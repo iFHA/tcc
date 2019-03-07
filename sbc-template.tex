@@ -35,21 +35,30 @@
 \maketitle
 
 \begin{abstract}
-  This meta-paper describes the style to be used in articles and short papers
-  for SBC conferences. For papers in English, you should add just an abstract
-  while for the papers in Portuguese, we also ask for an abstract in
-  Portuguese (``resumo''). In both cases, abstracts should not have more than
-  10 lines and must be in the first page of the paper.
+  The technological evolution has been making the Distance
+  Education accessible for a greater number of citizens anytime and anywhere.
+  The potential increase of the supply for mobile devices integrated to mobile
+  learning environments allows that the information comes out of the physical
+  environment, creating opportunities for students and teachers to create
+  geographically distributed learning scenarios. However, many applications
+  developed for these environments remain isolated from each other and do not
+  become integrated sufficiently into the virtual learning environments (AVA).
+  This paper presents an interoperability model between mobile devices and
+  distinct AVA based on webservices.
 \end{abstract}
 
 \begin{resumo} 
-  Este meta-artigo descreve o estilo a ser usado na confecção de artigos e
-  resumos de artigos para publicação nos anais das conferências organizadas
-  pela SBC. É solicitada a escrita de resumo e abstract apenas para os artigos
-  escritos em português. Artigos em inglês deverão apresentar apenas abstract.
-  Nos dois casos, o autor deve tomar cuidado para que o resumo (e o abstract)
-  não ultrapassem 10 linhas cada, sendo que ambos devem estar na primeira
-  página do artigo.
+  A evolução tecnológica tem tornado a Educação a Distância
+  acessível para um maior número de cidadãos em qualquer hora e em qualquer
+  lugar. O aumento potencial da oferta de dispositivos móveis integrados a
+  ambientes de aprendizado móvel permite que a informação saia dos ambientes
+  físicos das instituições de ensino, oportunizando a alunos e professores
+  criarem cenários de aprendizagem geograficamente distribuídos. Entretanto,
+  muitos dos aplicativos desenvolvidos para estes ambientes ainda permanecem
+  isolados uns dos outros e não se integram de maneira suficiente aos ambientes
+  virtuais de aprendizagem (AVA). Este artigo apresenta um modelo de
+  interoperabilidade entre dispositivos móveis e AVA distintos baseado em
+  webservices.
 \end{resumo}
 
 
@@ -105,28 +114,98 @@ com baixos custos computacionais, ou seja, baixo consumo de memória.
 
 \section{Referencial Teórico} \label{sec:firstpage}
 
-The first page must display the paper title, the name and address of the
-authors, the abstract in English and ``resumo'' in Portuguese (``resumos'' are
-required only for papers written in Portuguese). The title must be centered
-over the whole page, in 16 point boldface font and with 12 points of space
-before itself. Author names must be centered in 12 point font, bold, all of
-them disposed in the same line, separated by commas and with 12 points of
-space after the title. Addresses must be centered in 12 point font, also with
-12 points of space after the authors' names. E-mail addresses should be
-written using font Courier New, 10 point nominal size, with 6 points of space
-before and 6 points of space after.
+\subsection{Middleware}
 
-The abstract and ``resumo'' (if is the case) must be in 12 point Times font,
-indented 0.8cm on both sides. The word \textbf{Abstract} and \textbf{Resumo},
-should be written in boldface and must precede the text.
+Para Coulouris (2005) o middleware “é um termo aplicado a uma camada de software
+que fornece uma abstração da programação, assim como o mascaramento de
+heterogeneidade das redes, do hardware, de sistemas operacionais e linguagens de
+programação subjacentes”. Tal camada configura funções de identificação, autorização,
+autenticação, segurança, entre outras. O middleware implementa a comunicação e o
+compartilhamento de recursos e aplicativos distribuídos.
+Um middleware forma uma camada entre aplicações e plataformas distribuídas
+cuja finalidade é proporcionar um grau de transparência de distribuição. [Tanenbaum,
+2007]
+Neste trabalho pretende-se fazer middleware de modo que sejam simples as
+configurações, adaptações e personalizações da aplicação conforme sejam necessárias.
+
+\subsection{Webservice}
+
+Com o surgimento da comunicação através das redes de computadores e da necessidade
+de diferentes softwares se comunicarem entre si surgiu o conceito de Webservice (WS).
+Os Webservices permitem que sistemas desenvolvidos em várias linguagens,
+sendo executados em diversas plataformas, transmitam e recebam informações
+padronizadas entre si, permitindo uma interação entre os dispositivos, mais abrangente
+que qualquer outra tecnologia de computação distribuída existente.
+Segundo Kalin (2009) Webservice é um tipo de aplicação para web distribuída,
+cujos componentes podem ser aplicados e executados em dispositivos distintos.
+Configura-se como um mecanismo de comunicação que permite a interoperabilidade
+entre sistemas. Para Kreger (2001) um Webservice descreve uma coleção de operações
+que são acessíveis pela rede através de mensagens XML (eXtensible Markup Language)
+padronizadas. Porém existe a tecnologia JSON (Javascript Object Notation) que
+também possibilita a troca de mensagens de forma mais leve. O uso de Webservice
+possibilita que aplicações desenvolvidas em plataformas e linguagens diversificadas
+troquem informações padronizadas permitindo a interação entre elas com rapidez,
+facilidade e baixo custo, conforme ilustrado na Figura 1.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.5\textwidth]{figura1.png}
+	\caption{Troca de informações entre uma aplicação cliente e um WebService.}
+	\label{fig:exampleFigura1}
+\end{figure}
+
+Souza (2004) explica que os Webservices utilizam tecnologias que permitem que
+os serviços sejam disponibilizados pela WEB transportando e transformando dados
+entre aplicações com base em XML ou JSON. Nesse contexto, a XML e JSON além de
+funcionar como um padrão para troca de mensagens também têm o papel de definir os
+serviços. Sua sintaxe especifica como os dados são representados, transmitidos e
+detalhes de como são publicados e descobertos.
+
+\subsection{Processamento Digital de Imagens}
+
+
+\subsection{API em Desenvolvimento}
+
 
 \section{Mecanismo de chamada de serviço remoto (RSI)}
 
-In some conferences, the papers are published on CD-ROM while only the
-abstract is published in the printed Proceedings. In this case, authors are
-invited to prepare two final versions of the paper. One, complete, to be
-published on the CD and the other, containing only the first page, with
-abstract and ``resumo'' (for papers in Portuguese).
+Nesta sessão, será descrita a nossa proposta de um modelo para promover a integração
+de uma aplicação no domínio da educação à distância, executada através dos
+dispositivos móveis, e que utiliza os recursos de questionário dos AVA.
+
+A função de um middleware é estabelecer a comunicação entre aplicações que
+não se comunicam diretamente. Para o APP o uso de um middleware é de fundamental
+importância, pois o torna flexível para novas possibilidades de comunicação com outras
+funcionalidades dos AVA, além da possibilidade de registrar o log de transações
+realizadas entre as partes e outras questões relacionadas à segurança. O middleware foi 
+desenvolvido baseado num padrão de interoperabilidade que permite a comunicação
+com diversos AVA. 
+
+A figura 2 representa o diagrama da estratégia de comunicação que
+foi desenvolvida em duas etapas: entre o APP e o Middleware via Web Services e entre
+o Middleware e o AVA via Web Services distintos.
+
+Para a troca de informações adotou-se o JSON (Java Script Object Notation). O
+JSON é um formato de interconexão de dados utilizado em ambientes cliente-servidor
+que possibilita o desenvolvimento nas mais variadas linguagens. O JSON atualmente
+vem sendo utilizado como linguagem padrão para comunicação entre sistemas nas mais
+diversas plataformas. A disponibilidade de bibliotecas e o desempenho proporcionado
+pela simplicidade da transmissão de dados utilizando JSON influenciaram na decisão
+por utilizá-lo.
+
+
+IMAGEM 2
+
+A interoperabilidade entre o APP e os AVA, conforme ilustrado na Figura 2, é
+realizado da seguinte forma:
+O APP é executado no Smartphone do usuário;
+O APP se conecta ao servidor do middleware através da URL cadastrada
+pelo usuário ou através do serviço de consulta ao MW que fornecerá os
+AVA ao APP;
+O middleware disponibiliza o módulo com o padrão de comunicação de
+dados necessários à conexão com os diversos AVA;
+O middleware se conecta ao AVA selecionado pelo usuário.
+
 
 \section{Estudo de caso}
 
@@ -211,7 +290,7 @@ indented, while the subsequent should be indented by 0.5 cm.
 SANDOVAL, Jose. RESTful Java Web Services. Birmingham: Packt Publishing,
 2009.
 
-RICHARDSON Leonard; RUBY, Sam. RESTful Web Services. Sebastopol: O‟Reilly,
+RICHARDSON Leonard; RUBY, Sam. RESTful Web Services. Sebastopol: O'Reilly,
 2007.
 
 https://www.devmedia.com.br/introducao-a-web-services-restful/37387
