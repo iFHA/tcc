@@ -163,13 +163,26 @@ detalhes de como são publicados e descobertos.
 
 \subsection{Processamento Digital de Imagens}
 
+Uma imagem pode ser definida por uma função bidimensional f (x,y) em que x e y são um par de coordenadas espaciais e o valor de f representa a intensidade da
+imagem naquele ponto. Quando x, y e os valores das intensidades de f são todos finitos e em quantidades discretas, pode-se dizer que a imagem é uma imagem
+digital. Os elementos constituintes das imagens são denominados pixels. O PDI refere-se à utilização de métodos que manipulam imagens digitais e que geram
+como resultado outras imagens digitais. Esta manipulação envolve a utilização dos pixels da imagem de entrada para a geração de novos pixels que formam a
+nova imagem de obtida [4].
+
+Na maioria dos casos, os métodos que se deseja implementar para a manipulação das imagens são mapeamentos, considerando a utilização de uma matemática
+básica ou avançada, que utilizam as posições e os valores dos próprios pixels. Entretanto, quando os programadores se deparam com o desenvolvimento de
+programas que processam imagens, eles devem se preocupar com outras tarefas que não são estão ligadas à essência do PDI. Exemplos destas tarefas são dados
+pela escolha e utilização de bibliotecas para a leitura e gravação de arquivos, criação de interface gráfica ou aplicação de testes para verificação do que foi
+implementado. Estas nuâncias de implementação podem ser abstraídas através do uso de uma biblioteca específica que faça a abstração destas tarefas [4, 5].
 
 \subsection{API em Desenvolvimento}
 
 
 \section{Mecanismo de chamada de serviço remoto (RSI)}
 
-Nesta sessão, será descrita a nossa proposta de um modelo para promover a integração
+Descrever o mecanismo de forma genérica
+
+Nesta sessão, será descrita a proposta do um modelo para promover a integração
 de uma aplicação no domínio da educação à distância, executada através dos
 dispositivos móveis, e que utiliza os recursos de questionário dos AVA.
 
@@ -182,8 +195,8 @@ desenvolvido baseado num padrão de interoperabilidade que permite a comunicaç�
 com diversos AVA. 
 
 A figura 2 representa o diagrama da estratégia de comunicação que
-foi desenvolvida em duas etapas: entre o APP e o Middleware via Web Services e entre
-o Middleware e o AVA via Web Services distintos.
+foi desenvolvida em duas etapas: entre a aplicação cliente e o Middleware via Web Services e entre
+o Middleware e a API de PDI desenvolvida, esta, que por sua vez, está localizada no mesmo servidor do web service.
 
 Para a troca de informações adotou-se o JSON (Java Script Object Notation). O
 JSON é um formato de interconexão de dados utilizado em ambientes cliente-servidor
@@ -196,23 +209,18 @@ por utilizá-lo.
 
 IMAGEM 2
 
-A interoperabilidade entre o APP e os AVA, conforme ilustrado na Figura 2, é
+A interoperabilidade entre a aplicação cliente e a biblioteca de PDI, conforme ilustrado na Figura 2, é
 realizado da seguinte forma:
-O APP é executado no Smartphone do usuário;
-O APP se conecta ao servidor do middleware através da URL cadastrada
-pelo usuário ou através do serviço de consulta ao MW que fornecerá os
-AVA ao APP;
-O middleware disponibiliza o módulo com o padrão de comunicação de
-dados necessários à conexão com os diversos AVA;
-O middleware se conecta ao AVA selecionado pelo usuário.
+A aplicação cliente se conecta ao web service através da URL de acesso a algum serviço disponibilizado pelo mesmo, informando junto com a requisição, a imagem alvo a qual se deseja realizar tal transformação, codificada no formato base64;
+O middleware recebe a requisição, decodifica a imagem requisitada, salva-a no disco, e realiza uma chamada via linha de comando para o sistema operacional do servidor, passando como parâmetro o caminho da imagem salva, e o tipo de transformação que se deseja realizar na mesma, para que a API possa realizar seu trabalho;
+Após realizar seu processamento, a API retorna para o middleware como resultado de execução, a imagem transformada e codificada no formato base64;
+O middleware por fim, retorna para a aplicação cliente do serviço, uma mensagem informando se houve qualquer erro em algum dos passos anteriores, e caso todo o processo tenha sido realizado com sucesso, retorna também a imagem processada pela API, também no formato base64.
 
+falar sobre as tecnologias envolvidas em sua implementação: Java EE, Jersey, Maven, JSON, base64, http...
 
 \section{Estudo de caso}
 
-Section titles must be in boldface, 13pt, flush left. There should be an extra
-12 pt of space before each title. Section numbering is optional. The first
-paragraph of each section should not be indented, while the first lines of
-subsequent paragraphs should be indented by 1.27 cm.
+Explicar em detalhes usando figuras e diagramas como um programador invocar o web service.
 
 \subsection{Subsections}
 
