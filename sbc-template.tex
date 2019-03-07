@@ -8,6 +8,7 @@
 %\usepackage[latin1]{inputenc}  
 \usepackage[utf8]{inputenc}  
 % UTF-8 encoding is recommended by ShareLaTex
+\usepackage{multirow}
 
 \sloppy
 
@@ -141,7 +142,7 @@ facilidade e baixo custo, conforme ilustrado na Figura 1.
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=.5\textwidth]{figura1.png}
-	\caption{Troca de informações entre uma aplicação cliente e um WebService.}
+	\caption{Troca de informações entre uma aplicação cliente e um WebService}
 	\label{fig:exampleFigura1}
 \end{figure}
 
@@ -152,7 +153,7 @@ funcionar como um padrão para troca de mensagens também têm o papel de defini
 serviços. Sua sintaxe especifica como os dados são representados, transmitidos e
 detalhes de como são publicados e descobertos.
 
-\subsection{Processamento Digital de Imagens}
+\subsection{Processamento Digital de Imagens(PDI)}
 
 Uma imagem pode ser definida por uma função bidimensional f (x,y) em que x e y são um par de coordenadas espaciais e o valor de f representa a intensidade da
 imagem naquele ponto. Quando x, y e os valores das intensidades de f são todos finitos e em quantidades discretas, pode-se dizer que a imagem é uma imagem
@@ -189,7 +190,7 @@ A figura 2 representa o diagrama da estratégia de comunicação que
 foi desenvolvida em duas etapas: entre a aplicação cliente e o Middleware via Web Services e entre
 o Middleware e a API de PDI desenvolvida, esta, que por sua vez, está localizada no mesmo servidor do web service.
 
-Para a troca de informações adotou-se o JSON (Java Script Object Notation). O
+Para a troca de informações adotou-se o JSON (JavaScript Object Notation). O
 JSON é um formato de interconexão de dados utilizado em ambientes cliente-servidor
 que possibilita o desenvolvimento nas mais variadas linguagens. O JSON atualmente
 vem sendo utilizado como linguagem padrão para comunicação entre sistemas nas mais
@@ -202,10 +203,28 @@ IMAGEM 2
 
 A interoperabilidade entre a aplicação cliente e a biblioteca de PDI, conforme ilustrado na Figura 2, é
 realizado da seguinte forma:
-A aplicação cliente se conecta ao web service através da URL de acesso a algum serviço disponibilizado pelo mesmo, informando junto com a requisição, a imagem alvo a qual se deseja realizar tal transformação, codificada no formato base64;
-O middleware recebe a requisição, decodifica a imagem requisitada, salva-a no disco, e realiza uma chamada via linha de comando para o sistema operacional do servidor, passando como parâmetro o caminho da imagem salva, e o tipo de transformação que se deseja realizar na mesma, para que a API possa realizar seu trabalho;
-Após realizar seu processamento, a API retorna para o middleware como resultado de execução, a imagem transformada e codificada no formato base64;
-O middleware por fim, retorna para a aplicação cliente do serviço, uma mensagem informando se houve qualquer erro em algum dos passos anteriores, e caso todo o processo tenha sido realizado com sucesso, retorna também a imagem processada pela API, também no formato base64.
+\begin{itemize}
+	\item A aplicação cliente se conecta ao web service através da URL de acesso a algum serviço disponibilizado pelo mesmo, informando junto com a requisição, a imagem alvo a qual se deseja realizar tal transformação, codificada no formato base64;
+	\item O middleware recebe a requisição, decodifica a imagem requisitada, salva-a no disco, e realiza uma chamada via linha de comando para o sistema operacional do servidor, passando como parâmetro o caminho da imagem salva, e o tipo de transformação que se deseja realizar na mesma, para que a API possa realizar seu trabalho;
+	\item Após realizar seu processamento, a API retorna para o middleware como resultado de execução, a imagem transformada e codificada no formato base64;
+	\item O middleware por fim, retorna para a aplicação cliente do serviço, uma mensagem informando se houve qualquer erro em algum dos passos anteriores, e caso todo o processo tenha sido realizado com sucesso, retorna também a imagem processada pela API, também no formato base64.
+\end{itemize}
+
+\begin{table}[ht]
+	\centering
+	\caption{Descrição dos atributos de comunicação}
+	\label{tab:Table1}
+	\smallskip
+	\begin{tabular}{ |l|l|l| }
+		\hline
+		Objeto de Comunicação & Atributos & Exemplo (JSON) \\ \hline
+		Request & Img: texto & \{“img" : “/9j/4AAQSkZJRgABAQAAAQAB"\} \\ \hline
+		\multirow{3}{*}{Response} & Status: inteiro & \{“Status": 1, \\
+		& Msg: texto & “Msg":“Sucesso", \\
+		& Img: texto & “Img":“/9j/4AAQSkZJRgABAQAAAQAB"\} \\
+		\hline
+	\end{tabular}
+\end{table}
 
 falar sobre as tecnologias envolvidas em sua implementação: Java EE, Jersey, Maven, JSON, base64, http...
 
