@@ -102,7 +102,7 @@ específico. (RICHARDSON; RUBY, 2007)
 Aliando todos os fatores e tecnologias apresentados anteriormente, torna-se
 possível o desenvolvimento de uma arquitetura baseada em Serviços Web,
 fornecendo uma plataforma que disponibiliza serviços de uma API de processamento digital de imagens
-com baixos custos computacionais, ou seja, baixo consumo de memória.
+com baixos custos computacionais, ou seja, baixo consumo de memória e processamento.
 
 \section{Referencial Teórico} \label{sec:firstpage}
 
@@ -167,6 +167,8 @@ programas que processam imagens, eles devem se preocupar com outras tarefas que 
 pela escolha e utilização de bibliotecas para a leitura e gravação de arquivos, criação de interface gráfica ou aplicação de testes para verificação do que foi
 implementado. Estas nuâncias de implementação podem ser abstraídas através do uso de uma biblioteca específica que faça a abstração destas tarefas [4, 5].
 
+\subsection{Application Programming Interface(API)}
+
 \subsection{API em Desenvolvimento}
 
 
@@ -209,6 +211,39 @@ realizado da seguinte forma:
 	\item Após realizar seu processamento, a API retorna para o middleware como resultado de execução, a imagem transformada e codificada no formato base64;
 	\item O middleware por fim, retorna para a aplicação cliente do serviço, uma mensagem informando se houve qualquer erro em algum dos passos anteriores, e caso todo o processo tenha sido realizado com sucesso, retorna também a imagem processada pela API, também no formato base64.
 \end{itemize}
+
+Para que o processo funcione adequadamente, a API precisará estar ao alcance do web service, ou seja, localizada no mesmo servidor, e também implementar a forma padronizada de comunicação descrita anteriormente: enviar como resposta à suas chamadas de funções, uma imagem codificada no formato base64, para que o
+middleware consiga se conectar à mesma e, dessa forma, interagir com as aplicações clientes conforme o esperado.
+
+O middleware será executado em um servidor de aplicação. Este servidor
+é responsável por estabelecer a comunicação com as aplicações clientes que desejem utilizar os serviços da API. 
+A desvantagem é que recursos computacionais de um servidor serão alocados para o middleware, porém, como vantagens teremos a flexibilidade, melhoria no desempenho, manutenibilidade e disponibilidade do serviço.
+
+A utilização das funcionalidades da API de forma direta, necessitando de tê-la instalada na própria máquina do utilizador, traria alguns inconvenientes, sendo eles:
+\begin{itemize}
+	\item O usuário necessitar instalar novas versões da mesma à medida que novas funcionalidades forem sendo adicionadas;
+	\item Dependência de plataforma, uma vez que para se comunicar corretamente com a biblioteca de programação, o usuário necessita utilizar a mesma linguagem de programação com a qual a mesma fora implementada;
+	\item Restrição de utilização da biblioteca à medida que os recursos da máquina do usuário foram ficando mais escassos, uma vez que todo o processamento da API será feito no computador do usuário.
+\end{itemize}
+%O uso do MiddleWare desonera o consumo da bateria e o processamento do aparelho que esteja executando o mesmo, ampliando sua performance.
+
+O middleware possui a implementação e uso de três serviços através dos quais será possível realizar diversas operações de troca de informações.
+Todos os serviços têm somente um parâmetro de entrada (request) e um parâmetro de saída (response) de tipos que encapsulam as informações necessárias para realizar as requisições e o resultado da operação. Os serviços são descritos a seguir:
+
+\textit{ListFilters}: Operação destinada a realizar consultas dos filtros disponíveis para aplicação;
+
+\textit{YellowFilter}: Operação destinada a realizar a aplicação do filtro de cor amarela na imagem requisitada;
+
+\textit{BlackAndWhiteFilter}: Operação destinada a realizar a aplicação do filtro de cores preto e branco na imagem requisitada.
+
+A definição dos elementos de comunicação – ou objetos de comunicação – é
+determinante para o sucesso de todo o processo de comunicação, que inicia na requisição da aplicação cliente, passa pelo middleware, chega na API, e finaliza na resposta final do web service. Esses objetos são as estruturas de dados que carregam as informações necessárias para consumir e responder um WS.
+A dinâmica de comunicação é realizada da seguinte forma: a aplicação cliente realiza uma requisição encapsulando um objeto de comunicação que é processado pelo web service. Em seguida, o WS realiza uma chamada à função requisitada pelo cliente à API, esta que por sua vez, realiza seu processamento, e envia uma resposta ao WS, que, por fim, responde à requisição do cliente através de um outro objeto de comunicação.
+
+Por exemplo: para consumir o serviço YellowFilter a aplicação cliente requisita através do objeto de comunicação Request os dados da imagem codificada. Em seguida, o serviço YellowFilter envia a resposta com o objeto de comunicação Response.
+
+A tabela 1 representa um exemplo da estrutura de dados de um objeto de
+comunicação exemplificado no formato JSON.
 
 \begin{table}[ht]
 	\centering
