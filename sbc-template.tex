@@ -200,9 +200,6 @@ diversas plataformas. A disponibilidade de bibliotecas e o desempenho proporcion
 pela simplicidade da transmissão de dados utilizando JSON influenciaram na decisão
 por utilizá-lo.
 
-
-IMAGEM 2
-
 A interoperabilidade entre a aplicação cliente e a biblioteca de PDI, conforme ilustrado na Figura 2, é
 realizado da seguinte forma:
 \begin{itemize}
@@ -211,6 +208,13 @@ realizado da seguinte forma:
 	\item Após realizar seu processamento, a API retorna para o middleware como resultado de execução, a imagem transformada e codificada no formato base64;
 	\item O middleware por fim, retorna para a aplicação cliente do serviço, um código de status da requisição, representando o sucesso ou insucesso da operação, em conjunto com uma mensagem informando se houve qualquer erro em algum dos passos anteriores, e caso todo o processo tenha sido realizado com sucesso, retorna também a imagem processada pela API, também no formato base64.
 \end{itemize}
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.2\textwidth]{modelo-comunicacao.png}
+	\caption{Modelo de Comunicação}
+	\label{fig:Figura2}
+\end{figure}
 
 Para que o processo funcione adequadamente, a API precisará estar ao alcance do web service, ou seja, localizada no mesmo servidor, e também implementar a forma padronizada de comunicação descrita anteriormente: enviar como resposta à suas chamadas de funções, uma imagem codificada no formato base64, para que o
 middleware consiga se conectar à mesma e, dessa forma, interagir com as aplicações clientes conforme o esperado.
@@ -262,6 +266,12 @@ comunicação exemplificado no formato JSON.
 \end{table}
 
 A figura a seguir representa o diagrama de sequência para o consumo do serviço YellowFilter:
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.7\textwidth]{ds-yellow-filter.png}
+	\caption{Diagrama de Sequência - YellowFilterService}
+	\label{fig:Figura3}
+\end{figure}
 
 
 falar sobre as tecnologias envolvidas em sua implementação: Java EE, Jersey, Maven, JSON, base64, http...
