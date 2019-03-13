@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  9 MAR 2019 23:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  13 MAR 2019 16:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -316,7 +316,7 @@ Package pdftex.def Info: ds-yellow-filter.png  used on input line 271.
 Underfull \vbox (badness 2213) has occurred while \output is active []
 
  [6]
-(./sbc-template.bbl [7 <./ds-yellow-filter.png (PNG copy)>]) [8]
+[7 <./ds-yellow-filter.png (PNG copy)>] (./sbc-template.bbl) [8]
 (./sbc-template.aux) ) 
 Here is how much of TeX's memory you used:
  3269 strings out of 492639
@@ -333,7 +333,7 @@ rw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pf
 b></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sbc-template.pdf (8 pages, 168414 bytes).
+Output written on sbc-template.pdf (8 pages, 168999 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream
