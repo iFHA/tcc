@@ -259,10 +259,10 @@ A utilização das funcionalidades da API de forma direta, necessitando de tê-l
 \end{itemize}
 %O uso do MiddleWare desonera o consumo da bateria e o processamento do aparelho que esteja executando o mesmo, ampliando sua performance.
 
-O middleware possui a implementação e uso de três serviços através dos quais será possível realizar diversas operações de troca de informações.
-Todos os serviços têm somente um parâmetro de entrada (request) e um parâmetro de saída (response) de tipos que encapsulam as informações necessárias para realizar as requisições e o resultado da operação. Os serviços são descritos a seguir:
+O middleware possui a implementação e uso de dois serviços através dos quais será possível realizar diversas operações de troca de informações, à medida que novas funcionalidades forem sendo disponibilizadas pela API, poderão ser adicionados novos serviços que correspondam às mesmas.
+Todos os serviços possuem somente um parâmetro de entrada (Requisicao) e um parâmetro de saída (Resposta) de tipos que encapsulam as informações necessárias para realizar as requisições e o resultado da operação. Os serviços são descritos a seguir:
 
-\textit{ListFilters}: Operação destinada a realizar consultas dos filtros disponíveis para aplicação;
+%\textit{ListFilters}: Operação destinada a realizar consultas dos filtros disponíveis para aplicação;
 
 \textit{GreenFilter}: Operação destinada a realizar a aplicação do filtro de cor verde na imagem requisitada;
 
@@ -272,9 +272,9 @@ A definição dos elementos de comunicação – ou objetos de comunicação –
 determinante para o sucesso de todo o processo de comunicação, que inicia na requisição da aplicação cliente, passa pelo middleware, chega na API, e finaliza na resposta final do web service. Esses objetos são as estruturas de dados que carregam as informações necessárias para consumir e responder um WS.
 A dinâmica de comunicação é realizada da seguinte forma: a aplicação cliente realiza uma requisição encapsulando um objeto de comunicação que é processado pelo web service. Em seguida, o WS realiza uma chamada à função requisitada pelo cliente à API, esta que por sua vez, realiza seu processamento, e envia uma resposta ao WS, que, por fim, responde à requisição do cliente através de um outro objeto de comunicação.
 
-Por exemplo: para consumir o serviço GreenFilter a aplicação cliente requisita através do objeto de comunicação Request os dados da imagem codificada. Em seguida, o serviço GreenFilter envia a resposta com o objeto de comunicação Response.
+Por exemplo: para consumir o serviço GreenFilter a aplicação cliente requisita através do objeto de comunicação Requisicao os dados da imagem codificada. Em seguida, o serviço GreenFilter envia a resposta com o objeto de comunicação Resposta.
 
-A tabela 1 representa um exemplo da estrutura de dados de um objeto de
+A tabela 2 representa um exemplo da estrutura de dados de um objeto de
 comunicação exemplificado no formato JSON.
 
 \begin{table}[ht]
@@ -285,8 +285,8 @@ comunicação exemplificado no formato JSON.
 	\begin{tabular}{ |l|l|l| }
 		\hline
 		Objeto de Comunicação & Atributos & Exemplo (JSON) \\ \hline
-		Request & Img: texto & \{“img" : “/9j/4AAQSkZJRgABAQAAAQAB"\} \\ \hline
-		\multirow{3}{*}{Response} & Status: inteiro & \{“Status": 1, \\
+		Requisicao & Img: texto & \{“img" : “/9j/4AAQSkZJRgABAQAAAQAB"\} \\ \hline
+		\multirow{3}{*}{Resposta} & Status: inteiro & \{“Status": 1, \\
 		& Msg: texto & “Msg":“Sucesso", \\
 		& Img: texto & “Img":“/9j/4AAQSkZJRgABAQAAAQAB"\} \\
 		\hline
@@ -296,8 +296,8 @@ comunicação exemplificado no formato JSON.
 A figura 3 representa o diagrama de sequência para o consumo do serviço GreenFilter:
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=.7\textwidth]{ds-yellow-filter.png}
-	\caption{Diagrama de Sequência - YellowFilterService}
+	\includegraphics[width=.7\textwidth]{ds-green-filter.png}
+	\caption{Diagrama de Sequência - GreenFilterService}
 	\label{fig:Figura3}
 \end{figure}
 
@@ -309,6 +309,15 @@ falar sobre as tecnologias envolvidas em sua implementação: Java EE, Jersey, M
 Nesta sessão, serão descritos os passos necessários para a realização de consumo dos serviços da API por meio da comunicação com o Middleware, mostrando o desenvolvimento de uma aplicação cliente como estudo de caso.
 
 A escolha da linguagem JavaScript como base para o desenvolvimento da aplicação cliente, se deu mais pela necessidade de demonstrar a independência de plataforma que o Middleware nos proporciona, e também pelo fato de que atualmente JavaScript é uma das linguagens mais conhecidas e utilizadas ao redor do mundo.
+
+A figura 4 representa a interface da aplicação cliente.
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.7\textwidth]{aplicacao-cliente.png}
+	\caption{Aplicação Cliente}
+	\label{fig:Figura4}
+\end{figure}
 
 \section{Considerações Finais}
 
