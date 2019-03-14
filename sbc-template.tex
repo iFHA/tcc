@@ -124,7 +124,7 @@ configurações, adaptações e personalizações da aplicação conforme sejam 
 
 Com o surgimento da comunicação através das redes de computadores e da necessidade
 de diferentes softwares se comunicarem entre si surgiu o conceito de Webservice (WS).
-Os Webservices permitem que sistemas desenvolvidos em várias linguagens,
+Os Webservices permitem que sistemas desenvolvidos em diferentes linguagens,
 sendo executados em diversas plataformas, transmitam e recebam informações
 padronizadas entre si, permitindo uma interação entre os dispositivos, mais abrangente
 que qualquer outra tecnologia de computação distribuída existente.
@@ -148,10 +148,42 @@ facilidade e baixo custo, conforme ilustrado na Figura 1.
 
 Souza (2004) explica que os Webservices utilizam tecnologias que permitem que
 os serviços sejam disponibilizados pela WEB transportando e transformando dados
-entre aplicações com base em XML ou JSON. Nesse contexto, a XML e JSON além de
-funcionar como um padrão para troca de mensagens também têm o papel de definir os
+entre aplicações com base em XML ou JSON. Nesse contexto, o XML e JSON além de
+funcionarem como padrão para troca de mensagens também têm o papel de definir os
 serviços. Sua sintaxe especifica como os dados são representados, transmitidos e
 detalhes de como são publicados e descobertos.
+
+Existem basicamente, dois grupos de serviços web: os serviços baseados em SOAP (Simple Object Access Protocol) e os REST (Representational
+State Transfer ). Um serviço baseado em SOAP entregue sobre HTTP é um caso especial dos serviços REST. O foco deste trabalho está na criação e utilização de um web service do grupo REST, devido a sua popularização, e ferramentas auxiliares disponíveis para uso.
+
+\subsubsection{REST - Representational State Transfer}
+
+Descrito por Fielding (2000), REST é um modelo de arquitetura de software distribuído, baseado em comunicação via rede.
+%Um sistema no estilo REST é denominado RESTful e possui as seguintes características:
+Para a implementação de um sistema RESTful não há a necessidade da criação de novos protocolos ou tecnologias, pois o mesmo é suportado em qualquer arquitetura de rede.
+Enquanto o SOAP é um protocolo de mensagens, o REST é um estilo de arquitetura
+de software para sistemas hipermídia distribuídos, conhecidos como recursos. Um recurso RESTful é qualquer coisa que possua um endereço através da web, ou seja, sistemas em que as hipermídias são armazenadas em uma rede e interconectadas através de hiperlinks podendo ser acessados e transferidos entre clientes e servidores.
+O núcleo da abordagem REST consiste na utilização dos métodos HTTP, que correspondem às operações CRUD (Create, Read, Update, Delete). Cada requisição HTTP inclui um dos métodos apresentados na tabela 2.1 para indicar qual a operação CRUD que deve ser realizada sobre o recurso.
+\begin{table}[ht]
+	\centering
+	\caption{Métodos HTTP e operações CRUD}
+	\label{tab:Table1}
+	\smallskip
+	\begin{tabular}{ |l|l| }
+		\hline
+		POST & Cria um novo recurso a partir dos dados requisitados \\ \hline
+		GET & Lê um recurso \\ \hline
+		PUT & Atualiza um recurso a partir dos dados requisitados \\ \hline
+		DELETE & Remove um recurso \\
+		\hline
+	\end{tabular}
+\end{table}
+
+Em termos gerais, um cliente RESTful emite um pedido que envolve um recurso, como
+por exemplo, um pedido de alteração. Se este pedido for bem sucedido, uma representação
+do recurso é transferido do servidor que hospeda o recurso para o cliente que emitiu o
+pedido [Kalin 2009].
+
 
 \subsection{Processamento Digital de Imagens(PDI)}
 
@@ -174,23 +206,19 @@ implementado. Estas nuâncias de implementação podem ser abstraídas através 
 
 \section{Mecanismo de chamada de serviço remoto (RSI)}
 
-Descrever o mecanismo de forma genérica
+Esta sessão está destinada a descrever a arquitetura e funcionamento do Middleware proposto, bem como as tecnologias envolvidas em sua implementação.
 
-Nesta sessão, será descrita a proposta do um modelo para promover a integração
-de uma aplicação no domínio da educação à distância, executada através dos
-dispositivos móveis, e que utiliza os recursos de questionário dos AVA.
-
-A função de um middleware é estabelecer a comunicação entre aplicações que
-não se comunicam diretamente. Para o APP o uso de um middleware é de fundamental
-importância, pois o torna flexível para novas possibilidades de comunicação com outras
-funcionalidades dos AVA, além da possibilidade de registrar o log de transações
-realizadas entre as partes e outras questões relacionadas à segurança. O middleware foi 
-desenvolvido baseado num padrão de interoperabilidade que permite a comunicação
-com diversos AVA. 
+%A função de um middleware é tornar possível a comunicação entre aplicações que
+%não se comunicam diretamente. Para o contexto deste trabalho, que é o de promover a disponibilização das funcionalidades de uma API de PDI, o uso de um middleware é de fundamental
+%importância, pois torna possível para que programadores, o torna flexível para novas possibilidades de comunicação com outras
+%funcionalidades dos AVA, além da possibilidade de registrar o log de transações
+%realizadas entre as partes e outras questões relacionadas à segurança. O middleware foi 
+%desenvolvido baseado num padrão de interoperabilidade que permite a comunicação
+%com diversos AVA. 
 
 A figura 2 representa o diagrama da estratégia de comunicação que
 foi desenvolvida em duas etapas: entre a aplicação cliente e o Middleware via Web Services e entre
-o Middleware e a API de PDI desenvolvida, esta, que por sua vez, está localizada no mesmo servidor do web service.
+o Middleware e a API de PDI desenvolvida via linha de comando, esta, que por sua vez, está localizada no mesmo servidor do web service.
 
 Para a troca de informações adotou-se o JSON (JavaScript Object Notation). O
 JSON é um formato de interconexão de dados utilizado em ambientes cliente-servidor
@@ -216,7 +244,7 @@ realizado da seguinte forma:
 	\label{fig:Figura2}
 \end{figure}
 
-Para que o processo funcione adequadamente, a API precisará estar ao alcance do web service, ou seja, localizada no mesmo servidor, e também implementar a forma padronizada de comunicação descrita anteriormente: enviar como resposta à suas chamadas de funções, uma imagem codificada no formato base64, para que o
+Para que o processo funcione adequadamente, a API precisa estar ao alcance do web service, ou seja, localizada no mesmo servidor, e também é necessário que a mesma implemente a forma padronizada de comunicação descrita anteriormente: enviar como resposta à suas chamadas de funções, uma imagem codificada no formato base64, para que o
 middleware consiga se conectar à mesma e, dessa forma, interagir com as aplicações clientes conforme o esperado.
 
 O middleware será executado em um servidor de aplicação. Este servidor
@@ -236,7 +264,7 @@ Todos os serviços têm somente um parâmetro de entrada (request) e um parâmet
 
 \textit{ListFilters}: Operação destinada a realizar consultas dos filtros disponíveis para aplicação;
 
-\textit{YellowFilter}: Operação destinada a realizar a aplicação do filtro de cor amarela na imagem requisitada;
+\textit{GreenFilter}: Operação destinada a realizar a aplicação do filtro de cor verde na imagem requisitada;
 
 \textit{BlackAndWhiteFilter}: Operação destinada a realizar a aplicação do filtro de cores preto e branco na imagem requisitada.
 
@@ -244,7 +272,7 @@ A definição dos elementos de comunicação – ou objetos de comunicação –
 determinante para o sucesso de todo o processo de comunicação, que inicia na requisição da aplicação cliente, passa pelo middleware, chega na API, e finaliza na resposta final do web service. Esses objetos são as estruturas de dados que carregam as informações necessárias para consumir e responder um WS.
 A dinâmica de comunicação é realizada da seguinte forma: a aplicação cliente realiza uma requisição encapsulando um objeto de comunicação que é processado pelo web service. Em seguida, o WS realiza uma chamada à função requisitada pelo cliente à API, esta que por sua vez, realiza seu processamento, e envia uma resposta ao WS, que, por fim, responde à requisição do cliente através de um outro objeto de comunicação.
 
-Por exemplo: para consumir o serviço YellowFilter a aplicação cliente requisita através do objeto de comunicação Request os dados da imagem codificada. Em seguida, o serviço YellowFilter envia a resposta com o objeto de comunicação Response.
+Por exemplo: para consumir o serviço GreenFilter a aplicação cliente requisita através do objeto de comunicação Request os dados da imagem codificada. Em seguida, o serviço GreenFilter envia a resposta com o objeto de comunicação Response.
 
 A tabela 1 representa um exemplo da estrutura de dados de um objeto de
 comunicação exemplificado no formato JSON.
@@ -252,7 +280,7 @@ comunicação exemplificado no formato JSON.
 \begin{table}[ht]
 	\centering
 	\caption{Descrição dos atributos de comunicação}
-	\label{tab:Table1}
+	\label{tab:Table2}
 	\smallskip
 	\begin{tabular}{ |l|l|l| }
 		\hline
@@ -265,7 +293,7 @@ comunicação exemplificado no formato JSON.
 	\end{tabular}
 \end{table}
 
-A figura a seguir representa o diagrama de sequência para o consumo do serviço YellowFilter:
+A figura 3 representa o diagrama de sequência para o consumo do serviço GreenFilter:
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=.7\textwidth]{ds-yellow-filter.png}
@@ -277,8 +305,6 @@ A figura a seguir representa o diagrama de sequência para o consumo do serviço
 falar sobre as tecnologias envolvidas em sua implementação: Java EE, Jersey, Maven, JSON, base64, http...
 
 \section{Estudo de caso}
-
-Explicar em detalhes usando figuras e diagramas como um programador invocar o web service.
 
 Nesta sessão, serão descritos os passos necessários para a realização de consumo dos serviços da API por meio da comunicação com o Middleware, mostrando o desenvolvimento de uma aplicação cliente como estudo de caso.
 

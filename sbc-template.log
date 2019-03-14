@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  13 MAR 2019 16:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  13 MAR 2019 22:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -288,41 +288,36 @@ File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 145.
- [3 <./figura1.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 206.
+ [3 <./figura1.png (PNG copy)>] [4]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 234.
 
  (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 206.
- [4]
-<modelo-comunicacao.png, id=24, 108.405pt x 305.34074pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 234.
+<modelo-comunicacao.png, id=23, 108.405pt x 305.34074pt>
 File: modelo-comunicacao.png Graphic file (type png)
 <use modelo-comunicacao.png>
-Package pdftex.def Info: modelo-comunicacao.png  used on input line 214.
+Package pdftex.def Info: modelo-comunicacao.png  used on input line 242.
 (pdftex.def)             Requested size: 85.35696pt x 240.4338pt.
- [5 <./modelo-comunicacao.png (PNG copy)>]
-Overfull \hbox (21.54872pt too wide) in paragraph at lines 257--266
+ [5] [6 <./modelo-comunicacao.png (PNG copy)>]
+Overfull \hbox (21.54872pt too wide) in paragraph at lines 285--294
  [][] 
  []
 
-<ds-yellow-filter.png, id=28, 357.58594pt x 363.60844pt>
+<ds-yellow-filter.png, id=31, 357.58594pt x 363.60844pt>
 File: ds-yellow-filter.png Graphic file (type png)
 <use ds-yellow-filter.png>
-Package pdftex.def Info: ds-yellow-filter.png  used on input line 271.
+Package pdftex.def Info: ds-yellow-filter.png  used on input line 299.
 (pdftex.def)             Requested size: 298.75264pt x 303.80338pt.
-
-Underfull \vbox (badness 2213) has occurred while \output is active []
-
- [6]
 [7 <./ds-yellow-filter.png (PNG copy)>] (./sbc-template.bbl) [8]
 (./sbc-template.aux) ) 
 Here is how much of TeX's memory you used:
- 3269 strings out of 492639
- 45324 string characters out of 6135497
- 133914 words of memory out of 5000000
- 7085 multiletter control sequences out of 15000+600000
+ 3273 strings out of 492639
+ 45398 string characters out of 6135497
+ 133922 words of memory out of 5000000
+ 7089 multiletter control sequences out of 15000+600000
  21033 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,28p,466b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -333,7 +328,7 @@ rw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pf
 b></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dis
 t/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/time
 s/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sbc-template.pdf (8 pages, 168999 bytes).
+Output written on sbc-template.pdf (8 pages, 170915 bytes).
 PDF statistics:
  67 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream
