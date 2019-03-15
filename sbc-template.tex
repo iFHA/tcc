@@ -310,7 +310,7 @@ Nesta sessão, serão descritos os passos necessários para a realização de co
 
 A escolha da linguagem JavaScript como base para o desenvolvimento da aplicação cliente, se deu mais pela necessidade de demonstrar a independência de plataforma que o Middleware nos proporciona, e também pelo fato de que atualmente JavaScript é uma das linguagens mais conhecidas e utilizadas ao redor do mundo.
 
-A figura 4 representa a interface da aplicação cliente.
+A figura 4 representa a interface da aplicação cliente desenvolvida.
 
 \begin{figure}[ht]
 	\centering
@@ -318,6 +318,19 @@ A figura 4 representa a interface da aplicação cliente.
 	\caption{Aplicação Cliente}
 	\label{fig:Figura4}
 \end{figure}
+
+Esta aplicação consiste em uma página HTML, que utiliza-se da linguagem javascript para realizar as requisições ao Webservice. Na figura acima, temos a lista de serviços disponibilizados pelo middleware(1), onde o usuário poderá escolher qual filtro aplicar, um botão para selecionar a imagem desejada(2), a imagem escolhida(3), a imagem final(4), após o processamento da API, e resposta do middeware, e por fim, o botão de enviar(5), que realizará a requisição.
+
+O código da figura 5 diz respeito ao código necessário para realizar a requisição aos serviços do webservice:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.9\textwidth]{cliente-requisicao.png}
+	\caption{Código responsável pela requisição ao webservice}
+	\label{fig:Figura5}
+\end{figure}
+
+Como a maioria das linguagens de programação possuem suporte à codificação e decodificação do formato base64, por o mesmo ser bastante conhecido, não há necessidade de explicar o seu funcionamento. Portanto, no código listado acima, a partir da linha 21, entende-se que a imagem selecionada já está codificada em tal formato, e que seu valor está atribuído na variável chamada "base64". Assim sendo, na linha 22, têm-se a definição de qual serviço o usuário escolheu, atribuindo-o à variável serviceUrl, que mais tarde será utilizada para redirecionar a requisição para o serviço correto; a linha 23 é responsável pela criação e atribuição de um objeto de comunicação JSON com o atributo Img, como já descrito na tabela 2;
 
 \section{Considerações Finais}
 
