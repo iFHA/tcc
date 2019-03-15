@@ -123,7 +123,7 @@ configurações, adaptações e personalizações da aplicação conforme sejam 
 \subsection{Webservice}
 
 Com o surgimento da comunicação através das redes de computadores e da necessidade
-de diferentes softwares se comunicarem entre si surgiu o conceito de Webservice (WS).
+de diferentes softwares trocarem informações, surgiu o conceito de Webservice (WS).
 Os Webservices permitem que sistemas desenvolvidos em diferentes linguagens,
 sendo executados em diversas plataformas, transmitam e recebam informações
 padronizadas entre si, permitindo uma interação entre os dispositivos, mais abrangente
@@ -207,6 +207,7 @@ implementado. Estas nuâncias de implementação podem ser abstraídas através 
 \section{Mecanismo de chamada de serviço remoto (RSI)}
 
 Esta sessão está destinada a descrever a arquitetura e funcionamento do Middleware proposto, bem como as tecnologias envolvidas em sua implementação.
+
 
 %A função de um middleware é tornar possível a comunicação entre aplicações que
 %não se comunicam diretamente. Para o contexto deste trabalho, que é o de promover a disponibilização das funcionalidades de uma API de PDI, o uso de um middleware é de fundamental
@@ -294,6 +295,7 @@ comunicação exemplificado no formato JSON.
 \end{table}
 
 A figura 3 representa o diagrama de sequência para o consumo do serviço GreenFilter:
+
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=.7\textwidth]{ds-green-filter.png}
@@ -301,8 +303,9 @@ A figura 3 representa o diagrama de sequência para o consumo do serviço GreenF
 	\label{fig:Figura3}
 \end{figure}
 
+\subsection{Tecnologias Envolvidas}
 
-falar sobre as tecnologias envolvidas em sua implementação: Java EE, Jersey, Maven, JSON, base64, http...
+Para o desenvolvimento do middleware, foram utilizadas as tecnologias: Java - como linguagem padrão da implementação; Jersey - como framework para criação do webservice; Maven - como ferramenta de automatização e gerenciamento de projetos; JSON - como forma padrão de comunicação entre servidor e cliente; codificação base64 - para facilitar a transferência de arquivos binários(imagens, no contexto deste trabalho).
 
 \section{Estudo de caso}
 
