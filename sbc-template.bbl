@@ -6,6 +6,13 @@ Boulic, R. and Renault, O. (1991).
 \newblock In Magnenat-Thalmann, N. and Thalmann, D., editors, {\em New Trends
   in Animation and Visualization}. John Wiley {\&} Sons ltd.
 
+\bibitem[DevMedia 2018]{dev1}
+DevMedia (2018).
+\newblock Introdução a web services restful.
+\newblock
+  \url{https://www.devmedia.com.br/introducao-a-web-services-restful/37387}.
+\newblock 27 Dezembro, 2018.
+
 \bibitem[Knuth 1984]{knuth:84}
 Knuth, D.~E. (1984).
 \newblock {\em The {\TeX} Book}.

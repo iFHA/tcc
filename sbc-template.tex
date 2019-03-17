@@ -67,7 +67,7 @@ através da internet, por meio do protocolo HTTP (HyperText Transfer Protocol), 
 entre softwares que estejam executando em diferentes plataformas. Essas aplicações fazem uso do padrão 
 XML (eXtensible Markup Language) para prover descritores que são interpretados automaticamente 
 por outros sistemas, permitindo assim que diversos programas simples possam interagir uns com os 
-outros para, em conjunto, fornecer soluções mais complexas e sofisticadas(DEVMEDIA).
+outros para, em conjunto, fornecer soluções mais complexas e sofisticadas \cite{dev1}.
 
 Nos últimos anos, têm-se acompanhado a disponibilização de um grande número de sistemas 
 computacionais com um considerável conjunto de recursos que satisfaçam as necessidades de 
@@ -160,7 +160,7 @@ State Transfer ). Um serviço baseado em SOAP entregue sobre HTTP é um caso esp
 
 Descrito por Fielding (2000), REST é um modelo de arquitetura de software distribuído, baseado em comunicação via rede.
 %Um sistema no estilo REST é denominado RESTful e possui as seguintes características:
-Para a implementação de um sistema RESTful não há a necessidade da criação de novos protocolos ou tecnologias, pois o mesmo é suportado em qualquer arquitetura de rede.
+Um sistema baseado no modelo REST denomina-se RESTful. Para a implementação de tal sistema não há a necessidade da criação de novos protocolos ou tecnologias, pois o mesmo é suportado em qualquer arquitetura de rede.
 Enquanto o SOAP é um protocolo de mensagens, o REST é um estilo de arquitetura
 de software para sistemas hipermídia distribuídos, conhecidos como recursos. Um recurso RESTful é qualquer coisa que possua um endereço através da web, ou seja, sistemas em que as hipermídias são armazenadas em uma rede e interconectadas através de hiperlinks podendo ser acessados e transferidos entre clientes e servidores.
 O núcleo da abordagem REST consiste na utilização dos métodos HTTP, que correspondem às operações CRUD (Create, Read, Update, Delete). Cada requisição HTTP inclui um dos métodos apresentados na tabela 2.1 para indicar qual a operação CRUD que deve ser realizada sobre o recurso.
@@ -333,7 +333,7 @@ O código da figura 5 diz respeito ao código necessário para realizar a requis
 	\label{fig:Figura5}
 \end{figure}
 
-Como a maioria das linguagens de programação possuem suporte à codificação e decodificação do formato base64, por o mesmo ser bastante conhecido, não há necessidade de explicar o seu funcionamento. Portanto, no código listado acima, a partir da linha 21, entende-se que a imagem selecionada já está codificada em tal formato, e que seu valor está atribuído na variável chamada "base64". Assim sendo, na linha 22, têm-se a definição de qual serviço o usuário escolheu, atribuindo-o à variável serviceUrl, que mais tarde será utilizada para redirecionar a requisição para o serviço correto; a linha 23 é responsável pela criação e atribuição de um objeto de comunicação JSON com o atributo Img, como já descrito na tabela 2; A partir da linha 26, têm-se de fato a requisição. Com o intuito de simplicidade e praticidade, foi utilizada uma biblioteca javascript chamada jquery, para realização das requisições, e seu uso é demonstrado a partir da linha 26, onde está sendo chamado o método ajax, por meio do objeto \$(cifrão), método este, que nos permite reqlizar requisições assíncronas, ou seja, o fluxo do código não é interrompido até que a resposta seja obtida. Pelo contrário, após realizar a requisição, a resposta é obtida em um momento posterior, de forma independente, e tratada por meio de uma função (chamada função de callback). Esse método recebe como parâmetro, um objeto javascript, que servirá como base para configurar o funcionamento da requisição:
+Como a maioria das linguagens de programação possuem suporte à codificação e decodificação do formato base64, por o mesmo ser bastante conhecido, não há necessidade de explicar o seu funcionamento. Portanto, no código listado acima, a partir da linha 21, entende-se que a imagem selecionada já está codificada em tal formato, e que seu valor está atribuído na variável chamada "base64". Assim sendo, na linha 22, têm-se a definição de qual serviço o usuário escolheu, atribuindo-o à variável serviceUrl, que mais tarde será utilizada para redirecionar a requisição para o serviço correto; a linha 23 é responsável pela criação e atribuição de um objeto de comunicação JSON com o atributo Img, como já descrito na tabela 2; A partir da linha 26, têm-se de fato a requisição. Com o intuito de simplicidade e praticidade, foi utilizada uma biblioteca javascript chamada jquery, para realização das requisições, e seu uso é demonstrado a partir da linha 26, onde está sendo chamado o método ajax, por meio do objeto \$(cifrão), método este, que nos permite realizar requisições assíncronas, ou seja, o fluxo do código não é interrompido até que a resposta seja obtida. Pelo contrário, após realizar a requisição, a resposta é obtida em um momento posterior, de forma independente, e tratada por meio de uma função (chamada função de callback). Esse método recebe como parâmetro, um objeto javascript, que servirá como base para configurar o funcionamento da requisição:
 
 \section{Considerações Finais}
 
