@@ -309,7 +309,7 @@ Para o desenvolvimento do middleware, foram utilizadas as tecnologias: Java - co
 
 \section{Estudo de caso}
 
-Nesta sessão, serão descritos os passos necessários para a realização de consumo dos serviços da API por meio da comunicação com o Middleware, mostrando o desenvolvimento de uma aplicação cliente como estudo de caso.
+Nesta sessão, serão descritos os passos necessários para a realização de consumo dos serviços da API por meio da comunicação com o Middleware, apresentando o desenvolvimento de uma aplicação cliente como estudo de caso.
 
 A escolha da linguagem JavaScript como base para o desenvolvimento da aplicação cliente, se deu mais pela necessidade de demonstrar a independência de plataforma que o Middleware nos proporciona, e também pelo fato de que atualmente JavaScript é uma das linguagens mais conhecidas e utilizadas ao redor do mundo.
 
@@ -333,7 +333,35 @@ O código da figura 5 diz respeito ao código necessário para realizar a requis
 	\label{fig:Figura5}
 \end{figure}
 
-Como a maioria das linguagens de programação possuem suporte à codificação e decodificação do formato base64, por o mesmo ser bastante conhecido, não há necessidade de explicar o seu funcionamento. Portanto, no código listado acima, a partir da linha 21, entende-se que a imagem selecionada já está codificada em tal formato, e que seu valor está atribuído na variável chamada "base64". Assim sendo, na linha 22, têm-se a definição de qual serviço o usuário escolheu, atribuindo-o à variável serviceUrl, que mais tarde será utilizada para redirecionar a requisição para o serviço correto; a linha 23 é responsável pela criação e atribuição de um objeto de comunicação JSON com o atributo Img, como já descrito na tabela 2; A partir da linha 26, têm-se de fato a requisição. Com o intuito de simplicidade e praticidade, foi utilizada uma biblioteca javascript chamada jquery, para realização das requisições, e seu uso é demonstrado a partir da linha 26, onde está sendo chamado o método ajax, por meio do objeto \$(cifrão), método este, que nos permite realizar requisições assíncronas, ou seja, o fluxo do código não é interrompido até que a resposta seja obtida. Pelo contrário, após realizar a requisição, a resposta é obtida em um momento posterior, de forma independente, e tratada por meio de uma função (chamada função de callback). Esse método recebe como parâmetro, um objeto javascript, que servirá como base para configurar o funcionamento da requisição:
+Como a maioria das linguagens de programação possuem suporte à codificação e decodificação do formato base64, por o mesmo ser bastante difundido, não há necessidade de explicar o seu funcionamento. Portanto, no código listado acima, a partir da linha 21, entende-se que a imagem selecionada já está codificada em tal formato, e que seu valor está atribuído na variável denominada "base64". 
+
+Assim sendo, na linha 22, têm-se a definição de qual serviço o usuário escolheu, atribuindo-o à variável serviceUrl, que mais tarde será utilizada para redirecionar a requisição para o serviço correto. A Figura \ref{fig:Figura6} exibe as URLs associadas a cada serviço do webservice. Como o middleware está localizado na máquina local, seu acesso se tem por meio da URL \url{http://localhost:8080/demorest/restapi/ws}; 
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.9\textwidth]{caminho-servicos.png}
+	\caption{Urls referentes aos serviços disponibilizados}
+	\label{fig:Figura6}
+\end{figure}
+
+A linha 23 é responsável pela criação e atribuição de um objeto de comunicação JSON com o atributo Img, como já descrito na tabela 2; 
+
+A partir da linha 26, têm-se de fato a requisição. Com o intuito de simplicidade e praticidade, foi utilizada uma biblioteca javascript chamada jquery, para realização das requisições, e seu uso é demonstrado a partir da linha 26, onde está sendo chamado o método ajax, por meio do objeto \$(cifrão), método este, que nos permite realizar requisições assíncronas, ou seja, o fluxo do código não é interrompido até que a resposta seja obtida. Pelo contrário, após realizar a requisição, a resposta é obtida em um momento posterior, de forma independente, e tratada por meio de uma função (chamada função de callback) que será executada após o término da requisição. Com uma sintaxe bastante simples, esse método nos permite enviar e tratar o resultado de requisições assíncronas:
+
+Linha 27: informamos qual método/verbo HTTP será utilizado na requisição;
+
+Linhas 33 a 36: informamos ao middleware, sob qual formato os dados do corpo da requisição foram encapsulados, e sob qual formato a aplicação cliente espera receber como resposta à sua requisição;
+
+Linha 37: informamos a URL para a qual enviaremos a requisição;
+
+Linha 28: enviamos alguma informação no corpo da requisição;
+
+Linhas 29 a 32: o argumento beforeSend recebe uma função que é executada antes de a requisição ser enviada. Nesse caso, atribuímos um "gif" no local onde será inserido a imagem processada pela API, para demonstrar ao usuário que o processo de requisição ainda não foi concluído;
+
+Linhas 38 a 45: a função de callback success é executada quando a requisição é finalizada com sucesso, e nos permite tratar o retorno do servidor, que é recebido por meio do parâmetro "resposta";
+
+Linhas 46 a 48: a função de callback error, por sua vez, é executada quando ocorre algum erro na requisição. De modo semelhante, a mensagem de erro é recebida no parâmetro "e".
+%recebe como parâmetro, um objeto javascript, que servirá como base para configurar o funcionamento da requisição:
 
 \section{Considerações Finais}
 
