@@ -325,7 +325,7 @@ Como o Java EE é apenas uma especificação, fez-se o uso de um dos principais 
 \end{figure}
 
 Na figura acima, a linha 12 refere-se ao pacote java onde estarão salvas as classes referentes aos recursos do web service, já na linha 18, está sendo definida a Url base a qual a partir da mesma será possível o acesso aos recursos, ou seja, no momento, o servidor está sendo acessível pelo seguinte endereço web: \url{http://endereco_ip_servidor:8080/nome_projeto/restapi}.
-Em seguida, é necessário a criação de tais classes. Neste trabalho, foi criada a classe MyResource, no pacote descrito pela linha 12 da figura \ref{fig:Figura9}, Segue na figura \ref{fig:Figura10} o código referente à classe MyResource:
+Em seguida, é necessário a criação de tais classes. Neste trabalho, foi criada a classe MyResource, no pacote descrito pela linha 12 da figura \ref{fig:Figura9}, A figura \ref{fig:Figura10} mostra a implementação da classe que expõe os métodos como serviços REST:
 
 \begin{figure}[ht]
 	\centering
@@ -333,6 +333,9 @@ Em seguida, é necessário a criação de tais classes. Neste trabalho, foi cria
 	\caption{Classe MyResource - código referente ao serviço greenService}
 	\label{fig:Figura10}
 \end{figure}
+
+A anotação @Path definida na classe, indica o endereço por meio do qual o recurso será acessado, em conjunto com as anotações @Path, nos métodos implementados pela classe, por exemplo, o método getGreenImg(serviço GreenService), que possui a anotação @Path com o valor /get/image/green\_filter poderá ser acessado por meio da Url \url{http://endereco_ip_servidor:8080/nome_projeto/restapi/ws/get/image/green_filter}.
+ O método getGreenImg recebe como parâmetro um objeto do tipo Requisicao, e envia como resposta um objeto do tipo Resposta, ambos descritos na tabela 2. Para acessar esse método, é necessário indicar no cabeçalho da requisição que se deseja acessar o método com tipo de resposta APPLICATION\_JSON. As anotações @POST, @Consumes, e @Produces, dizem respeito ao método/verbo HTTP pelo qual o serviço pode ser acessado, o tipo hipermídia que o serviço aceita como corpo da requisição, e o tipo de hipermídia que o serviço retornará à aplicação cliente, respectivamente. Há também outro método chamado getBlackAndWhiteImg, porém, como o mesmo é muito semelhante ao anterior, decidiu-se omitir sua implementação.
 
 \subsubsection{Armazenamento e transmissão de informação}
 
