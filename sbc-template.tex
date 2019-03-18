@@ -162,8 +162,8 @@ Descrito por Fielding (2000), REST é um modelo de arquitetura de software distr
 %Um sistema no estilo REST é denominado RESTful e possui as seguintes características:
 Um sistema baseado no modelo REST denomina-se RESTful. Para a implementação de tal sistema não há a necessidade da criação de novos protocolos ou tecnologias, pois o mesmo é suportado em qualquer arquitetura de rede.
 Enquanto o SOAP é um protocolo de mensagens, o REST é um estilo de arquitetura
-de software para sistemas hipermídia distribuídos, conhecidos como recursos. Um recurso RESTful é qualquer coisa que possua um endereço através da web, ou seja, sistemas em que as hipermídias são armazenadas em uma rede e interconectadas através de hiperlinks podendo ser acessados e transferidos entre clientes e servidores.
-O núcleo da abordagem REST consiste na utilização dos métodos HTTP, que correspondem às operações CRUD (Create, Read, Update, Delete). Cada requisição HTTP inclui um dos métodos apresentados na tabela 2.1 para indicar qual a operação CRUD que deve ser realizada sobre o recurso.
+de software para sistemas hipermídia distribuídos, conhecidos como recursos e são acessados via URIs (Uniform Resource Identifiers ou, em português, Identificador Uniforme de Recursos). Um recurso RESTful é qualquer coisa que possua um endereço através da web, como por exemplo uma imagem jpg, dados de uma empresa, entre outros, ou seja, sistemas em que as hipermídias são armazenadas em uma rede e interconectadas através de hiperlinks podendo ser acessados e transferidos entre clientes e servidores.
+O núcleo da abordagem REST consiste na utilização dos métodos HTTP, que correspondem às operações CRUD (Create, Read, Update, Delete). Cada requisição HTTP inclui um dos métodos apresentados na tabela 1 para indicar qual a operação CRUD que deve ser realizada sobre o recurso.
 \begin{table}[ht]
 	\centering
 	\caption{Métodos HTTP e operações CRUD}
@@ -318,12 +318,83 @@ O Java EE consiste de uma série de especificações bem detalhadas, ditando com
 Como o Java EE é apenas uma especificação, fez-se o uso de um dos principais frameworks utilizados para desenvolver aplicações RESTful em Java, o Jersey, que implementa todas as características da arquitetura REST.
 
 \subsubsection{Armazenamento e transmissão de informação}
-JSON - como forma padrão de comunicação entre servidor e cliente; codificação base64 - para facilitar a transferência de arquivos binários(imagens, no contexto deste trabalho).
+
+Como forma padrão de comunicação entre servidor e cliente, foi adotado o JSON. O JSON é um formato de troca de dados entre sistemas independente de linguagem de programação derivado do JavaScript[1][2]; a figura \ref{fig:Figura4} exibe um exemplo de arquivo JSON, com a representação de um array de carros, onde cada elemento do array possui os atributos modelo e ano:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.7\textwidth]{exemplo-json.png}
+	\caption{Exemplo de representação JSON}
+	\label{fig:Figura4}
+\end{figure}
+
+Para que fosse possível a transmissão de um arquivo binário de forma leve e eficiente, foi utilizado o padrão de codificação base64, que nada mais é do que uma forma de representar arquivos binários(imagens, no contexto deste trabalho) em formato de texto, método comumente utilizado na internet para transferência de dados.
+Seu nome é dado pelo fato de o mesmo ser constituído por 64 caracteres ([A-Za-z0-9], "/" e "+"). Trabalha com transformação em bits a partir de um outro padrão, como por exemplo ASCII. A tabela 3 expressa um exemplo de codificação da palavra “Fer”.
+
+\begin{table}[ht]
+	\centering
+	\caption{Exemplo de codificação base64}
+	\label{tab:Table3}
+	\smallskip
+	\begin{tabular}{ |l|l|l|l| }
+		\hline
+		Conteúdo & F & e & r \\ \hline
+		ASCII & 70 & 101 & 114 \\ \hline
+		Padrão em Bit & 01000110 & 01100101 & 01110010\\ \hline
+	\end{tabular}
+\end{table}
+
+Em seguida a cada 6 bits da esquerda para a direita, os valores são convertidos para decimal e posteriormente o algoritmo base 64 entende estes decimais como índices para serem convertidos a um dos 64 caracteres, como mostra o exemplo a seguir:
+
+\begin{table}[ht]
+	\centering
+	\caption{Exemplo de codificação base64}
+	\label{tab:Table4}
+	\smallskip
+	\begin{tabular}{ |l|l|l| }
+		\hline
+		Bits & Decimal & Base 64\\ \hline
+		0 1 0 0 0 1 & 17 & R \\ \hline
+		1 0 0 1 1 0 & 38 & m \\ \hline
+		0 1 0 1 0 1 & 21 & V \\ \hline
+		1 1 0 0 1 0 & 50 & y \\ \hline
+	\end{tabular}
+\end{table}
+
+Na tabela 5 confere-se os índices de conversão para base64.
+
+\begin{table}[ht]
+	\centering
+	\caption{Tabela de índices base64}
+	\label{tab:Table5}
+	\smallskip
+	\begin{tabular}{ |l|l|l|l| }
+		\hline
+		Value Char&Value Char&Value Char&Value Char \\ \hline
+		0	A&	16	Q&	32	g&	48	w \\ \hline
+		1	B&	17	R&	33	h&	49	x \\ \hline
+		2	C&	18	S&	34	i&	50	y \\ \hline
+		3	D&	19	T&	35	j&	51	z \\ \hline
+		4	E&	20	U&	36	k&	52	0 \\ \hline
+		5	F&	21	V&	37	l&	53	1 \\ \hline
+		6	G&	22	W&	38	m&	54	2 \\ \hline
+		7	H&	23	X&	39	n&	55	3 \\ \hline
+		8	I&	24	Y&	40	o&	56	4 \\ \hline
+		9	J&	25	Z&	41	p&	57	5 \\ \hline
+		10	K&	26	a&	42	q&	58	6 \\ \hline
+		11	L&	27	b&	43	r&	59	7 \\ \hline
+		12	M&	28	c&	44	s&	60	8 \\ \hline
+		13	N&	29	d&	45	t&	61	9 \\ \hline
+		14	O&	30	e&	46	u&	62	+ \\ \hline
+		15	P&	31	f&	47	v&	63	/ \\ \hline
+	\end{tabular}
+\end{table}
 
 \subsubsection{Apache Maven}
 
 Inicialmente, para criação do projeto, utilizou-se da ferramenta de automatização de construção e gerenciamento de projetos Java, denominada Apache Maven, embora também possa ser utilizada com outras linguagens. Ela fornece aos desenvolvedores uma forma padronizada de automação, construção e publicação de suas aplicações.
-O processo de criação de um projeto Java EE  envolve vários passos, como a criação de um diretório principal com vários subdiretórios, a configuração de diversos arquivos XML, a obtenção de bibliotecas para o projeto, a criação dos pacotes de publicação, a geração de documentação javadoc, entre outras etapas. Normalmente, sem a utilização de tal ferramenta, cada projeto teria sua própria estrutura, seu próprio jeito de gerar pacotes(jar, war), ou de executar cada um desses passos. Projetos complexos, com vários módulos, podem exigir uma ordem específica para a compilação dos mesmos, para que se chegue ao pacote final[devmedia]. Essa não-padronização, pode gerar vários problemas, como por exemplo, um desenvolvedor alterar a estrutura de pastas do projeto referente a localização de imagens, e esquecer de avisar aos demais, o sistema passaria a funcionar de forma instável em algumas partes. Tendo em vista esses pontos, e o fato de que tal ferramenta incentiva a adoção de boas práticas, optou-se por utilizá-la.
+
+O processo de criação de um projeto Java EE  envolve vários passos, como a criação de um diretório principal com vários subdiretórios, a configuração de diversos arquivos XML, a obtenção de bibliotecas para o projeto, a criação dos pacotes de publicação, a geração de documentação javadoc, entre outras etapas. Normalmente, sem a utilização de tal ferramenta, cada projeto teria sua própria estrutura, seu próprio jeito de gerar pacotes(jar, war), ou de executar cada um desses passos. Projetos complexos, com vários módulos, podem exigir uma ordem específica para a compilação dos mesmos, para que se chegue ao pacote final[devmedia]. Essa não-padronização, pode acarretar vários problemas, como por exemplo, um desenvolvedor alterar a estrutura de pastas do projeto referente a localização de imagens, e esquecer de avisar aos demais, o sistema passaria a funcionar de forma instável em algumas partes. Tendo em vista esses pontos, e o fato de que tal ferramenta incentiva a adoção de boas práticas, optou-se por utilizá-la.
 
 ,que possui x e y, um exemplo de pom.xml é apresentado na figura;
 
@@ -333,35 +404,35 @@ Nesta sessão, serão descritos os passos necessários para a realização de co
 
 A escolha da linguagem JavaScript como base para o desenvolvimento da aplicação cliente, se deu mais pela necessidade de demonstrar a independência de plataforma que o Middleware nos proporciona, e também pelo fato de que atualmente JavaScript é uma das linguagens mais conhecidas e utilizadas ao redor do mundo.
 
-A figura 4 representa a interface da aplicação cliente desenvolvida.
+A figura 5 representa a interface da aplicação cliente desenvolvida.
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=.7\textwidth]{aplicacao-cliente.png}
 	\caption{Aplicação Cliente}
-	\label{fig:Figura4}
+	\label{fig:Figura5}
 \end{figure}
 
 Esta aplicação consiste em uma página HTML, que utiliza-se da linguagem javascript para realizar as requisições ao Webservice. Na figura acima, temos a lista de serviços disponibilizados pelo middleware(1), onde o usuário poderá escolher qual filtro aplicar, um botão para selecionar a imagem desejada(2), a imagem escolhida(3), a imagem final(4), após o processamento da API, e resposta do middeware, e por fim, o botão de enviar(5), que realizará a requisição.
 
-O código da figura 5 diz respeito ao código necessário para realizar a requisição aos serviços do webservice:
+O código da figura 6 diz respeito ao código necessário para realizar a requisição aos serviços do webservice:
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=.9\textwidth]{cliente-requisicao.png}
 	\caption{Código responsável pela requisição ao webservice}
-	\label{fig:Figura5}
+	\label{fig:Figura6}
 \end{figure}
 
 Como a maioria das linguagens de programação possuem suporte à codificação e decodificação do formato base64, por o mesmo ser bastante difundido, não há necessidade de explicar o seu funcionamento. Portanto, no código listado acima, a partir da linha 21, entende-se que a imagem selecionada já está codificada em tal formato, e que seu valor está atribuído na variável denominada "base64". 
 
-Assim sendo, na linha 22, têm-se a definição de qual serviço o usuário escolheu, atribuindo-o à variável serviceUrl, que mais tarde será utilizada para redirecionar a requisição para o serviço correto. A Figura \ref{fig:Figura6} exibe as URLs associadas a cada serviço do webservice. Como o middleware está localizado na máquina local, seu acesso se tem por meio da URL \url{http://localhost:8080/demorest/restapi/ws}; 
+Assim sendo, na linha 22, têm-se a definição de qual serviço o usuário escolheu, atribuindo-o à variável serviceUrl, que mais tarde será utilizada para redirecionar a requisição para o serviço correto. A Figura \ref{fig:Figura7} exibe as URLs associadas a cada serviço do webservice. Como o middleware está localizado na máquina local, seu acesso se tem por meio da URL \url{http://localhost:8080/demorest/restapi/ws}; 
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=.9\textwidth]{caminho-servicos.png}
 	\caption{Urls referentes aos serviços disponibilizados}
-	\label{fig:Figura6}
+	\label{fig:Figura7}
 \end{figure}
 
 A linha 23 é responsável pela criação e atribuição de um objeto de comunicação JSON com o atributo Img, como já descrito na tabela 2; 
@@ -393,6 +464,10 @@ the author names references in brackets, e.g. \cite{knuth:84},
 The references must be listed using 12 point font size, with 6 points of space
 before each reference. The first line of each reference should not be
 indented, while the subsequent should be indented by 0.5 cm.
+
+[1][2]
+ «ECMA-404 The JSON Data Interchange Standard.». json.org. Consultado em 23 de janeiro de 2015
+«Network Working Group». ietf.org (em inglês). Consultado em 23 de janeiro de 2015
 
 SANDOVAL, Jose. RESTful Java Web Services. Birmingham: Packt Publishing,
 2009.
