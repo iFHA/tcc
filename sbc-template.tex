@@ -75,15 +75,14 @@ desenvolvedores de software. Esse aumento do poder computacional gera um desejo 
 problemas de maior escopo por parte de programadores e pesquisadores, e uma das áreas que podem 
 se beneficiar de tal avanço é a de Processamento Digital de Imagens (PDI), pois a popularização 
 de dispositivos de aquisição e armazenamento de mídias digitais, como imagens e vídeos, faz 
-crescer a demanda por software capaz de manipulá-las. Neste contexto, bibliotecas de software 
-podem incorporar implementações de métodos que são a base comum para a manipulação de imagens e 
+crescer a demanda por software capaz de manipulá-las. Neste contexto, APIs podem incorporar implementações de métodos que são a base comum para a manipulação de imagens e 
 vídeos a fim de minimizar erros de codificação, diminuir o custo e o tempo de produção. 
 Com a disseminação da internet e da consequente e inevitável necessidade de troca de informação, 
 as aplicações e sistemas desenvolvidos hoje em dia precisam 
 atender a certas condições do cenário atual, essas condições dizem respeito às características 
 de execução dos softwares de forma distribuída, rápida e portável. 
 
-Diante da necessidade de permitir que uma biblioteca de PDI atenda a tais requisitos, surge a
+Diante da necessidade de permitir que uma API de PDI atenda a tais requisitos, surge a
 possibilidade de implementar uma ferramenta, independente de plataforma, para a
 disponibilização de suas funcionalidades.
 
@@ -196,18 +195,18 @@ nova imagem de obtida [4].
 Na maioria dos casos, os métodos que se deseja implementar para a manipulação das imagens são mapeamentos, considerando a utilização de uma matemática
 básica ou avançada, que utilizam as posições e os valores dos próprios pixels. Entretanto, quando os programadores se deparam com o desenvolvimento de
 programas que processam imagens, eles devem se preocupar com outras tarefas que não são estão ligadas à essência do PDI. Exemplos destas tarefas são dados
-pela escolha e utilização de bibliotecas para a leitura e gravação de arquivos, criação de interface gráfica ou aplicação de testes para verificação do que foi
-implementado. Estas nuâncias de implementação podem ser abstraídas através do uso de uma biblioteca específica que faça a abstração destas tarefas [4, 5].
+pela escolha e utilização de APIs para a leitura e gravação de arquivos, criação de interface gráfica ou aplicação de testes para verificação do que foi
+implementado. Estas nuâncias de implementação podem ser abstraídas através do uso de uma API específica que faça a abstração destas tarefas [4, 5].
 
 \subsection{API em Desenvolvimento}
 
 API do Inglês Application Programming Interface(ou Interface de Programação de Aplicativos), é um conjunto de rotinas e padrões que são seguidos com o intuito de utilizar a funcionalidade de algum software, onde não há a necessidade de o usuário se ater aos detalhes internos de funcionamento do mesmo, ou seja, sua implementação não necessita ser compreendida pelo usuário. 
 Paralelamente a este trabalho, está em processo de desenvolvimento, uma API, livre e de código aberto, que poderá ser utilizada para o desenvolvimento de software na área de PDI, para a manipulação de imagens utilizando-se de técnicas de processamento paralelo, podendo ajudar a diminuir custos e tempo para a produção de programas. Além disso, mais programadores podem utilizá-la para o PDI sem que seja necessário que eles se tornem especialistas na área.
-Até o presente momento, foram desenvolvidos dois filtros para aplicação em imagens, sendo eles o filtro preto e branco YIQ, e o filtro de recuperação do canal verde da imagem. Este trabalho tem como foco, a disponibilização das funcionalidades dessa API exposta em específico.
+Até o presente momento, foram desenvolvidos dois filtros para aplicação em imagens, sendo eles o filtro preto e branco YIQ, e o filtro de recuperação do canal verde da imagem. Este trabalho tem como foco, a disponibilização das funcionalidades dessa API exposta em específico, que, como já mencionado, está em constante desenvolvimento e mais funcionalidades podem ser adicionadas ao serviço remoto.
 
-\section{Mecanismo de chamada de serviço remoto (RSI)}
+\section{Desenvolvimento}
 
-Esta sessão está destinada a descrever a arquitetura e funcionamento do Middleware proposto, bem como as tecnologias envolvidas em sua implementação.
+Esta sessão está destinada a descrever a arquitetura e funcionamento da ferramenta proposta, bem como a disponibilização de seus serviços, e as tecnologias envolvidas em sua implementação.
 
 
 %A função de um middleware é tornar possível a comunicação entre aplicações que
@@ -226,11 +225,11 @@ Para a troca de informações adotou-se o JSON (JavaScript Object Notation). O
 JSON é um formato de interconexão de dados utilizado em ambientes cliente-servidor
 que possibilita o desenvolvimento nas mais variadas linguagens. O JSON atualmente
 vem sendo utilizado como linguagem padrão para comunicação entre sistemas nas mais
-diversas plataformas. A disponibilidade de bibliotecas e o desempenho proporcionado
+diversas plataformas. A disponibilidade de APIs que realizam processamento desse objeto de comunicação e o desempenho proporcionado
 pela simplicidade da transmissão de dados utilizando JSON influenciaram na decisão
 por utilizá-lo.
 
-A interoperabilidade entre a aplicação cliente e a biblioteca de PDI, conforme ilustrado na Figura 2, é
+A interoperabilidade entre a aplicação cliente e a API de PDI, conforme ilustrado na Figura 2, é
 realizado da seguinte forma:
 \begin{itemize}
 	\item A aplicação cliente se conecta ao web service através da URL de acesso a algum serviço disponibilizado pelo mesmo, informando junto com a requisição, a imagem alvo a qual se deseja realizar tal transformação, codificada no formato base64;
@@ -256,8 +255,8 @@ A desvantagem é que recursos computacionais de um servidor serão alocados para
 A utilização das funcionalidades da API de forma direta, necessitando de tê-la instalada na própria máquina do utilizador, traria alguns inconvenientes, sendo eles:
 \begin{itemize}
 	\item O usuário necessitar instalar novas versões da mesma à medida que novas funcionalidades forem sendo adicionadas;
-	\item Dependência de plataforma, uma vez que para se comunicar corretamente com a biblioteca de programação, o usuário necessita utilizar a mesma linguagem de programação com a qual a mesma fora implementada;
-	\item Restrição de utilização da biblioteca à medida que os recursos da máquina do usuário foram ficando mais escassos, uma vez que todo o processamento da API será feito no computador do usuário.
+	\item Dependência de plataforma, uma vez que para se comunicar corretamente com a API, o usuário necessita utilizar a mesma linguagem de programação com a qual a mesma fora implementada;
+	\item Restrição de utilização da API à medida que os recursos da máquina do usuário foram ficando mais escassos, uma vez que todo o processamento da API será feito no computador do usuário.
 \end{itemize}
 %O uso do MiddleWare desonera o consumo da bateria e o processamento do aparelho que esteja executando o mesmo, ampliando sua performance.
 
@@ -490,7 +489,8 @@ Linhas 46 a 48: a função de callback error, por sua vez, é executada quando o
 
 \section{Considerações Finais}
 
-
+O principal objetivo do middleware desenvolvido é possibilitar aos desenvolvedores uma forma fácil e intuitiva de utilizar as funcionalidades da API apresentada na seção 2.4 por meio de requisições HTTP. Para isso, o programador não deverá encontrar dificuldades em adaptar a sua forma de de-
+senvolvimento atual para um arquitetura de comunicação distribuída.
 Bibliographic references must be unambiguous and uniform.  We recommend giving
 the author names references in brackets, e.g. \cite{knuth:84},
 \cite{boulic:91}, and \cite{smith:99}.

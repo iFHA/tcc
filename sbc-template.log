@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  18 MAR 2019 11:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  18 MAR 2019 20:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -278,56 +278,56 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 <figura1.png, id=15, 456.95718pt x 135.50626pt>
 File: figura1.png Graphic file (type png)
 <use figura1.png>
-Package pdftex.def Info: figura1.png  used on input line 144.
+Package pdftex.def Info: figura1.png  used on input line 143.
 (pdftex.def)             Requested size: 341.43437pt x 101.25311pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 145.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 144.
 
 
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 145.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 144.
  [3 <./figura1.png (PNG copy)>] [4]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 236.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 235.
 
  (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 236.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 235.
 <modelo-comunicacao.png, id=23, 108.405pt x 305.34074pt>
 File: modelo-comunicacao.png Graphic file (type png)
 <use modelo-comunicacao.png>
-Package pdftex.def Info: modelo-comunicacao.png  used on input line 244.
+Package pdftex.def Info: modelo-comunicacao.png  used on input line 243.
 (pdftex.def)             Requested size: 85.35696pt x 240.4338pt.
  [5] [6 <./modelo-comunicacao.png (PNG copy)>]
-Overfull \hbox (21.54872pt too wide) in paragraph at lines 287--296
+Overfull \hbox (21.54872pt too wide) in paragraph at lines 286--295
  [][] 
  []
 
 <ds-green-filter.png, id=31, 350.81062pt x 359.09157pt>
 File: ds-green-filter.png Graphic file (type png)
 <use ds-green-filter.png>
-Package pdftex.def Info: ds-green-filter.png  used on input line 302.
+Package pdftex.def Info: ds-green-filter.png  used on input line 301.
 (pdftex.def)             Requested size: 298.75264pt x 305.8265pt.
 [7]
 <web-xml.png, id=36, 536.75531pt x 207.02344pt>
 File: web-xml.png Graphic file (type png)
 <use web-xml.png>
-Package pdftex.def Info: web-xml.png  used on input line 323.
+Package pdftex.def Info: web-xml.png  used on input line 322.
 (pdftex.def)             Requested size: 384.1096pt x 148.14697pt.
  [8 <./ds-green-filter.png (PNG copy)>]
 <codigo-green-service.png, id=40, 603.0028pt x 399.74344pt>
 File: codigo-green-service.png Graphic file (type png)
 <use codigo-green-service.png>
-Package pdftex.def Info: codigo-green-service.png  used on input line 333.
+Package pdftex.def Info: codigo-green-service.png  used on input line 332.
 (pdftex.def)             Requested size: 384.1096pt x 254.6333pt.
  [9 <./web-xml.png (PNG copy)> <./codigo-green-service.png (PNG copy)>]
 <exemplo-json.png, id=44, 284.56313pt x 79.79813pt>
 File: exemplo-json.png Graphic file (type png)
 <use exemplo-json.png>
-Package pdftex.def Info: exemplo-json.png  used on input line 347.
+Package pdftex.def Info: exemplo-json.png  used on input line 346.
 (pdftex.def)             Requested size: 298.75264pt x 83.78561pt.
 
 Underfull \vbox (badness 1590) has occurred while \output is active []
@@ -336,24 +336,24 @@ Underfull \vbox (badness 1590) has occurred while \output is active []
 <jersey-pom.png, id=51, 425.33907pt x 173.89969pt>
 File: jersey-pom.png Graphic file (type png)
 <use jersey-pom.png>
-Package pdftex.def Info: jersey-pom.png  used on input line 426.
+Package pdftex.def Info: jersey-pom.png  used on input line 425.
 (pdftex.def)             Requested size: 384.1096pt x 157.05222pt.
  [12 <./jersey-pom.png (PNG copy)>]
 <aplicacao-cliente.png, id=55, 584.1825pt x 756.8275pt>
 File: aplicacao-cliente.png Graphic file (type png)
 <use aplicacao-cliente.png>
-Package pdftex.def Info: aplicacao-cliente.png  used on input line 445.
+Package pdftex.def Info: aplicacao-cliente.png  used on input line 444.
 (pdftex.def)             Requested size: 298.75264pt x 387.0509pt.
 <cliente-requisicao.png, id=57, 767.86874pt x 568.1225pt>
 File: cliente-requisicao.png Graphic file (type png)
 <use cliente-requisicao.png>
-Package pdftex.def Info: cliente-requisicao.png  used on input line 456.
+Package pdftex.def Info: cliente-requisicao.png  used on input line 455.
 (pdftex.def)             Requested size: 384.1096pt x 284.19923pt.
  [13 <./aplicacao-cliente.png>]
 <caminho-servicos.png, id=63, 664.4825pt x 53.19875pt>
 File: caminho-servicos.png Graphic file (type png)
 <use caminho-servicos.png>
-Package pdftex.def Info: caminho-servicos.png  used on input line 467.
+Package pdftex.def Info: caminho-servicos.png  used on input line 466.
 (pdftex.def)             Requested size: 384.1096pt x 30.7522pt.
  [14 <./cliente-requisicao.png> <./caminho-servicos.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 512--515
@@ -371,7 +371,7 @@ uisicoes-
 Here is how much of TeX's memory you used:
  3332 strings out of 492639
  46498 string characters out of 6135497
- 137027 words of memory out of 5000000
+ 136027 words of memory out of 5000000
  7140 multiletter control sequences out of 15000+600000
  21548 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -385,7 +385,7 @@ lvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr
 /share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/font
 s/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on sbc-template.pdf (16 pages, 845133 bytes).
+Output written on sbc-template.pdf (16 pages, 845675 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  66 compressed objects within 1 object stream
