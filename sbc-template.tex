@@ -309,12 +309,9 @@ Nesta seção, serão descritas, bem como o título da mesma explicita, as tecno
 
 \subsubsection{Java Enterprise Edition(Java EE)}
 
-\subsubsection{Apache Maven}
+Como mencionado na introdução deste trabalho, a linguagem escolhida para desenvolvimento do middleware foi Java, que é uma das linguagens de desenvolvimento multiplataforma mais conhecidas e atualmente está bastante consolidada no mercado, com vários fóruns e comunidades dispostos a nos auxiliar no processo de construção de software, o que torna tal escolha bastante razoável. 
 
-Inicialmente, para criação do projeto, utilizou-se da ferramenta de automatização de construção e gerenciamento de projetos Java, denominada Apache Maven, embora também possa ser utilizada com outras linguagens. Ela fornece aos desenvolvedores uma forma padronizada de automação, construção e publicação de suas aplicações.
-O processo de criação de um projeto Java EE  envolve vários passos, como a criação de um diretório principal com vários subdiretórios, a configuração de diversos arquivos XML, a obtenção de bibliotecas para o projeto, a criação dos pacotes de publicação, a geração de documentação javadoc, entre outras etapas. Normalmente, sem a utilização de tal ferramenta, cada projeto teria sua própria estrutura, seu próprio jeito de gerar pacotes(jar, war), ou de executar cada um desses passos. Projetos complexos, com vários módulos, podem exigir uma ordem específica para a compilação dos mesmos, para que se chegue ao pacote final[devmedia]. Essa não-padronização, pode gerar vários problemas, como por exemplo, um desenvolvedor alterar a estrutura de pastas do projeto referente a localização de imagens, e esquecer de avisar aos demais, o sistema passaria a funcionar de forma instável em algumas partes. Tendo em vista esses pontos, e o fato de que tal ferramenta incentiva a adoção de boas práticas, optou-se por utilizá-la.
-
-,que possui x e y, um exemplo de pom.xml é apresentado na figura;
+O Java EE consiste de uma série de especificações bem detalhadas, ditando como deve ser implementado um software capaz de realizar serviços de infraestrutura, como web services, persistência em banco de dados, gerenciamento de conexões HTTP, acesso remoto, gerenciamento de sessão web, entre outros. Tudo isso, claro, baseado na linguagem Java.
 
 \subsubsection{Framework Jersey}
 
@@ -322,6 +319,13 @@ Como o Java EE é apenas uma especificação, fez-se o uso do framework Jersey, 
 Para o desenvolvimento do middleware, foram utilizadas as tecnologias: Java - como linguagem padrão da implementação; Jersey - como framework para criação do webservice; Maven - como ferramenta de automatização e gerenciamento de projetos; JSON - como forma padrão de comunicação entre servidor e cliente; codificação base64 - para facilitar a transferência de arquivos binários(imagens, no contexto deste trabalho).
 
 \subsubsection{Armazenamento e transmissão de informação}
+
+\subsubsection{Apache Maven}
+
+Inicialmente, para criação do projeto, utilizou-se da ferramenta de automatização de construção e gerenciamento de projetos Java, denominada Apache Maven, embora também possa ser utilizada com outras linguagens. Ela fornece aos desenvolvedores uma forma padronizada de automação, construção e publicação de suas aplicações.
+O processo de criação de um projeto Java EE  envolve vários passos, como a criação de um diretório principal com vários subdiretórios, a configuração de diversos arquivos XML, a obtenção de bibliotecas para o projeto, a criação dos pacotes de publicação, a geração de documentação javadoc, entre outras etapas. Normalmente, sem a utilização de tal ferramenta, cada projeto teria sua própria estrutura, seu próprio jeito de gerar pacotes(jar, war), ou de executar cada um desses passos. Projetos complexos, com vários módulos, podem exigir uma ordem específica para a compilação dos mesmos, para que se chegue ao pacote final[devmedia]. Essa não-padronização, pode gerar vários problemas, como por exemplo, um desenvolvedor alterar a estrutura de pastas do projeto referente a localização de imagens, e esquecer de avisar aos demais, o sistema passaria a funcionar de forma instável em algumas partes. Tendo em vista esses pontos, e o fato de que tal ferramenta incentiva a adoção de boas práticas, optou-se por utilizá-la.
+
+,que possui x e y, um exemplo de pom.xml é apresentado na figura;
 
 \section{Estudo de caso}
 
