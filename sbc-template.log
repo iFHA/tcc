@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  18 MAR 2019 01:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  18 MAR 2019 01:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -317,20 +317,19 @@ File: aplicacao-cliente.png Graphic file (type png)
 <use aplicacao-cliente.png>
 Package pdftex.def Info: aplicacao-cliente.png  used on input line 340.
 (pdftex.def)             Requested size: 298.75264pt x 387.0509pt.
-<cliente-requisicao.png, id=41, 767.86874pt x 568.1225pt>
+ [9 <./aplicacao-cliente.png>]
+<cliente-requisicao.png, id=45, 767.86874pt x 568.1225pt>
 File: cliente-requisicao.png Graphic file (type png)
 <use cliente-requisicao.png>
 Package pdftex.def Info: cliente-requisicao.png  used on input line 351.
 (pdftex.def)             Requested size: 384.1096pt x 284.19923pt.
-<caminho-servicos.png, id=42, 664.4825pt x 53.19875pt>
+<caminho-servicos.png, id=46, 664.4825pt x 53.19875pt>
 File: caminho-servicos.png Graphic file (type png)
 <use caminho-servicos.png>
 Package pdftex.def Info: caminho-servicos.png  used on input line 362.
 (pdftex.def)             Requested size: 384.1096pt x 30.7522pt.
- [9]
-Underfull \vbox (badness 5924) has occurred while \output is active []
 
- [10 <./aplicacao-cliente.png>]
+[10 <./cliente-requisicao.png> <./caminho-servicos.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 403--406
 []\OT1/ptm/m/n/12 https://www.devmedia.com.br/introducao-a-web-services-restful
 /37387
@@ -342,24 +341,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 403--406
 uisicoes-
  []
 
-[11 <./cliente-requisicao.png> <./caminho-servicos.png>] (./sbc-template.bbl)
-[12] (./sbc-template.aux) ) 
+(./sbc-template.bbl [11]) [12] (./sbc-template.aux) ) 
 Here is how much of TeX's memory you used:
  3301 strings out of 492639
  45942 string characters out of 6135497
- 133965 words of memory out of 5000000
+ 133964 words of memory out of 5000000
  7113 multiletter control sequences out of 15000+600000
  21548 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,28p,1091b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}<
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/ty
-pe1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb
-8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texm
-f-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sbc-template.pdf (12 pages, 667280 bytes).
+{/usr/share/texmf-dist/fon
+ts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fon
+ts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/u
+tmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/
+urw/times/utmri8a.pfb>
+Output written on sbc-template.pdf (12 pages, 667033 bytes).
 PDF statistics:
  86 PDF objects out of 1000 (max. 8388607)
  54 compressed objects within 1 object stream
