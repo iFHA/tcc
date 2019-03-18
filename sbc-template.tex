@@ -315,7 +315,24 @@ O Java EE consiste de uma série de especificações bem detalhadas, ditando com
 
 \subsubsection{Framework Jersey}
 
-Como o Java EE é apenas uma especificação, fez-se o uso de um dos principais frameworks utilizados para desenvolver aplicações RESTful em Java, o Jersey, que implementa todas as características da arquitetura REST.
+Como o Java EE é apenas uma especificação, fez-se o uso de um dos principais frameworks utilizados para desenvolver aplicações RESTful em Java, o Jersey, que implementa todas as características da arquitetura REST. Para fazer uso da ferramenta, basta adicioná-la como dependência no arquivo pom.xml, assim como no exemplo da figura \ref{fig:Figura5}. Após a inclusão da dependência, é necessário alterar mais um arquivo xml de configuração, dessa vez, o arquivo web.xml, localizado no diretório src/main/webapp/WEB-INF, como segue na figura 9:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.9\textwidth]{web-xml.png}
+	\caption{Arquivo de configuração web.xml}
+	\label{fig:Figura9}
+\end{figure}
+
+Na figura acima, a linha 12 refere-se ao pacote java onde estarão salvas as classes referentes aos recursos do web service, já na linha 18, está sendo definida a Url base a qual a partir da mesma será possível o acesso aos recursos, ou seja, no momento, o servidor está sendo acessível pelo seguinte endereço web: \url{http://endereco_ip_servidor:8080/nome_projeto/restapi}.
+Em seguida, é necessário a criação de tais classes. Neste trabalho, foi criada a classe MyResource, no pacote descrito pela linha 12 da figura \ref{fig:Figura9}, Segue na figura \ref{fig:Figura10} o código referente à classe MyResource:
+
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.9\textwidth]{codigo-green-service.png}
+	\caption{Classe MyResource - código referente ao serviço greenService}
+	\label{fig:Figura10}
+\end{figure}
 
 \subsubsection{Armazenamento e transmissão de informação}
 
@@ -409,7 +426,7 @@ A figura \ref{fig:Figura5} exibe as dependências adicionadas ao arquivo pom.xml
 
 %Outra capacidade da ferramenta é identificar as dependências das dependências do projeto. Ou seja, se uma biblioteca depender de outras, o Maven irá procurar por elas também e assim sucessivamente, até todas as dependências necessárias estarem à disposição do projeto.
 
-Com as dependências citadas na figura \ref{fig:Figura5} adicionadas, e com o Maven instalado devidamente na máquina, basta um único comando(mvn install), no diretório raiz do projeto, para que a ferramenta realize seu trabalho de buscar dependências que ainda não tenham sido adicionadas ao projeto, compilá-lo e gerar o pacote, com o código compilado.
+Com as dependências citadas na figura \ref{fig:Figura5} adicionadas, e com o Maven instalado devidamente na máquina, basta um único comando(mvn install), no diretório raiz do projeto, para que a ferramenta realize seu trabalho de baixar dependências que ainda não tenham sido adicionadas ao projeto, compilá-lo e gerar o pacote, com o código compilado.
 
 \section{Estudo de caso}
 
