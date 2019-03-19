@@ -31,50 +31,51 @@ Too many commas in name 1 of "CAMARA, G., SOUZA, R. C. M., FREITAS, U. M. and GA
 while executing---line 1096 of file sbc.bst
 Too many commas in name 1 of "COULOURIS, George, DOLLIMORE, Jean and KINDBERG, Tim" for entry coulouris:05
 while executing---line 1096 of file sbc.bst
+Warning--empty year in jersey
 Warning--empty year in soa2
 Warning--empty year in soa1
 Warning--empty year in oracle
 Too many commas in name 1 of "RICHARDSON, Leonard, RUBY, Sam" for entry richard:07
 while executing---line 1096 of file sbc.bst
-You've used 19 entries,
+You've used 20 entries,
             1935 wiz_defined-function locations,
-            565 strings with 5565 characters,
-and the built_in function-call counts, 5404 in all, are:
-= -- 526
-> -- 157
-< -- 19
-+ -- 46
-- -- 46
-* -- 355
-:= -- 1016
-add.period$ -- 61
-call.type$ -- 19
-change.case$ -- 110
-chr.to.int$ -- 19
-cite$ -- 22
-duplicate$ -- 245
-empty$ -- 401
-format.name$ -- 73
-if$ -- 1045
+            570 strings with 5668 characters,
+and the built_in function-call counts, 5656 in all, are:
+= -- 554
+> -- 164
+< -- 20
++ -- 48
+- -- 48
+* -- 368
+:= -- 1066
+add.period$ -- 65
+call.type$ -- 20
+change.case$ -- 116
+chr.to.int$ -- 20
+cite$ -- 24
+duplicate$ -- 255
+empty$ -- 416
+format.name$ -- 76
+if$ -- 1092
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 25
-newline$ -- 102
-num.names$ -- 57
-pop$ -- 121
+newline$ -- 108
+num.names$ -- 60
+pop$ -- 125
 preamble$ -- 1
-purify$ -- 118
+purify$ -- 124
 quote$ -- 0
-skip$ -- 181
+skip$ -- 188
 stack$ -- 0
-substring$ -- 249
+substring$ -- 261
 swap$ -- 14
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 90
-warning$ -- 3
-while$ -- 39
+type$ -- 96
+warning$ -- 4
+while$ -- 41
 width$ -- 0
-write$ -- 243
+write$ -- 256
 (There were 15 error messages)

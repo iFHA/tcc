@@ -33,6 +33,12 @@ JAIN, A.~K. (2007).
 \newblock {\em Fundamentals of Digital Image Processing}.
 \newblock Prentice Hall.
 
+\bibitem[JERSEY ]{jersey}
+JERSEY.
+\newblock Jersey - restful web services in java.
+\newblock \url{https://jersey.github.io/}.
+\newblock Acesso em: 22 Jan. 2019.
+
 \bibitem[KALIN 2009]{kalin:09}
 KALIN, M. (2009).
 \newblock {\em Java Web Services}.
