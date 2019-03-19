@@ -33,7 +33,7 @@
   O trabalho se fundamentou em pesquisas bibliográficas, buscando inicialmente construir uma base conceitual bibliográfica, para então implementar uma aplicação de serviços web.
   Cumpridas todas as etapas a que se propôs, o estudo resultou na confirmação da eficácia e viabilidade da adoção de REST no provimento de serviços em um universo de sistemas distribuídos. O grau de dificuldade para implementação foi considerado baixo em termos práticos, mas demandando a necessidade de domínio dos conceitos teóricos envolvidos.
   
-  
+  Palavras-chave: Web Service, Interoperabilidade e Processamento Digital de Imagens.
 \end{resumo}
 
 
@@ -121,7 +121,7 @@ cuja finalidade é proporcionar um grau de transparência de distribuição.
 Neste trabalho pretende-se fazer middleware de modo que sejam simples as
 configurações, adaptações e personalizações da aplicação conforme sejam necessárias.
 
-\subsection{Webservice}
+\subsection{Web Service}
 
 Com o surgimento da comunicação através das redes de computadores e da necessidade
 de diferentes softwares trocarem informações, surgiu o conceito de Webservice (WS).
@@ -129,13 +129,18 @@ Os Webservices permitem que sistemas desenvolvidos em diferentes linguagens,
 sendo executados em diversas plataformas, transmitam e recebam informações
 padronizadas entre si, permitindo uma interação entre os dispositivos, mais abrangente
 que qualquer outra tecnologia de computação distribuída existente.
+
 Segundo \cite{kalin:09}, Webservice é um tipo de aplicação para web distribuída,
 cujos componentes podem ser aplicados e executados em dispositivos distintos.
 Configura-se como um mecanismo de comunicação que permite a interoperabilidade
-entre sistemas. Para \cite{kreger:01}, um Webservice descreve uma coleção de operações
+entre sistemas. 
+
+Para \cite{kreger:01}, um Webservice descreve uma coleção de operações
 que são acessíveis pela rede através de mensagens XML (eXtensible Markup Language)
 padronizadas. Porém existe a tecnologia JSON (Javascript Object Notation) que
-também possibilita a troca de mensagens de forma mais leve. Segundo \cite{sandoval:09}, dentre os
+também possibilita a troca de mensagens de forma mais leve. 
+
+Segundo \cite{sandoval:09}, dentre os
 formatos mais utilizados nas requisições e respostas, destacam-se texto plano
 HTML, XML e JSON. O uso de Webservice
 possibilita que aplicações desenvolvidas em plataformas e linguagens diversificadas
@@ -228,8 +233,8 @@ Esta seção está destinada a descrever a arquitetura e funcionamento da ferram
 %com diversos AVA. 
 
 A Figura 2 representa o diagrama da estratégia de comunicação que
-foi desenvolvida em duas etapas: entre a aplicação cliente e o Middleware via Web Services e entre
-o Middleware e a API de PDI desenvolvida via linha de comando, esta, que por sua vez, está localizada no mesmo servidor do web service.
+foi desenvolvida em duas etapas: entre a aplicação cliente e o WS via HTTP utilizando JSON como padrão de comunicação e entre
+o WS e a API de PDI desenvolvida via linha de comando, esta, que por sua vez, está localizada no mesmo servidor do web service.
 
 Para a troca de informações adotou-se o JSON (JavaScript Object Notation). O
 JSON é um formato de interconexão de dados utilizado em ambientes cliente-servidor
@@ -243,24 +248,24 @@ A interoperabilidade entre a aplicação cliente e a API de PDI, conforme ilustr
 realizado da seguinte forma:
 \begin{itemize}
 	\item A aplicação cliente se conecta ao web service através da URL de acesso a algum serviço disponibilizado pelo mesmo, informando junto com a requisição, a imagem alvo a qual se deseja realizar tal transformação, codificada no formato base64;
-	\item O middleware recebe a requisição, decodifica a imagem requisitada, salva-a no disco, e realiza uma chamada via linha de comando para o sistema operacional do servidor, passando como parâmetro o caminho da imagem salva, e o tipo de transformação que se deseja realizar na mesma, para que a API possa realizar seu trabalho;
-	\item Após realizar seu processamento, a API retorna para o middleware como resultado de execução, a imagem transformada e codificada no formato base64;
-	\item O middleware por fim, retorna para a aplicação cliente do serviço, um código de status da requisição, representando o sucesso ou insucesso da operação, em conjunto com uma mensagem informando se houve qualquer erro em algum dos passos anteriores, e caso todo o processo tenha sido realizado com sucesso, retorna também a imagem processada pela API, também no formato base64.
+	\item O WS recebe a requisição, decodifica a imagem requisitada, salva-a no disco, e realiza uma chamada via linha de comando para o sistema operacional do servidor, passando como parâmetro o caminho da imagem salva, e o tipo de transformação que se deseja realizar na mesma, para que a API possa realizar seu trabalho;
+	\item Após realizar seu processamento, a API retorna para o WS como resultado de execução, a imagem transformada e codificada no formato base64;
+	\item O WS por fim, retorna para a aplicação cliente do serviço, um código de status da requisição, representando o sucesso ou insucesso da operação, em conjunto com uma mensagem informando se houve qualquer erro em algum dos passos anteriores, e caso todo o processo tenha sido realizado com sucesso, retorna também a imagem processada pela API, também no formato base64.
 \end{itemize}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=.2\textwidth]{modelo-comunicacao.png}
+	\includegraphics[width=.3\textwidth]{modelo-comunicacao2.png}
 	\caption{Modelo de Comunicação}
 	\label{fig:Figura2}
 \end{figure}
 
 Para que o processo funcione adequadamente, a API precisa estar ao alcance do web service, ou seja, localizada no mesmo servidor, e também é necessário que a mesma implemente a forma padronizada de comunicação descrita anteriormente: enviar como resposta à suas chamadas de funções, uma imagem codificada no formato base64, para que o
-middleware consiga se conectar à mesma e, dessa forma, interagir com as aplicações clientes conforme o esperado.
+WS consiga se conectar à mesma e, dessa forma, interagir com as aplicações clientes conforme o esperado.
 
-O middleware será executado em um servidor de aplicação. Este servidor
+O WS será executado em um servidor de aplicação. Este servidor
 é responsável por estabelecer a comunicação com as aplicações clientes que desejem utilizar os serviços da API. 
-A desvantagem é que recursos computacionais de um servidor serão alocados para o middleware, porém, como vantagens teremos a flexibilidade, melhoria no desempenho, manutenibilidade e disponibilidade do serviço.
+A desvantagem é que recursos computacionais de um servidor serão alocados para o WS, porém, como vantagens teremos a flexibilidade, melhoria no desempenho, manutenibilidade e disponibilidade do serviço.
 
 A utilização das funcionalidades da API de forma direta, necessitando de tê-la instalada na própria máquina do utilizador, traria alguns inconvenientes, sendo eles:
 \begin{itemize}
@@ -270,7 +275,7 @@ A utilização das funcionalidades da API de forma direta, necessitando de tê-l
 \end{itemize}
 %O uso do MiddleWare desonera o consumo da bateria e o processamento do aparelho que esteja executando o mesmo, ampliando sua performance.
 
-O middleware possui a implementação e uso de dois serviços através dos quais será possível realizar diversas operações de troca de informações, à medida que novas funcionalidades forem sendo disponibilizadas pela API, poderão ser adicionados novos serviços que correspondam às mesmas.
+O WS possui a implementação e uso de dois serviços através dos quais será possível realizar diversas operações de troca de informações, à medida que novas funcionalidades forem sendo disponibilizadas pela API, poderão ser adicionados novos serviços que correspondam às mesmas.
 Todos os serviços possuem somente um parâmetro de entrada (Requisicao) e um parâmetro de saída (Resposta) de tipos que encapsulam as informações necessárias para realizar as requisições e o resultado da operação. Os serviços são descritos a seguir:
 
 %\textit{ListFilters}: Operação destinada a realizar consultas dos filtros disponíveis para aplicação;
@@ -280,7 +285,7 @@ Todos os serviços possuem somente um parâmetro de entrada (Requisicao) e um pa
 \textit{BlackAndWhiteFilter}: Operação destinada a realizar a aplicação do filtro de cores preto e branco na imagem requisitada.
 
 A definição dos elementos de comunicação – ou objetos de comunicação – é
-determinante para o sucesso de todo o processo de comunicação, que inicia na requisição da aplicação cliente, passa pelo middleware, chega na API, e finaliza na resposta final do web service. Esses objetos são as estruturas de dados que carregam as informações necessárias para consumir e responder um WS.
+determinante para o sucesso de todo o processo de comunicação, que inicia na requisição da aplicação cliente, passa pelo WS, chega na API, e finaliza na resposta final do web service. Esses objetos são as estruturas de dados que carregam as informações necessárias para consumir e responder um WS.
 A dinâmica de comunicação é realizada da seguinte forma: a aplicação cliente realiza uma requisição encapsulando um objeto de comunicação que é processado pelo web service. Em seguida, o WS realiza uma chamada à função requisitada pelo cliente à API, esta que por sua vez, realiza seu processamento, e envia uma resposta ao WS, que, por fim, responde à requisição do cliente através de um outro objeto de comunicação.
 
 Por exemplo: para consumir o serviço GreenFilter a aplicação cliente requisita através do objeto de comunicação Requisicao os dados da imagem codificada. Em seguida, o serviço GreenFilter envia a resposta com o objeto de comunicação Resposta.
@@ -308,7 +313,7 @@ A Figura 3 representa o diagrama de sequência para o consumo do serviço GreenF
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[width=.7\textwidth]{ds-green-filter.png}
+	\includegraphics[width=.7\textwidth]{ds-green-filter2.png}
 	\caption{Diagrama de Sequência - GreenFilterService}
 	\label{fig:Figura3}
 \end{figure}
@@ -325,7 +330,7 @@ O Java EE consiste de uma série de especificações bem detalhadas, ditando com
 
 \subsubsection{Framework Jersey}
 
-Como o Java EE é apenas uma especificação, fez-se o uso de um dos principais frameworks utilizados para desenvolver aplicações RESTful em Java, o Jersey, que implementa todas as características da arquitetura REST. Para fazer uso da ferramenta, basta adicioná-la como dependência no arquivo pom.xml, assim como no exemplo da Figura \ref{fig:Figura5}. Após a inclusão da dependência, é necessário alterar mais um arquivo xml de configuração, dessa vez, o arquivo web.xml, localizado no diretório src/main/webapp/WEB-INF, como segue na Figura 9:
+Como o Java EE é apenas uma especificação, fez-se o uso de um dos principais frameworks utilizados para desenvolver aplicações RESTful em Java, o Jersey, que implementa todas as características da arquitetura REST. Para fazer uso da ferramenta, basta adicioná-la como dependência no arquivo pom.xml, assim como no exemplo da Figura \ref{fig:Figura5}. Após a inclusão da dependência, é necessário alterar mais um arquivo xml de configuração denominado web.xml, localizado no diretório src/main/webapp/WEB-INF, como segue na Figura 9:
 
 \begin{figure}[ht]
 	\centering
@@ -443,9 +448,9 @@ Com as dependências citadas na Figura \ref{fig:Figura5} adicionadas, e com o Ma
 
 \section{Estudo de caso}
 
-Nesta seção, serão descritos os passos necessários para a realização de consumo dos serviços da API por meio da comunicação com o Middleware, apresentando o desenvolvimento de uma aplicação cliente como estudo de caso.
+Nesta seção, serão descritos os passos necessários para a realização de consumo dos serviços da API por meio da comunicação com o WS, apresentando o desenvolvimento de uma aplicação cliente como estudo de caso.
 
-A escolha da linguagem JavaScript como base para o desenvolvimento da aplicação cliente, se deu mais pela necessidade de demonstrar a independência de plataforma que o Middleware nos proporciona, e também pelo fato de que atualmente JavaScript é uma das linguagens mais conhecidas e utilizadas ao redor do mundo.
+A escolha da linguagem JavaScript como base para o desenvolvimento da aplicação cliente, se deu mais pela necessidade de demonstrar a independência de plataforma que o WS nos proporciona, e também pelo fato de que atualmente JavaScript é uma das linguagens mais conhecidas e utilizadas ao redor do mundo.
 
 A Figura \ref{fig:Figura6} representa a interface da aplicação cliente desenvolvida.
 
@@ -456,7 +461,7 @@ A Figura \ref{fig:Figura6} representa a interface da aplicação cliente desenvo
 	\label{fig:Figura6}
 \end{figure}
 
-Esta aplicação consiste em uma página HTML, que utiliza-se da linguagem javascript para realizar as requisições ao Webservice. Na Figura acima, temos a lista de serviços disponibilizados pelo middleware(1), onde o usuário poderá escolher qual filtro aplicar, um botão para selecionar a imagem desejada(2), a imagem escolhida(3), a imagem final(4), após o processamento da API, e resposta do middeware, e por fim, o botão de enviar(5), que realizará a requisição.
+Esta aplicação consiste em uma página HTML, que utiliza-se da linguagem javascript para realizar as requisições ao Webservice. Na Figura acima, temos a lista de serviços disponibilizados pelo WS(1), onde o usuário poderá escolher qual filtro aplicar, um botão para selecionar a imagem desejada(2), a imagem escolhida(3), a imagem final(4), após o processamento da API, e resposta do middeware, e por fim, o botão de enviar(5), que realizará a requisição.
 
 O código da Figura \ref{fig:Figura7} diz respeito ao código necessário para realizar a requisição aos serviços do webservice:
 
@@ -469,7 +474,7 @@ O código da Figura \ref{fig:Figura7} diz respeito ao código necessário para r
 
 Como a maioria das linguagens de programação possuem suporte à codificação e decodificação do formato base64, por o mesmo ser bastante difundido, não há necessidade de explicar o seu funcionamento. Portanto, no código listado acima, a partir da linha 21, entende-se que a imagem selecionada já está codificada em tal formato, e que seu valor está atribuído na variável denominada "base64". 
 
-Assim sendo, na linha 22, têm-se a definição de qual serviço o usuário escolheu, atribuindo-o à variável serviceUrl, que mais tarde será utilizada para redirecionar a requisição para o serviço correto. A Figura \ref{fig:Figura8} exibe as URLs associadas a cada serviço do webservice. Como o middleware está localizado na máquina local, seu acesso se tem por meio da URL \url{http://localhost:8080/demorest/restapi/ws}; 
+Assim sendo, na linha 22, têm-se a definição de qual serviço o usuário escolheu, atribuindo-o à variável serviceUrl, que mais tarde será utilizada para redirecionar a requisição para o serviço correto. A Figura \ref{fig:Figura8} exibe as URLs associadas a cada serviço do webservice. Como o WS está localizado na máquina local, seu acesso se tem por meio da URL \url{http://localhost:8080/demorest/restapi/ws}; 
 
 \begin{figure}[ht]
 	\centering
@@ -484,7 +489,7 @@ A partir da linha 26, têm-se de fato a requisição. Com o intuito de simplicid
 
 Linha 27: informamos qual método/verbo HTTP será utilizado na requisição;
 
-Linhas 33 a 36: informamos ao middleware, sob qual formato os dados do corpo da requisição foram encapsulados, e sob qual formato a aplicação cliente espera receber como resposta à sua requisição;
+Linhas 33 a 36: informamos ao WS, sob qual formato os dados do corpo da requisição foram encapsulados, e sob qual formato a aplicação cliente espera receber como resposta à sua requisição;
 
 Linha 37: informamos a URL para a qual enviaremos a requisição;
 
@@ -499,7 +504,7 @@ Linhas 46 a 48: a função de callback error, por sua vez, é executada quando o
 
 \section{Considerações Finais}
 
-O principal objetivo do middleware desenvolvido é possibilitar aos desenvolvedores uma forma fácil e intuitiva de utilizar as funcionalidades da API apresentada na seção 2.4 por meio de requisições HTTP. Para isso, o programador não deverá encontrar dificuldades em adaptar a sua forma de desenvolvimento atual para um arquitetura de comunicação distribuída.
+O principal objetivo do WS desenvolvido é possibilitar aos desenvolvedores uma forma fácil e intuitiva de utilizar as funcionalidades da API apresentada na seção 2.4 por meio de requisições HTTP. Para isso, o programador não deverá encontrar dificuldades em adaptar a sua forma de desenvolvimento atual para um arquitetura de comunicação distribuída.
 
 \bibliographystyle{sbc}
 \bibliography{sbc-template}
