@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  19 MAR 2019 19:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  19 MAR 2019 19:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -289,12 +289,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Underfull \hbox (badness 1194) in paragraph at lines 110--120
+Underfull \hbox (badness 1194) in paragraph at lines 110--118
 \OT1/ptm/m/n/12 Para [[]] o mid-dleware refere-se a uma ca-mada
  []
 
 
-Underfull \hbox (badness 1412) in paragraph at lines 110--120
+Underfull \hbox (badness 1412) in paragraph at lines 110--118
 \OT1/ptm/m/n/12 autoriza[][]ao, autentica[][]ao, seguran[]a, en-tre ou-tras. O 
 mid-dleware im-ple-menta a
  []
