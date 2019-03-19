@@ -3,6 +3,18 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: sbc-template.aux
 The style file: sbc.bst
 Database file #1: sbc-template.bib
+Too many commas in name 1 of "CAMARA, G., SOUZA, R. C. M., FREITAS, U. M. and GARRIDO, J." for entry spring
+while executing---line 1021 of file sbc.bst
+Too many commas in name 1 of "CAMARA, G., SOUZA, R. C. M., FREITAS, U. M. and GARRIDO, J." for entry spring
+while executing---line 1021 of file sbc.bst
+Too many commas in name 1 of "CAMARA, G., SOUZA, R. C. M., FREITAS, U. M. and GARRIDO, J." for entry spring
+while executing---line 1021 of file sbc.bst
+Too many commas in name 1 of "CAMARA, G., SOUZA, R. C. M., FREITAS, U. M. and GARRIDO, J." for entry spring
+while executing---line 1021 of file sbc.bst
+Too many commas in name 1 of "CAMARA, G., SOUZA, R. C. M., FREITAS, U. M. and GARRIDO, J." for entry spring
+while executing---line 1021 of file sbc.bst
+Too many commas in name 1 of "CAMARA, G., SOUZA, R. C. M., FREITAS, U. M. and GARRIDO, J." for entry spring
+while executing---line 1021 of file sbc.bst
 Too many commas in name 1 of "COULOURIS, George, DOLLIMORE, Jean and KINDBERG, Tim" for entry coulouris:05
 while executing---line 1021 of file sbc.bst
 Too many commas in name 1 of "COULOURIS, George, DOLLIMORE, Jean and KINDBERG, Tim" for entry coulouris:05
@@ -11,49 +23,58 @@ Too many commas in name 1 of "RICHARDSON, Leonard, RUBY, Sam" for entry richard:
 while executing---line 1021 of file sbc.bst
 Too many commas in name 1 of "RICHARDSON, Leonard, RUBY, Sam" for entry richard:07
 while executing---line 1021 of file sbc.bst
+Too many commas in name 1 of "CAMARA, G., SOUZA, R. C. M., FREITAS, U. M. and GARRIDO, J." for entry spring
+while executing---line 1096 of file sbc.bst
+Too many commas in name 1 of "CAMARA, G., SOUZA, R. C. M., FREITAS, U. M. and GARRIDO, J." for entry spring
+while executing---line 1096 of file sbc.bst
+Too many commas in name 1 of "CAMARA, G., SOUZA, R. C. M., FREITAS, U. M. and GARRIDO, J." for entry spring
+while executing---line 1096 of file sbc.bst
 Too many commas in name 1 of "COULOURIS, George, DOLLIMORE, Jean and KINDBERG, Tim" for entry coulouris:05
 while executing---line 1096 of file sbc.bst
+Warning--empty year in soa2
+Warning--empty year in soa1
+Warning--empty year in oracle
 Too many commas in name 1 of "RICHARDSON, Leonard, RUBY, Sam" for entry richard:07
 while executing---line 1096 of file sbc.bst
-You've used 11 entries,
+You've used 19 entries,
             1935 wiz_defined-function locations,
-            524 strings with 4704 characters,
-and the built_in function-call counts, 3118 in all, are:
-= -- 292
-> -- 89
-< -- 11
-+ -- 26
-- -- 26
-* -- 204
-:= -- 587
-add.period$ -- 33
-call.type$ -- 11
-change.case$ -- 61
-chr.to.int$ -- 11
-cite$ -- 11
-duplicate$ -- 149
-empty$ -- 242
-format.name$ -- 41
-if$ -- 604
+            565 strings with 5565 characters,
+and the built_in function-call counts, 5404 in all, are:
+= -- 526
+> -- 157
+< -- 19
++ -- 46
+- -- 46
+* -- 355
+:= -- 1016
+add.period$ -- 61
+call.type$ -- 19
+change.case$ -- 110
+chr.to.int$ -- 19
+cite$ -- 22
+duplicate$ -- 245
+empty$ -- 401
+format.name$ -- 73
+if$ -- 1045
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 18
-newline$ -- 58
-num.names$ -- 33
-pop$ -- 80
+missing$ -- 25
+newline$ -- 102
+num.names$ -- 57
+pop$ -- 121
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 118
 quote$ -- 0
-skip$ -- 110
+skip$ -- 181
 stack$ -- 0
-substring$ -- 132
-swap$ -- 10
+substring$ -- 249
+swap$ -- 14
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
-warning$ -- 0
-while$ -- 22
+type$ -- 90
+warning$ -- 3
+while$ -- 39
 width$ -- 0
-write$ -- 139
-(There were 6 error messages)
+write$ -- 243
+(There were 15 error messages)

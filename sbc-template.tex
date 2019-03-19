@@ -13,7 +13,7 @@
 \sloppy
 
 %\title{Instructions for Authors of SBC Conferences\\ Papers and Abstracts}
-\title{Desenvolvimento de um Middleware para Comunicação via Web Services e sua Aplicação  em uma API de Processamento Digital de Imagens}
+\title{Criação de um Mecanismo para Encapsulamento e Disponibilização de Funções para Manipulação de Imagens Digitais Usando um Web Service RESTful}
 \author{Fernando Henrique Alves\inst{1}, Paulo Henrique Lopes Silva\inst{1}, Leandro Carlos de Souza\inst{1}}
 \address{
   Centro de Ciências Exatas e Naturais\\
@@ -26,16 +26,7 @@
 \maketitle
 
 \begin{abstract}
-  The technological evolution has been making the Distance
-  Education accessible for a greater number of citizens anytime and anywhere.
-  The potential increase of the supply for mobile devices integrated to mobile
-  learning environments allows that the information comes out of the physical
-  environment, creating opportunities for students and teachers to create
-  geographically distributed learning scenarios. However, many applications
-  developed for these environments remain isolated from each other and do not
-  become integrated sufficiently into the virtual learning environments (AVA).
-  This paper presents an interoperability model between mobile devices and
-  distinct AVA based on webservices.
+  
 \end{abstract}
 
 \begin{resumo} 
@@ -54,13 +45,17 @@ Dentre elas, a Computação e a Internet se destacam por automatizar tarefas, re
 custos, distância e tempo para realizar a troca de vários tipos de informação. 
 
 Toda área, seja ela educação, comércio, medicina ou militar, exige troca de informação para seu funcionamento. 
-Um dos mais populares modos de comunicação de dados via internet é através do uso de um web service. 
-Web services podem ser definidos como aplicações cliente/servidor que se utilizam da comunicação 
-através da internet, por meio do protocolo HTTP (HyperText Transfer Protocol), para prover serviços 
-entre softwares que estejam executando em diferentes plataformas. Essas aplicações fazem uso do padrão 
-XML (eXtensible Markup Language) para prover descritores que são interpretados automaticamente 
-por outros sistemas, permitindo assim que diversos programas simples possam interagir uns com os 
-outros para, em conjunto, fornecer soluções mais complexas e sofisticadas.
+Um dos mais populares modos de comunicação de dados via internet é através do uso de um Web Service(WS) ou serviço web.
+Segundo o \cite{w3c1} um WS é definido como um sistema de software projetado para fornecer suporte à interoperabilidade entre máquinas sobre rede.
+%Web Services podem ser definidos como aplicações cliente/servidor que se utilizam da comunicação 
+%através da internet, por meio do protocolo HTTP (HyperText Transfer Protocol), para prover serviços 
+%entre softwares que estejam executando em diferentes plataformas. Essas aplicações podem fazer uso do padrão 
+%XML (eXtensible Markup Language) para prover descritores que são interpretados automaticamente 
+%por outros sistemas, permitindo assim que diversos programas simples possam interagir uns com os 
+%outros para, em conjunto, fornecer soluções mais complexas e sofisticadas.
+De acordo com  \cite{cerami:02} este tipo
+de serviço permite a comunicação entre aplicações por meio de uma interface bem
+definida.
 
 Nos últimos anos, têm-se acompanhado a disponibilização de um grande número de sistemas 
 computacionais com um considerável conjunto de recursos que satisfaçam as necessidades de 
@@ -68,8 +63,15 @@ desenvolvedores de software. Esse aumento do poder computacional gera um desejo 
 problemas de maior escopo por parte de programadores e pesquisadores, e uma das áreas que podem 
 se beneficiar de tal avanço é a de Processamento Digital de Imagens (PDI), pois a popularização 
 de dispositivos de aquisição e armazenamento de mídias digitais, como imagens e vídeos, faz 
-crescer a demanda por software capaz de manipulá-las. Neste contexto, APIs podem incorporar implementações de métodos que são a base comum para a manipulação de imagens e 
+crescer a demanda por software capaz de manipulá-las.
+
+O PDI refere-se ao processamento de imagens por meio de um computador digital. Segundo \cite{spring} o objetivo de se usar processamento digital de imagens é melhorar o aspecto visual de certas feições estruturais para o analista humano e fornecer outros subsídios para a sua interpretação, inclusive gerando produtos que possam ser posteriormente submetidos a outros processamentos. 
+
+Neste contexto, APIs(Application Programming Interface) podem incorporar implementações de métodos que são a base comum para a manipulação de imagens e 
 vídeos a fim de minimizar erros de codificação, diminuir o custo e o tempo de produção. 
+
+De acordo com \cite{pressman:16, sommerville:11} APIs contém a implementação de funcionalidades de uso frequente e que podem ser utilizadas pelo
+programador sem que que seja necessário que ele tenha um conhecimento aprofundado sobre a área ou os métodos utilizados.
 
 Com a disseminação da internet e da consequente e inevitável necessidade de troca de informação, 
 as aplicações e sistemas desenvolvidos hoje em dia precisam 
@@ -82,10 +84,20 @@ disponibilização de suas funcionalidades.
 
 Para chegar à ferramenta, a solução está implementada em Linguagem
 Java, com auxílio de uma ferramenta denominada JERSEY, baseada na arquitetura
-SOA, mais especificamente em Serviço Web seguindo o conceito REST, do inglês
-Representational State Transfer (Transferência do Estado Representacional), o qual
-foi proposto por Roy T. Fielding em sua dissertação de doutorado, publicada no ano
-2000. 
+SOA(Service-Oriented Architecture), mais especificamente em Serviço Web seguindo o conceito REST, do inglês
+Representational State Transfer (Transferência do Estado Representacional). 
+
+De acordo com \cite{oracle} Java é uma linguagem de programação e plataforma computacional cujo lançamento foi realizado pela Sun Microsystems em 1995.
+
+Em \cite{soa1,soa2} temos que SOA é um estilo de arquitetura de software cujo princípio fundamental é o de que as funcionalidades implementadas pelas aplicações devam ser disponibilizadas na forma de serviços.
+
+Proposto por \cite{rest} REST refere-se a um estilo de arquitetura de software.
+
+
+
+segundo fulando jersey
+
+
 
 Este tipo de Serviço Web utiliza-se do protocolo HTTP para realizar a troca
 de mensagens entre clientes e servidor. Outra característica importante é a forma de
@@ -104,10 +116,10 @@ Esta seção tem como objetivos desenvolver ideias com base em referências bibl
 
 \subsection{Middleware}
 
-Para \cite{coulouris:05} o middleware “é um termo aplicado a uma camada de software
-que fornece uma abstração da programação, assim como o mascaramento de
+Para \cite{coulouris:05} o middleware refere-se a uma camada de software
+que promove uma abstração da programação, assim como o mascaramento de
 heterogeneidade das redes, do hardware, de sistemas operacionais e linguagens de
-programação subjacentes”. Tal camada configura funções de identificação, autorização,
+programação subjacentes. Tal camada configura funções de identificação, autorização,
 autenticação, segurança, entre outras. O middleware implementa a comunicação e o
 compartilhamento de recursos e aplicativos distribuídos.
 De acordo com \cite{tanenbaum:07}, um middleware forma uma camada entre aplicações e plataformas distribuídas

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  19 MAR 2019 14:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  19 MAR 2019 17:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -282,120 +282,129 @@ LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 28.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 41.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2]
+Underfull \hbox (badness 1194) in paragraph at lines 119--129
+\OT1/ptm/m/n/12 Para [[]] o mid-dleware refere-se a uma ca-mada
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 119--129
+\OT1/ptm/m/n/12 autoriza[][]ao, autentica[][]ao, seguran[]a, en-tre ou-tras. O 
+mid-dleware im-ple-menta a
+ []
+
 <figura1.png, id=16, 456.95718pt x 135.50626pt>
 File: figura1.png Graphic file (type png)
 <use figura1.png>
-Package pdftex.def Info: figura1.png  used on input line 141.
+Package pdftex.def Info: figura1.png  used on input line 153.
 (pdftex.def)             Requested size: 341.43437pt x 101.25311pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 142.
-
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 154.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 142.
- [3 <./figura1.png (PNG copy)>] [4] [5]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 239.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 154.
+ [3 <./figura1.png (PNG copy)>]
+Underfull \vbox (badness 1127) has occurred while \output is active []
+
+ [4]
+[5]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 251.
 
  (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 239.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 251.
 <modelo-comunicacao.png, id=27, 108.405pt x 305.34074pt>
 File: modelo-comunicacao.png Graphic file (type png)
 <use modelo-comunicacao.png>
-Package pdftex.def Info: modelo-comunicacao.png  used on input line 247.
+Package pdftex.def Info: modelo-comunicacao.png  used on input line 259.
 (pdftex.def)             Requested size: 85.35696pt x 240.4338pt.
- [6 <./modelo-comunicacao.png (PNG copy)>]
-Overfull \hbox (21.54872pt too wide) in paragraph at lines 290--299
+ [6] [7 <./modelo-comunicacao.png (PNG copy)>]
+Overfull \hbox (21.54872pt too wide) in paragraph at lines 302--311
  [][] 
  []
 
-[7]
 <ds-green-filter.png, id=35, 350.81062pt x 359.09157pt>
 File: ds-green-filter.png Graphic file (type png)
 <use ds-green-filter.png>
-Package pdftex.def Info: ds-green-filter.png  used on input line 305.
+Package pdftex.def Info: ds-green-filter.png  used on input line 317.
 (pdftex.def)             Requested size: 298.75264pt x 305.8265pt.
-
-Underfull \vbox (badness 3646) has occurred while \output is active []
-
- [8 <./ds-green-filter.png (PNG copy)>]
+[8 <./ds-green-filter.png (PNG copy)>]
 <web-xml.png, id=39, 536.75531pt x 207.02344pt>
 File: web-xml.png Graphic file (type png)
 <use web-xml.png>
-Package pdftex.def Info: web-xml.png  used on input line 326.
+Package pdftex.def Info: web-xml.png  used on input line 338.
 (pdftex.def)             Requested size: 384.1096pt x 148.14697pt.
-<codigo-green-service.png, id=40, 603.0028pt x 399.74344pt>
+ [9 <./web-xml.png (PNG copy)>]
+<codigo-green-service.png, id=43, 603.0028pt x 399.74344pt>
 File: codigo-green-service.png Graphic file (type png)
 <use codigo-green-service.png>
-Package pdftex.def Info: codigo-green-service.png  used on input line 336.
+Package pdftex.def Info: codigo-green-service.png  used on input line 348.
 (pdftex.def)             Requested size: 384.1096pt x 254.6333pt.
- [9 <./web-xml.png (PNG copy)>]
 <exemplo-json.png, id=44, 284.56313pt x 79.79813pt>
 File: exemplo-json.png Graphic file (type png)
 <use exemplo-json.png>
-Package pdftex.def Info: exemplo-json.png  used on input line 350.
+Package pdftex.def Info: exemplo-json.png  used on input line 362.
 (pdftex.def)             Requested size: 298.75264pt x 83.78561pt.
  [10 <./codigo-green-service.png (PNG copy)>] [11 <./exemplo-json.png (PNG copy
 )>]
 <jersey-pom.png, id=51, 425.33907pt x 173.89969pt>
 File: jersey-pom.png Graphic file (type png)
 <use jersey-pom.png>
-Package pdftex.def Info: jersey-pom.png  used on input line 429.
+Package pdftex.def Info: jersey-pom.png  used on input line 441.
 (pdftex.def)             Requested size: 384.1096pt x 157.05222pt.
 
-Underfull \vbox (badness 1603) has occurred while \output is active []
-
- [12]
+[12]
 <aplicacao-cliente.png, id=55, 584.1825pt x 756.8275pt>
 File: aplicacao-cliente.png Graphic file (type png)
 <use aplicacao-cliente.png>
-Package pdftex.def Info: aplicacao-cliente.png  used on input line 448.
+Package pdftex.def Info: aplicacao-cliente.png  used on input line 460.
 (pdftex.def)             Requested size: 298.75264pt x 387.0509pt.
 <cliente-requisicao.png, id=57, 767.86874pt x 568.1225pt>
 File: cliente-requisicao.png Graphic file (type png)
 <use cliente-requisicao.png>
-Package pdftex.def Info: cliente-requisicao.png  used on input line 459.
+Package pdftex.def Info: cliente-requisicao.png  used on input line 471.
 (pdftex.def)             Requested size: 384.1096pt x 284.19923pt.
-<caminho-servicos.png, id=58, 664.4825pt x 53.19875pt>
+ [13 <./jersey-pom.png (PNG copy)>]
+<caminho-servicos.png, id=62, 664.4825pt x 53.19875pt>
 File: caminho-servicos.png Graphic file (type png)
 <use caminho-servicos.png>
-Package pdftex.def Info: caminho-servicos.png  used on input line 470.
+Package pdftex.def Info: caminho-servicos.png  used on input line 482.
 (pdftex.def)             Requested size: 384.1096pt x 30.7522pt.
+ [14 <./aplicacao-cliente.png>]
+Underfull \vbox (badness 5077) has occurred while \output is active []
 
-[13 <./jersey-pom.png (PNG copy)>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [14 <./aplicacao-cliente.png>] [15 <./cliente-requisicao.png> <./caminho-servi
-cos.png>]
-(./sbc-template.bbl) [16] (./sbc-template.aux) ) 
+ [15 <./cliente-requisicao.png> <./caminho-servicos.png>] (./sbc-template.bbl [
+16])
+[17] (./sbc-template.aux) ) 
 Here is how much of TeX's memory you used:
- 3354 strings out of 492639
- 46822 string characters out of 6135497
- 135242 words of memory out of 5000000
- 7159 multiletter control sequences out of 15000+600000
+ 3362 strings out of 492639
+ 46896 string characters out of 6135497
+ 137389 words of memory out of 5000000
+ 7167 multiletter control sequences out of 15000+600000
  21548 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,28p,1069b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/en
-c/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
-pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/ty
-pe1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a
-.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf
--dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/t
-imes/utmri8a.pfb>
-Output written on sbc-template.pdf (16 pages, 840575 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}<
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/ty
+pe1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb
+8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texm
+f-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw
+/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on sbc-template.pdf (17 pages, 844449 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 106 PDF objects out of 1000 (max. 8388607)
+ 65 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

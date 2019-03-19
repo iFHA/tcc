@@ -1,5 +1,17 @@
 \begin{thebibliography}{}
 
+\bibitem[CAMARA and GARRIDO 1996]{spring}
+CAMARA, G., S. R. C. M. F. U.~M. and GARRIDO, J. (1996).
+\newblock Spring: Integrating remote sensing and gis by object-oriented data
+  modelling.
+\newblock {\em Computers and Graphics}, 20(3):395--403.
+
+\bibitem[CERAMI 2002]{cerami:02}
+CERAMI, E. (2002).
+\newblock {\em Web Services Essentials Distributed Applications with XML-RPC,
+  SOAP, UDDI and WSDL}.
+\newblock O'Reilly.
+
 \bibitem[COULOURIS and KINDBERG 2005]{coulouris:05}
 COULOURIS, George, D.~J. and KINDBERG, T. (2005).
 \newblock {\em Distributed systems: concepts and design}.
@@ -36,6 +48,29 @@ LECHETA, R.~R. (2015).
 \newblock {\em Web Services RESTful}.
 \newblock Novatec.
 
+\bibitem[LUBLINSKY ]{soa2}
+LUBLINSKY, B.
+\newblock Defining soa as an architectural style.
+\newblock \url{http://www.ibm.com/developerworks/library/ar-soastyle/}.
+\newblock Acesso em: 18 dez. 2018.
+
+\bibitem[OPENGROUP ]{soa1}
+OPENGROUP.
+\newblock Definition of soa.
+\newblock \url{http://opengroup.org/projects/soa/doc.tpl?gdid=10632}.
+\newblock Acesso em: 18 dez. 2018.
+
+\bibitem[ORACLE ]{oracle}
+ORACLE.
+\newblock What is java.
+\newblock \url{https://www.java.com/pt_BR/download/faq/whatis_java.xml}.
+\newblock Acesso em: 29 dez. 2018.
+
+\bibitem[PRESSMAN and MAXIM 2016]{pressman:16}
+PRESSMAN, R.~S. and MAXIM, B.~R. (2016).
+\newblock {\em Engenharia de software: uma abordagem profissional}.
+\newblock AMGH, 8th edition.
+
 \bibitem[RICHARDSON 2007]{richard:07}
 RICHARDSON, Leonard, R.~S. (2007).
 \newblock {\em RESTful Web Services}.
@@ -45,6 +80,11 @@ RICHARDSON, Leonard, R.~S. (2007).
 SANDOVAL, J. (2009).
 \newblock {\em RESTful Java Web Services}.
 \newblock Packt Publishing.
+
+\bibitem[SOMMERVILLE 2011]{sommerville:11}
+SOMMERVILLE, I. (2011).
+\newblock {\em Engenharia de Software}.
+\newblock Pearson, 9th edition.
 
 \bibitem[SOUZA 2004]{souza04}
 SOUZA, V. (2004).
@@ -57,5 +97,11 @@ SOUZA, V. (2004).
 TANENBAUM, A.~S. (2007).
 \newblock {\em Sistemas Distribuidos - Princípios e Paradigmas}.
 \newblock Prentice Hall.
+
+\bibitem[W3C 2004]{w3c1}
+W3C (2004).
+\newblock Web services architecture.
+\newblock \url{https://www.w3.org/TR/ws-arch/#whatis}.
+\newblock Acesso em: 29 dez. 2018.
 
 \end{thebibliography}
