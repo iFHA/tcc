@@ -36,7 +36,7 @@ JAIN, A.~K. (2007).
 \bibitem[JERSEY ]{jersey}
 JERSEY.
 \newblock Jersey - restful web services in java.
-\newblock \url{https://jersey.github.io/}.
+\newblock Disponível em: \url{https://jersey.github.io/}.
 \newblock Acesso em: 22 Jan. 2019.
 
 \bibitem[KALIN 2009]{kalin:09}
@@ -57,19 +57,22 @@ LECHETA, R.~R. (2015).
 \bibitem[LUBLINSKY ]{soa2}
 LUBLINSKY, B.
 \newblock Defining soa as an architectural style.
-\newblock \url{http://www.ibm.com/developerworks/library/ar-soastyle/}.
+\newblock Disponível em:
+  \url{http://www.ibm.com/developerworks/library/ar-soastyle/}.
 \newblock Acesso em: 18 dez. 2018.
 
 \bibitem[OPENGROUP ]{soa1}
 OPENGROUP.
 \newblock Definition of soa.
-\newblock \url{http://opengroup.org/projects/soa/doc.tpl?gdid=10632}.
+\newblock Disponível em:
+  \url{http://opengroup.org/projects/soa/doc.tpl?gdid=10632}.
 \newblock Acesso em: 18 dez. 2018.
 
 \bibitem[ORACLE ]{oracle}
 ORACLE.
 \newblock What is java.
-\newblock \url{https://www.java.com/pt_BR/download/faq/whatis_java.xml}.
+\newblock Disponível em:
+  \url{https://www.java.com/pt_BR/download/faq/whatis_java.xml}.
 \newblock Acesso em: 29 dez. 2018.
 
 \bibitem[PRESSMAN and MAXIM 2016]{pressman:16}
@@ -107,7 +110,7 @@ TANENBAUM, A.~S. (2007).
 \bibitem[W3C 2004]{w3c1}
 W3C (2004).
 \newblock Web services architecture.
-\newblock \url{https://www.w3.org/TR/ws-arch/#whatis}.
+\newblock Disponível em: \url{https://www.w3.org/TR/ws-arch/#whatis}.
 \newblock Acesso em: 29 dez. 2018.
 
 \end{thebibliography}

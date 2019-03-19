@@ -39,7 +39,7 @@ Too many commas in name 1 of "RICHARDSON, Leonard, RUBY, Sam" for entry richard:
 while executing---line 1096 of file sbc.bst
 You've used 20 entries,
             1935 wiz_defined-function locations,
-            570 strings with 5668 characters,
+            570 strings with 5748 characters,
 and the built_in function-call counts, 5656 in all, are:
 = -- 554
 > -- 164

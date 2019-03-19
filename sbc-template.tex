@@ -29,7 +29,7 @@
 %\end{abstract}
 
 \begin{resumo} 
-  O trabalho presente tem como objetivo a criação de um serviço web no estilo arquitetural REST (Representational State Transfer), com o intuito de disponibilizar funções para manipulação de imagens digitais, além de apresentar um estudo de caso demonstrando a aplicação do consumo de tais serviços por meio do desenvolvimento de uma aplicação cliente na plataforma web, onde um cliente JavaScript se comunica com o serviço web. Nele, todo o processo de desenvolvimento do cliente, bem como as tecnologias utilizadas são descritas passo a passo. O estudo de caso mostra resultados promissores na adoção de serviços web RESTful para encapsular e disponibilizar funções de manipulação de imagens digitais. Dentre as principais vantagens, pode-se mencionar a redução da dificuldade de acesso a funções de processamento de imagens digitais, bem como a interoperabilidade entre linguagens de programação que essa tecnologia proporciona.
+  O presente trabalho tem como objetivo a criação de um serviço web no estilo arquitetural REST (Representational State Transfer), com o intuito de disponibilizar funções para manipulação de imagens digitais, além de apresentar um estudo de caso demonstrando a aplicação do consumo de tais serviços por meio do desenvolvimento de uma aplicação cliente na plataforma web, onde um cliente JavaScript se comunica com o serviço web. Nele, todo o processo de desenvolvimento do cliente, bem como as tecnologias utilizadas são descritas passo a passo. O estudo de caso mostra resultados promissores na adoção de serviços web RESTful para encapsular e disponibilizar funções de manipulação de imagens digitais. Dentre as principais vantagens, pode-se mencionar a redução da dificuldade de acesso a funções de processamento de imagens digitais, bem como a interoperabilidade entre linguagens de programação que essa tecnologia proporciona.
   
 \end{resumo}
 \textbf{Palavras-chave:} serviço web, estilo REST, interoperabilidade, manipulação de imagens digitais.
@@ -501,7 +501,19 @@ Linhas 46 a 48: a função de callback error, por sua vez, é executada quando o
 
 \section{Considerações Finais}
 
-O principal objetivo do WS desenvolvido é possibilitar aos desenvolvedores uma forma fácil e intuitiva de utilizar as funcionalidades da API apresentada na seção 2.4 por meio de requisições HTTP. Para isso, o programador não deverá encontrar dificuldades em adaptar a sua forma de desenvolvimento atual para uma arquitetura de comunicação distribuída, uma vez que praticamente todas as linguagens de programação possuem alguma API específica para auxiliar na realização de chamadas a WS's RESTful. O estudo de caso mostrou resultados promissores na adoção de serviços web RESTful para encapsular e disponibilizar as funções da API. Dentre as principais vantagens, pode-se mencionar a redução da dificuldade de acesso a funções de processamento de imagens digitais, bem como a interoperabilidade entre linguagens de programação que essa tecnologia proporciona.
+O principal objetivo do WS desenvolvido é possibilitar aos desenvolvedores uma forma fácil e intuitiva de utilizar as funcionalidades da API apresentada na seção 2.4 por meio de requisições HTTP. Para isso, o programador não deverá encontrar dificuldades em adaptar a sua forma de desenvolvimento atual para fazer uso dessa ferramenta, uma vez que praticamente todas as linguagens de programação populares possuem alguma API específica para auxiliar na realização de chamadas a serviços RESTful. 
+
+%Dessa forma, O WS cumpre essas expectativas, provendo uma comunicação de fácil  que encapsula toda
+%as funcionalidades além de permitir efetuar chamadas remotas de maneira similar a
+%chamadas locais.
+
+O WS apresentado neste trabalho elimina a restrição de dependência a uma
+única linguagem de programação, permitindo que os desenvolvedores tenham uma maior
+liberdade, não só na escolha da linguagem utilizada para implementar suas aplicações,
+mas também permitindo que o foco do desenvolvimento se resuma a aplicação em si,
+uma vez que, os detalhes da implementação estão encapsulados pela API,
+permitindo a utilização dos mesmos de uma forma fácil e eficiente.
+
 
 \bibliographystyle{sbc}
 \bibliography{sbc-template}
