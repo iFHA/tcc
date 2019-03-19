@@ -14,12 +14,11 @@
 
 %\title{Instructions for Authors of SBC Conferences\\ Papers and Abstracts}
 \title{Desenvolvimento de um Middleware para Comunicação via Web Services e sua Aplicação  em uma API de Processamento Digital de Imagens}
-\author{Fernando Henrique Alves\inst{1}}
-
+\author{Fernando Henrique Alves\inst{1}, Paulo Henrique Lopes Silva\inst{1}, Leandro Carlos de Souza\inst{1}}
 \address{
   Centro de Ciências Exatas e Naturais\\
   Universidade Federal Rural do Semi-Árido (UFERSA) -- Mossoró, RN -- Brazil
-  \email{fernandofha01@gmail.com}
+  \email{fernandofha01@gmail.com, \{phenrique,leandro.souza\}@ufersa.edu.br}
 }
 
 \begin{document} 
@@ -48,7 +47,7 @@
 \end{resumo}
 
 
-\section{Introdução/Motivação}
+\section{Introdução}
 
 Com a evolução da tecnologia, foram desenvolvidas várias facilidades para o ser humano. 
 Dentre elas, a Computação e a Internet se destacam por automatizar tarefas, reduzir
@@ -71,6 +70,7 @@ se beneficiar de tal avanço é a de Processamento Digital de Imagens (PDI), poi
 de dispositivos de aquisição e armazenamento de mídias digitais, como imagens e vídeos, faz 
 crescer a demanda por software capaz de manipulá-las. Neste contexto, APIs podem incorporar implementações de métodos que são a base comum para a manipulação de imagens e 
 vídeos a fim de minimizar erros de codificação, diminuir o custo e o tempo de produção. 
+
 Com a disseminação da internet e da consequente e inevitável necessidade de troca de informação, 
 as aplicações e sistemas desenvolvidos hoje em dia precisam 
 atender a certas condições do cenário atual, essas condições dizem respeito às características 
@@ -98,6 +98,9 @@ fornecendo uma plataforma que disponibiliza serviços de uma API de processament
 com baixos custos computacionais, ou seja, baixo consumo de memória e processamento.
 
 \section{Referencial Teórico} \label{sec:firstpage}
+
+Esta seção tem como objetivos desenvolver ideias com base em referências bibliográficas, visando o embasamento teórico do estudo e elucidar quais são os teóricos que já estudaram sobre os assuntos abordados neste trabalho.
+% e que lhe ajudarão asustentar, embasar o tema que será desenvolvido.
 
 \subsection{Middleware}
 
@@ -155,8 +158,14 @@ State Transfer ). Um serviço baseado em SOAP entregue sobre HTTP é um caso esp
 Descrito por \cite{rest}, REST é um modelo de arquitetura de software distribuído, baseado em comunicação via rede.
 %Um sistema no estilo REST é denominado RESTful e possui as seguintes características:
 Segundo \cite{richard:07} Um sistema baseado no modelo REST denomina-se RESTful. Para a implementação de tal sistema não há a necessidade da criação de novos protocolos ou tecnologias, pois o mesmo é suportado em qualquer arquitetura de rede.
+
 Enquanto o SOAP é um protocolo de mensagens, o REST é um estilo de arquitetura
-de software para sistemas hipermídia distribuídos, conhecidos como recursos e são acessados via URIs (Uniform Resource Identifiers ou, em português, Identificador Uniforme de Recursos). Um recurso RESTful é qualquer coisa que possua um endereço através da web, como por exemplo uma imagem jpg, dados de uma empresa, entre outros, ou seja, sistemas em que as hipermídias são armazenadas em uma rede e interconectadas através de hiperlinks podendo ser acessados e transferidos entre clientes e servidores.
+de software para sistemas hipermídia distribuídos, conhecidos como recursos e são acessados via URIs (Uniform Resource Identifiers ou, em português, Identificador Uniforme de Recursos). 
+
+Segundo \cite{lecheta:15}, um dos motivos pelos quais o SOAP começou a perder espaço para web services RESTful, foi principalmente, por causa da grande utilização de dispositivos móveis atualmente, que possuem recursos mais escassos, e necessitam de uma forma mais leve para tráfego de dados, pois um WS RESTful, possui uma sintaxe mais elegante e pode transmitir informações utilizando formatos mais leves.
+
+Um recurso RESTful é qualquer coisa que possua um endereço através da web, como por exemplo uma imagem jpg, dados de uma empresa, entre outros, ou seja, sistemas em que as hipermídias são armazenadas em uma rede e interconectadas através de hiperlinks podendo ser acessados e transferidos entre clientes e servidores.
+
 O núcleo da abordagem REST consiste na utilização dos métodos HTTP, que correspondem às operações CRUD (Create, Read, Update, Delete). Cada requisição HTTP inclui um dos métodos apresentados na tabela 1 para indicar qual a operação CRUD que deve ser realizada sobre o recurso.
 \begin{table}[ht]
 	\centering
@@ -184,14 +193,14 @@ pedido.
 Uma imagem pode ser definida por uma função bidimensional f (x,y) em que x e y são um par de coordenadas espaciais e o valor de f representa a intensidade da
 imagem naquele ponto. Quando x, y e os valores das intensidades de f são todos finitos e em quantidades discretas, pode-se dizer que a imagem é uma imagem
 digital. Os elementos constituintes das imagens são denominados pixels. O PDI refere-se à utilização de métodos que manipulam imagens digitais e que geram
-como resultado outras imagens digitais. Esta manipulação envolve a utilização dos pixels da imagem de entrada para a geração de novos pixels que formam a
-nova imagem de obtida \cite{gonzalez:08}.
+como resultado outras imagens digitais. De acordo com \cite{gonzalez:08} esta manipulação envolve a utilização dos pixels da imagem de entrada para a geração de novos pixels que formam a
+nova imagem de obtida.
 
 Na maioria dos casos, os métodos que se deseja implementar para a manipulação das imagens são mapeamentos, considerando a utilização de uma matemática
 básica ou avançada, que utilizam as posições e os valores dos próprios pixels. Entretanto, quando os programadores se deparam com o desenvolvimento de
 programas que processam imagens, eles devem se preocupar com outras tarefas que não são estão ligadas à essência do PDI. Exemplos destas tarefas são dados
 pela escolha e utilização de APIs para a leitura e gravação de arquivos, criação de interface gráfica ou aplicação de testes para verificação do que foi
-implementado. Estas nuâncias de implementação podem ser abstraídas através do uso de uma API específica que faça a abstração destas tarefas \cite{gonzalez:08,jain:89}.
+implementado. Segundo \cite{gonzalez:08,jain:89} estas nuâncias de implementação podem ser abstraídas através do uso de uma API específica que faça a abstração destas tarefas.
 
 \subsection{API em Desenvolvimento}
 
@@ -201,7 +210,7 @@ Até o presente momento, foram desenvolvidos dois filtros para aplicação em im
 
 \section{Desenvolvimento}
 
-Esta sessão está destinada a descrever a arquitetura e funcionamento da ferramenta proposta, bem como a disponibilização de seus serviços, e as tecnologias envolvidas em sua implementação.
+Esta seção está destinada a descrever a arquitetura e funcionamento da ferramenta proposta, bem como a disponibilização de seus serviços, e as tecnologias envolvidas em sua implementação.
 
 
 %A função de um middleware é tornar possível a comunicação entre aplicações que
@@ -304,7 +313,7 @@ Nesta seção, serão descritas, bem como o título da mesma explicita, as tecno
 
 \subsubsection{Java Enterprise Edition(Java EE)}
 
-Como mencionado na introdução deste trabalho, a linguagem escolhida para desenvolvimento do middleware foi Java, que é uma das linguagens de desenvolvimento multiplataforma mais conhecidas e atualmente está bastante consolidada no mercado, com vários fóruns e comunidades dispostos a nos auxiliar no processo de construção de software, o que torna tal escolha bastante razoável. 
+Como mencionado na introdução deste trabalho, a linguagem escolhida para desenvolvimento do WS foi Java, que é uma das linguagens de desenvolvimento multiplataforma mais conhecidas e atualmente está bastante consolidada no mercado, com vários fóruns e comunidades dispostos a nos auxiliar no processo de construção de software, o que torna tal escolha bastante razoável. 
 
 O Java EE consiste de uma série de especificações bem detalhadas, ditando como deve ser implementado um software capaz de realizar serviços de infraestrutura, como web services, persistência em banco de dados, gerenciamento de conexões HTTP, acesso remoto, gerenciamento de sessão web, entre outros. Tudo isso, claro, baseado na linguagem Java.
 
@@ -428,7 +437,7 @@ Com as dependências citadas na Figura \ref{fig:Figura5} adicionadas, e com o Ma
 
 \section{Estudo de caso}
 
-Nesta sessão, serão descritos os passos necessários para a realização de consumo dos serviços da API por meio da comunicação com o Middleware, apresentando o desenvolvimento de uma aplicação cliente como estudo de caso.
+Nesta seção, serão descritos os passos necessários para a realização de consumo dos serviços da API por meio da comunicação com o Middleware, apresentando o desenvolvimento de uma aplicação cliente como estudo de caso.
 
 A escolha da linguagem JavaScript como base para o desenvolvimento da aplicação cliente, se deu mais pela necessidade de demonstrar a independência de plataforma que o Middleware nos proporciona, e também pelo fato de que atualmente JavaScript é uma das linguagens mais conhecidas e utilizadas ao redor do mundo.
 

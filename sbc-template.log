@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  18 MAR 2019 22:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  19 MAR 2019 14:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -137,19 +137,19 @@ Package: multirow 2018/08/03 v2.3 Span multiple rows of a table
 ) (./sbc-template.aux)
 \openout1 = `sbc-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
-LaTeX Font Info:    ... okay on input line 25.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 25.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 24.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -254,135 +254,145 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <16> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 27.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 27.
+(Font)              <12> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 27.
+(Font)              <8> on input line 26.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 27.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 27.
+(Font)              <6> on input line 26.
 
+Overfull \hbox (15.77084pt too wide) in paragraph at lines 26--26
+ [][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 26.
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
+LaTeX Font Info:    Try loading font information for OMS+pcr on input line 26.
+
+(/usr/share/texmf-dist/tex/latex/psnfss/omspcr.fd
+File: omspcr.fd 
+)
+LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 29.
+(Font)              Font shape `OT1/ptm/b/it' tried instead on input line 28.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 51.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 50.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-<figura1.png, id=15, 456.95718pt x 135.50626pt>
+<figura1.png, id=16, 456.95718pt x 135.50626pt>
 File: figura1.png Graphic file (type png)
 <use figura1.png>
-Package pdftex.def Info: figura1.png  used on input line 138.
+Package pdftex.def Info: figura1.png  used on input line 141.
 (pdftex.def)             Requested size: 341.43437pt x 101.25311pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 139.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 142.
 
 
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 139.
-
-Underfull \vbox (badness 1377) has occurred while \output is active []
-
- [3 <./figura1.png (PNG copy)>] [4]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 230.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 142.
+ [3 <./figura1.png (PNG copy)>] [4] [5]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 239.
 
  (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 230.
-
-[5]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 239.
 <modelo-comunicacao.png, id=27, 108.405pt x 305.34074pt>
 File: modelo-comunicacao.png Graphic file (type png)
 <use modelo-comunicacao.png>
-Package pdftex.def Info: modelo-comunicacao.png  used on input line 238.
+Package pdftex.def Info: modelo-comunicacao.png  used on input line 247.
 (pdftex.def)             Requested size: 85.35696pt x 240.4338pt.
  [6 <./modelo-comunicacao.png (PNG copy)>]
-Overfull \hbox (21.54872pt too wide) in paragraph at lines 281--290
+Overfull \hbox (21.54872pt too wide) in paragraph at lines 290--299
  [][] 
  []
 
-<ds-green-filter.png, id=31, 350.81062pt x 359.09157pt>
+[7]
+<ds-green-filter.png, id=35, 350.81062pt x 359.09157pt>
 File: ds-green-filter.png Graphic file (type png)
 <use ds-green-filter.png>
-Package pdftex.def Info: ds-green-filter.png  used on input line 296.
+Package pdftex.def Info: ds-green-filter.png  used on input line 305.
 (pdftex.def)             Requested size: 298.75264pt x 305.8265pt.
 
-Underfull \vbox (badness 4832) has occurred while \output is active []
+Underfull \vbox (badness 3646) has occurred while \output is active []
 
- [7]
-[8 <./ds-green-filter.png (PNG copy)>]
+ [8 <./ds-green-filter.png (PNG copy)>]
 <web-xml.png, id=39, 536.75531pt x 207.02344pt>
 File: web-xml.png Graphic file (type png)
 <use web-xml.png>
-Package pdftex.def Info: web-xml.png  used on input line 317.
+Package pdftex.def Info: web-xml.png  used on input line 326.
 (pdftex.def)             Requested size: 384.1096pt x 148.14697pt.
 <codigo-green-service.png, id=40, 603.0028pt x 399.74344pt>
 File: codigo-green-service.png Graphic file (type png)
 <use codigo-green-service.png>
-Package pdftex.def Info: codigo-green-service.png  used on input line 327.
+Package pdftex.def Info: codigo-green-service.png  used on input line 336.
 (pdftex.def)             Requested size: 384.1096pt x 254.6333pt.
-
-Underfull \vbox (badness 2005) has occurred while \output is active []
-
  [9 <./web-xml.png (PNG copy)>]
 <exemplo-json.png, id=44, 284.56313pt x 79.79813pt>
 File: exemplo-json.png Graphic file (type png)
 <use exemplo-json.png>
-Package pdftex.def Info: exemplo-json.png  used on input line 341.
+Package pdftex.def Info: exemplo-json.png  used on input line 350.
 (pdftex.def)             Requested size: 298.75264pt x 83.78561pt.
- [10 <./codigo-green-service.png (PNG copy)> <./exemplo-json.png (PNG copy)>] [
-11]
+ [10 <./codigo-green-service.png (PNG copy)>] [11 <./exemplo-json.png (PNG copy
+)>]
 <jersey-pom.png, id=51, 425.33907pt x 173.89969pt>
 File: jersey-pom.png Graphic file (type png)
 <use jersey-pom.png>
-Package pdftex.def Info: jersey-pom.png  used on input line 420.
+Package pdftex.def Info: jersey-pom.png  used on input line 429.
 (pdftex.def)             Requested size: 384.1096pt x 157.05222pt.
- [12 <./jersey-pom.png (PNG copy)>]
+
+Underfull \vbox (badness 1603) has occurred while \output is active []
+
+ [12]
 <aplicacao-cliente.png, id=55, 584.1825pt x 756.8275pt>
 File: aplicacao-cliente.png Graphic file (type png)
 <use aplicacao-cliente.png>
-Package pdftex.def Info: aplicacao-cliente.png  used on input line 439.
+Package pdftex.def Info: aplicacao-cliente.png  used on input line 448.
 (pdftex.def)             Requested size: 298.75264pt x 387.0509pt.
- [13 <./aplicacao-cliente.png>]
-<cliente-requisicao.png, id=62, 767.86874pt x 568.1225pt>
+<cliente-requisicao.png, id=57, 767.86874pt x 568.1225pt>
 File: cliente-requisicao.png Graphic file (type png)
 <use cliente-requisicao.png>
-Package pdftex.def Info: cliente-requisicao.png  used on input line 450.
+Package pdftex.def Info: cliente-requisicao.png  used on input line 459.
 (pdftex.def)             Requested size: 384.1096pt x 284.19923pt.
-<caminho-servicos.png, id=63, 664.4825pt x 53.19875pt>
+<caminho-servicos.png, id=58, 664.4825pt x 53.19875pt>
 File: caminho-servicos.png Graphic file (type png)
 <use caminho-servicos.png>
-Package pdftex.def Info: caminho-servicos.png  used on input line 461.
+Package pdftex.def Info: caminho-servicos.png  used on input line 470.
 (pdftex.def)             Requested size: 384.1096pt x 30.7522pt.
- [14 <./cliente-requisicao.png> <./caminho-servicos.png>]
-(./sbc-template.bbl [15]) [16] (./sbc-template.aux) ) 
+
+[13 <./jersey-pom.png (PNG copy)>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <./aplicacao-cliente.png>] [15 <./cliente-requisicao.png> <./caminho-servi
+cos.png>]
+(./sbc-template.bbl) [16] (./sbc-template.aux) ) 
 Here is how much of TeX's memory you used:
- 3339 strings out of 492639
- 46580 string characters out of 6135497
- 134125 words of memory out of 5000000
- 7147 multiletter control sequences out of 15000+600000
+ 3354 strings out of 492639
+ 46822 string characters out of 6135497
+ 135242 words of memory out of 5000000
+ 7159 multiletter control sequences out of 15000+600000
  21548 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,11n,28p,1069b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fon
-ts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fon
-ts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/u
-tmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on sbc-template.pdf (16 pages, 838544 bytes).
+ 41i,11n,28p,1069b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/en
+c/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
+e/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/ty
+pe1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a
+.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf
+-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on sbc-template.pdf (16 pages, 840575 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream
