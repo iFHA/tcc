@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  19 MAR 2019 18:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  19 MAR 2019 19:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -282,19 +282,19 @@ LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <10> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/it' tried instead on input line 31.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 40.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [2]
-Underfull \hbox (badness 1194) in paragraph at lines 113--123
+Underfull \hbox (badness 1194) in paragraph at lines 110--120
 \OT1/ptm/m/n/12 Para [[]] o mid-dleware refere-se a uma ca-mada
  []
 
 
-Underfull \hbox (badness 1412) in paragraph at lines 113--123
+Underfull \hbox (badness 1412) in paragraph at lines 110--120
 \OT1/ptm/m/n/12 autoriza[][]ao, autentica[][]ao, seguran[]a, en-tre ou-tras. O 
 mid-dleware im-ple-menta a
  []
@@ -302,82 +302,78 @@ mid-dleware im-ple-menta a
 <figura1.png, id=16, 456.95718pt x 135.50626pt>
 File: figura1.png Graphic file (type png)
 <use figura1.png>
-Package pdftex.def Info: figura1.png  used on input line 152.
+Package pdftex.def Info: figura1.png  used on input line 149.
 (pdftex.def)             Requested size: 341.43437pt x 101.25311pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 153.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 150.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 153.
- [3]
-Underfull \vbox (badness 6300) has occurred while \output is active []
-
- [4 <./figura1.png (PNG copy)>] [5]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 250.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 150.
+ [3] [4 <./figura1.png (PNG copy)>] [5]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 247.
 
  (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 250.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 247.
 <modelo-comunicacao2.png, id=27, 158.09062pt x 331.2375pt>
 File: modelo-comunicacao2.png Graphic file (type png)
 <use modelo-comunicacao2.png>
-Package pdftex.def Info: modelo-comunicacao2.png  used on input line 258.
+Package pdftex.def Info: modelo-comunicacao2.png  used on input line 255.
 (pdftex.def)             Requested size: 128.0387pt x 268.29079pt.
-
-[6] [7 <./modelo-comunicacao2.png (PNG copy)>]
-Overfull \hbox (21.54872pt too wide) in paragraph at lines 301--310
+ [6] [7 <./modelo-comunicacao2.png (PNG copy)>]
+Overfull \hbox (21.54872pt too wide) in paragraph at lines 298--307
  [][] 
  []
 
 <ds-green-filter2.png, id=35, 388.45125pt x 332.74312pt>
 File: ds-green-filter2.png Graphic file (type png)
 <use ds-green-filter2.png>
-Package pdftex.def Info: ds-green-filter2.png  used on input line 316.
+Package pdftex.def Info: ds-green-filter2.png  used on input line 313.
 (pdftex.def)             Requested size: 298.75264pt x 255.91342pt.
 [8 <./ds-green-filter2.png (PNG copy)>]
 <web-xml.png, id=39, 536.75531pt x 207.02344pt>
 File: web-xml.png Graphic file (type png)
 <use web-xml.png>
-Package pdftex.def Info: web-xml.png  used on input line 337.
+Package pdftex.def Info: web-xml.png  used on input line 334.
 (pdftex.def)             Requested size: 384.1096pt x 148.14697pt.
  [9 <./web-xml.png (PNG copy)>]
 <codigo-green-service.png, id=43, 603.0028pt x 399.74344pt>
 File: codigo-green-service.png Graphic file (type png)
 <use codigo-green-service.png>
-Package pdftex.def Info: codigo-green-service.png  used on input line 347.
+Package pdftex.def Info: codigo-green-service.png  used on input line 344.
 (pdftex.def)             Requested size: 384.1096pt x 254.6333pt.
  [10 <./codigo-green-service.png (PNG copy)>]
 <exemplo-json.png, id=47, 284.56313pt x 79.79813pt>
 File: exemplo-json.png Graphic file (type png)
 <use exemplo-json.png>
-Package pdftex.def Info: exemplo-json.png  used on input line 361.
+Package pdftex.def Info: exemplo-json.png  used on input line 358.
 (pdftex.def)             Requested size: 298.75264pt x 83.78561pt.
  [11 <./exemplo-json.png (PNG copy)>]
 [12]
 <jersey-pom.png, id=54, 425.33907pt x 173.89969pt>
 File: jersey-pom.png Graphic file (type png)
 <use jersey-pom.png>
-Package pdftex.def Info: jersey-pom.png  used on input line 440.
+Package pdftex.def Info: jersey-pom.png  used on input line 437.
 (pdftex.def)             Requested size: 384.1096pt x 157.05222pt.
 <aplicacao-cliente.png, id=55, 584.1825pt x 756.8275pt>
 File: aplicacao-cliente.png Graphic file (type png)
 <use aplicacao-cliente.png>
-Package pdftex.def Info: aplicacao-cliente.png  used on input line 459.
+Package pdftex.def Info: aplicacao-cliente.png  used on input line 456.
 (pdftex.def)             Requested size: 213.39568pt x 276.46494pt.
 <cliente-requisicao.png, id=57, 767.86874pt x 568.1225pt>
 File: cliente-requisicao.png Graphic file (type png)
 <use cliente-requisicao.png>
-Package pdftex.def Info: cliente-requisicao.png  used on input line 470.
+Package pdftex.def Info: cliente-requisicao.png  used on input line 467.
 (pdftex.def)             Requested size: 384.1096pt x 284.19923pt.
  [13 <./jersey-pom.png (PNG copy)>]
 <caminho-servicos.png, id=62, 664.4825pt x 53.19875pt>
 File: caminho-servicos.png Graphic file (type png)
 <use caminho-servicos.png>
-Package pdftex.def Info: caminho-servicos.png  used on input line 481.
+Package pdftex.def Info: caminho-servicos.png  used on input line 478.
 (pdftex.def)             Requested size: 384.1096pt x 30.7522pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -386,10 +382,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 cos.png>]
 (./sbc-template.bbl) [16] (./sbc-template.aux) ) 
 Here is how much of TeX's memory you used:
- 3363 strings out of 492639
- 46914 string characters out of 6135497
+ 3362 strings out of 492639
+ 46906 string characters out of 6135497
  137399 words of memory out of 5000000
- 7168 multiletter control sequences out of 15000+600000
+ 7167 multiletter control sequences out of 15000+600000
  21548 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,28p,1069b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -401,7 +397,7 @@ pe1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a
 .pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf
 -dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/t
 imes/utmri8a.pfb>
-Output written on sbc-template.pdf (16 pages, 845581 bytes).
+Output written on sbc-template.pdf (16 pages, 843246 bytes).
 PDF statistics:
  103 PDF objects out of 1000 (max. 8388607)
  63 compressed objects within 1 object stream
