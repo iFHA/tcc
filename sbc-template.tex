@@ -40,17 +40,11 @@
 \end{abstract}
 
 \begin{resumo} 
-  A evolução tecnológica tem tornado a Educação a Distância
-  acessível para um maior número de cidadãos em qualquer hora e em qualquer
-  lugar. O aumento potencial da oferta de dispositivos móveis integrados a
-  ambientes de aprendizado móvel permite que a informação saia dos ambientes
-  físicos das instituições de ensino, oportunizando a alunos e professores
-  criarem cenários de aprendizagem geograficamente distribuídos. Entretanto,
-  muitos dos aplicativos desenvolvidos para estes ambientes ainda permanecem
-  isolados uns dos outros e não se integram de maneira suficiente aos ambientes
-  virtuais de aprendizagem (AVA). Este artigo apresenta um modelo de
-  interoperabilidade entre dispositivos móveis e AVA distintos baseado em
-  webservices.
+  O presente artigo promoveu a criação de um serviço web do estilo arquitetural REST (Representational State Transfer - Transferência de Estado Representacional), proposto por Roy Thomas Fielding, em sua tese de doutorado no ano 2000, com objetivo de disponibilizar funcionalidades de uma API(Application Programming Interface - Interface de Programação de Aplicativos) de PDI(Processamento Digital de Imagens).
+  O trabalho se fundamentou em pesquisas bibliográficas, buscando inicialmente construir uma base conceitual bibliográfica, para então implementar uma aplicação de serviços web.
+  Cumpridas todas as etapas a que se propôs, o estudo resultou na confirmação da eficácia e viabilidade da adoção de REST no provimento de serviços em um universo de sistemas distribuídos. O grau de dificuldade para implementação foi considerado baixo em termos práticos, mas demandando a necessidade de domínio dos conceitos teóricos envolvidos.
+  
+  
 \end{resumo}
 
 
@@ -91,12 +85,12 @@ Java, com auxílio de uma ferramenta denominada JERSEY, baseada na arquitetura
 SOA, mais especificamente em Serviço Web seguindo o conceito REST, do inglês
 Representational State Transfer (Transferência do Estado Representacional), o qual
 foi proposto por Roy T. Fielding em sua dissertação de doutorado, publicada no ano
-2000. (SANDOVAL, 2009)
+2000. 
 
 Este tipo de Serviço Web utiliza-se do protocolo HTTP para realizar a troca
 de mensagens entre clientes e servidor. Outra característica importante é a forma de
 redirecionamento de serviços, realizado através de um endereçamento URI
-específico. (RICHARDSON; RUBY, 2007)
+específico.
 
 Aliando todos os fatores e tecnologias apresentados anteriormente, torna-se
 possível o desenvolvimento de uma arquitetura baseada em Serviços Web,
@@ -107,15 +101,14 @@ com baixos custos computacionais, ou seja, baixo consumo de memória e processam
 
 \subsection{Middleware}
 
-Para Coulouris (2005) o middleware “é um termo aplicado a uma camada de software
+Para \cite{coulouris:05} o middleware “é um termo aplicado a uma camada de software
 que fornece uma abstração da programação, assim como o mascaramento de
 heterogeneidade das redes, do hardware, de sistemas operacionais e linguagens de
 programação subjacentes”. Tal camada configura funções de identificação, autorização,
 autenticação, segurança, entre outras. O middleware implementa a comunicação e o
 compartilhamento de recursos e aplicativos distribuídos.
-Um middleware forma uma camada entre aplicações e plataformas distribuídas
-cuja finalidade é proporcionar um grau de transparência de distribuição. [Tanenbaum,
-2007]
+De acordo com \cite{tanenbaum:07}, um middleware forma uma camada entre aplicações e plataformas distribuídas
+cuja finalidade é proporcionar um grau de transparência de distribuição. 
 Neste trabalho pretende-se fazer middleware de modo que sejam simples as
 configurações, adaptações e personalizações da aplicação conforme sejam necessárias.
 
@@ -127,13 +120,15 @@ Os Webservices permitem que sistemas desenvolvidos em diferentes linguagens,
 sendo executados em diversas plataformas, transmitam e recebam informações
 padronizadas entre si, permitindo uma interação entre os dispositivos, mais abrangente
 que qualquer outra tecnologia de computação distribuída existente.
-Segundo Kalin (2009) Webservice é um tipo de aplicação para web distribuída,
+Segundo \cite{kalin:09}, Webservice é um tipo de aplicação para web distribuída,
 cujos componentes podem ser aplicados e executados em dispositivos distintos.
 Configura-se como um mecanismo de comunicação que permite a interoperabilidade
-entre sistemas. Para Kreger (2001) um Webservice descreve uma coleção de operações
+entre sistemas. Para \cite{kreger:01}, um Webservice descreve uma coleção de operações
 que são acessíveis pela rede através de mensagens XML (eXtensible Markup Language)
 padronizadas. Porém existe a tecnologia JSON (Javascript Object Notation) que
-também possibilita a troca de mensagens de forma mais leve. O uso de Webservice
+também possibilita a troca de mensagens de forma mais leve. Segundo \cite{sandoval:09}, dentre os
+formatos mais utilizados nas requisições e respostas, destacam-se texto plano
+HTML, XML e JSON. O uso de Webservice
 possibilita que aplicações desenvolvidas em plataformas e linguagens diversificadas
 troquem informações padronizadas permitindo a interação entre elas com rapidez,
 facilidade e baixo custo, conforme ilustrado na Figura 1.
@@ -145,7 +140,7 @@ facilidade e baixo custo, conforme ilustrado na Figura 1.
 	\label{fig:exampleFigura1}
 \end{figure}
 
-Souza (2004) explica que os Webservices utilizam tecnologias que permitem que
+\cite{souza04} explica que os Webservices utilizam tecnologias que permitem que
 os serviços sejam disponibilizados pela WEB transportando e transformando dados
 entre aplicações com base em XML ou JSON. Nesse contexto, o XML e JSON além de
 funcionarem como padrão para troca de mensagens também têm o papel de definir os
@@ -157,9 +152,9 @@ State Transfer ). Um serviço baseado em SOAP entregue sobre HTTP é um caso esp
 
 \subsubsection{REST - Representational State Transfer}
 
-Descrito por Fielding (2000), REST é um modelo de arquitetura de software distribuído, baseado em comunicação via rede.
+Descrito por \cite{rest}, REST é um modelo de arquitetura de software distribuído, baseado em comunicação via rede.
 %Um sistema no estilo REST é denominado RESTful e possui as seguintes características:
-Um sistema baseado no modelo REST denomina-se RESTful. Para a implementação de tal sistema não há a necessidade da criação de novos protocolos ou tecnologias, pois o mesmo é suportado em qualquer arquitetura de rede.
+Segundo \cite{richard:07} Um sistema baseado no modelo REST denomina-se RESTful. Para a implementação de tal sistema não há a necessidade da criação de novos protocolos ou tecnologias, pois o mesmo é suportado em qualquer arquitetura de rede.
 Enquanto o SOAP é um protocolo de mensagens, o REST é um estilo de arquitetura
 de software para sistemas hipermídia distribuídos, conhecidos como recursos e são acessados via URIs (Uniform Resource Identifiers ou, em português, Identificador Uniforme de Recursos). Um recurso RESTful é qualquer coisa que possua um endereço através da web, como por exemplo uma imagem jpg, dados de uma empresa, entre outros, ou seja, sistemas em que as hipermídias são armazenadas em uma rede e interconectadas através de hiperlinks podendo ser acessados e transferidos entre clientes e servidores.
 O núcleo da abordagem REST consiste na utilização dos métodos HTTP, que correspondem às operações CRUD (Create, Read, Update, Delete). Cada requisição HTTP inclui um dos métodos apresentados na tabela 1 para indicar qual a operação CRUD que deve ser realizada sobre o recurso.
@@ -181,7 +176,7 @@ O núcleo da abordagem REST consiste na utilização dos métodos HTTP, que corr
 Em termos gerais, um cliente RESTful emite um pedido que envolve um recurso, como
 por exemplo, um pedido de alteração. Se este pedido for bem sucedido, uma representação
 do recurso é transferido do servidor que hospeda o recurso para o cliente que emitiu o
-pedido [Kalin 2009].
+pedido.
 
 
 \subsection{Processamento Digital de Imagens(PDI)}
@@ -190,13 +185,13 @@ Uma imagem pode ser definida por uma função bidimensional f (x,y) em que x e y
 imagem naquele ponto. Quando x, y e os valores das intensidades de f são todos finitos e em quantidades discretas, pode-se dizer que a imagem é uma imagem
 digital. Os elementos constituintes das imagens são denominados pixels. O PDI refere-se à utilização de métodos que manipulam imagens digitais e que geram
 como resultado outras imagens digitais. Esta manipulação envolve a utilização dos pixels da imagem de entrada para a geração de novos pixels que formam a
-nova imagem de obtida [4].
+nova imagem de obtida \cite{gonzalez:08}.
 
 Na maioria dos casos, os métodos que se deseja implementar para a manipulação das imagens são mapeamentos, considerando a utilização de uma matemática
 básica ou avançada, que utilizam as posições e os valores dos próprios pixels. Entretanto, quando os programadores se deparam com o desenvolvimento de
 programas que processam imagens, eles devem se preocupar com outras tarefas que não são estão ligadas à essência do PDI. Exemplos destas tarefas são dados
 pela escolha e utilização de APIs para a leitura e gravação de arquivos, criação de interface gráfica ou aplicação de testes para verificação do que foi
-implementado. Estas nuâncias de implementação podem ser abstraídas através do uso de uma API específica que faça a abstração destas tarefas [4, 5].
+implementado. Estas nuâncias de implementação podem ser abstraídas através do uso de uma API específica que faça a abstração destas tarefas \cite{gonzalez:08,jain:89}.
 
 \subsection{API em Desenvolvimento}
 
@@ -492,8 +487,8 @@ Linhas 46 a 48: a função de callback error, por sua vez, é executada quando o
 O principal objetivo do middleware desenvolvido é possibilitar aos desenvolvedores uma forma fácil e intuitiva de utilizar as funcionalidades da API apresentada na seção 2.4 por meio de requisições HTTP. Para isso, o programador não deverá encontrar dificuldades em adaptar a sua forma de de-
 senvolvimento atual para um arquitetura de comunicação distribuída.
 Bibliographic references must be unambiguous and uniform.  We recommend giving
-the author names references in brackets, e.g. \cite{knuth:84},
-\cite{boulic:91}, and \cite{smith:99}.
+the author names references in brackets, e.g.
+
 
 The references must be listed using 12 point font size, with 6 points of space
 before each reference. The first line of each reference should not be

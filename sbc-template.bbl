@@ -1,27 +1,56 @@
 \begin{thebibliography}{}
 
-\bibitem[Boulic and Renault 1991]{boulic:91}
-Boulic, R. and Renault, O. (1991).
-\newblock 3d hierarchies for animation.
-\newblock In Magnenat-Thalmann, N. and Thalmann, D., editors, {\em New Trends
-  in Animation and Visualization}. John Wiley {\&} Sons ltd.
+\bibitem[Coulouris 2005]{coulouris:05}
+Coulouris, George;~Dollimore, J. K.~T. (2005).
+\newblock {\em Distributed systems: concepts and design}.
+\newblock Addison-Wesley, 4th edition.
 
-\bibitem[DevMedia 2018]{dev1}
-DevMedia (2018).
-\newblock Introdução a web services restful.
-\newblock
-  \url{https://www.devmedia.com.br/introducao-a-web-services-restful/37387}.
-\newblock 27 Dezembro, 2018.
+\bibitem[Fielding 2000]{rest}
+Fielding, R.~T. (2000).
+\newblock {\em {REST:} Architectural Styles and the Design of Network-based
+  Software Architectures}.
+\newblock Doctoral dissertation, University of California, Irvine.
 
-\bibitem[Knuth 1984]{knuth:84}
-Knuth, D.~E. (1984).
-\newblock {\em The {\TeX} Book}.
-\newblock Addison-Wesley, 15th edition.
+\bibitem[GONZALEZ and WOODS 2008]{gonzalez:08}
+GONZALEZ, R.~C. and WOODS, R.~E. (2008).
+\newblock {\em Digital Image Processing}.
+\newblock Prentice Hall, 3rd edition.
 
-\bibitem[Smith and Jones 1999]{smith:99}
-Smith, A. and Jones, B. (1999).
-\newblock On the complexity of computing.
-\newblock In Smith-Jones, A.~B., editor, {\em Advances in Computer Science},
-  pages 555--566. Publishing Press.
+\bibitem[JAIN 2007]{jain:89}
+JAIN, A.~K. (2007).
+\newblock {\em Fundamentals of Digital Image Processing}.
+\newblock Prentice Hall.
+
+\bibitem[KALIN 2009]{kalin:09}
+KALIN, M. (2009).
+\newblock {\em Java Web Services}.
+\newblock Alta Books.
+
+\bibitem[KREGER 2001]{kreger:01}
+KREGER, H. (2001).
+\newblock {\em Web Services Conceptual Architecture}.
+\newblock IBM Software Group.
+
+\bibitem[RICHARDSON 2007]{richard:07}
+RICHARDSON, Leonard, R.~S. (2007).
+\newblock {\em RESTful Web Services}.
+\newblock O'Reilly.
+
+\bibitem[SANDOVAL 2009]{sandoval:09}
+SANDOVAL, J. (2009).
+\newblock {\em RESTful Java Web Services}.
+\newblock Packt Publishing.
+
+\bibitem[SOUZA 2004]{souza04}
+SOUZA, V. (2004).
+\newblock Swservice: uma biblioteca para a escrita da língua brasileira de
+  sinais baseada em web services.
+\newblock Master's thesis, Universidade do Vale do Rio dos Sinos, Unisinos,
+  São Leopoldo.
+
+\bibitem[Tanenbaum 2007]{tanenbaum:07}
+Tanenbaum, A.~S. (2007).
+\newblock {\em Sistemas Distribuidos - Princípios e Paradigmas}.
+\newblock Prentice Hall.
 
 \end{thebibliography}
