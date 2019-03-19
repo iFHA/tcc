@@ -1,12 +1,12 @@
 \begin{thebibliography}{}
 
-\bibitem[Coulouris 2005]{coulouris:05}
-Coulouris, George;~Dollimore, J. K.~T. (2005).
+\bibitem[COULOURIS and KINDBERG 2005]{coulouris:05}
+COULOURIS, George, D.~J. and KINDBERG, T. (2005).
 \newblock {\em Distributed systems: concepts and design}.
 \newblock Addison-Wesley, 4th edition.
 
-\bibitem[Fielding 2000]{rest}
-Fielding, R.~T. (2000).
+\bibitem[FIELDING 2000]{rest}
+FIELDING, R.~T. (2000).
 \newblock {\em {REST:} Architectural Styles and the Design of Network-based
   Software Architectures}.
 \newblock Doctoral dissertation, University of California, Irvine.
@@ -48,8 +48,8 @@ SOUZA, V. (2004).
 \newblock Master's thesis, Universidade do Vale do Rio dos Sinos, Unisinos,
   São Leopoldo.
 
-\bibitem[Tanenbaum 2007]{tanenbaum:07}
-Tanenbaum, A.~S. (2007).
+\bibitem[TANENBAUM 2007]{tanenbaum:07}
+TANENBAUM, A.~S. (2007).
 \newblock {\em Sistemas Distribuidos - Princípios e Paradigmas}.
 \newblock Prentice Hall.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  18 MAR 2019 22:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  18 MAR 2019 22:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -364,40 +364,28 @@ File: caminho-servicos.png Graphic file (type png)
 <use caminho-servicos.png>
 Package pdftex.def Info: caminho-servicos.png  used on input line 461.
 (pdftex.def)             Requested size: 384.1096pt x 30.7522pt.
- [14 <./cliente-requisicao.png> <./caminho-servicos.png>] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 507--510
-[]\OT1/ptm/m/n/12 https://www.devmedia.com.br/introducao-a-web-services-restful
-/37387
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 507--510
-\OT1/ptm/m/n/12 https://www.devmedia.com.br/ajax-com-jquery-trabalhando-com-req
-uisicoes-
- []
-
-(./sbc-template.bbl) [16] (./sbc-template.aux) ) 
+ [14 <./cliente-requisicao.png> <./caminho-servicos.png>]
+(./sbc-template.bbl [15]) [16] (./sbc-template.aux) ) 
 Here is how much of TeX's memory you used:
  3339 strings out of 492639
  46580 string characters out of 6135497
- 135112 words of memory out of 5000000
+ 134125 words of memory out of 5000000
  7147 multiletter control sequences out of 15000+600000
  21548 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,28p,1069b,312s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/en
-c/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
-pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/shar
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fo
-nts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helveti
-c/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
-e/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on sbc-template.pdf (16 pages, 846698 bytes).
+{/usr/share/texmf-dist/fon
+ts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fon
+ts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/u
+tmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/
+texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/
+urw/times/utmri8a.pfb>
+Output written on sbc-template.pdf (16 pages, 838544 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 103 PDF objects out of 1000 (max. 8388607)
+ 63 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
