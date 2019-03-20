@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  19 MAR 2019 20:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  19 MAR 2019 21:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -346,6 +346,9 @@ File: codigo-green-service.png Graphic file (type png)
 <use codigo-green-service.png>
 Package pdftex.def Info: codigo-green-service.png  used on input line 344.
 (pdftex.def)             Requested size: 384.1096pt x 254.6333pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [10 <./codigo-green-service.png (PNG copy)>]
 <exemplo-json.png, id=47, 284.56313pt x 79.79813pt>
 File: exemplo-json.png Graphic file (type png)
@@ -353,7 +356,9 @@ File: exemplo-json.png Graphic file (type png)
 Package pdftex.def Info: exemplo-json.png  used on input line 358.
 (pdftex.def)             Requested size: 298.75264pt x 83.78561pt.
  [11 <./exemplo-json.png (PNG copy)>]
-[12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12]
 <jersey-pom.png, id=54, 425.33907pt x 173.89969pt>
 File: jersey-pom.png Graphic file (type png)
 <use jersey-pom.png>
@@ -369,7 +374,8 @@ File: cliente-requisicao.png Graphic file (type png)
 <use cliente-requisicao.png>
 Package pdftex.def Info: cliente-requisicao.png  used on input line 467.
 (pdftex.def)             Requested size: 384.1096pt x 284.19923pt.
- [13 <./jersey-pom.png (PNG copy)>]
+
+[13 <./jersey-pom.png (PNG copy)>]
 <caminho-servicos.png, id=62, 664.4825pt x 53.19875pt>
 File: caminho-servicos.png Graphic file (type png)
 <use caminho-servicos.png>
@@ -378,26 +384,28 @@ Package pdftex.def Info: caminho-servicos.png  used on input line 478.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [14 <./aplicacao-cliente.png>] [15 <./cliente-requisicao.png> <./caminho-servi
-cos.png>]
-(./sbc-template.bbl [16]) [17] (./sbc-template.aux) ) 
+ [14 <./aplicacao-cliente.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./cliente-requisicao.png> <./caminho-servicos.png>] (./sbc-template.bbl [
+16])
+[17] (./sbc-template.aux) ) 
 Here is how much of TeX's memory you used:
  3362 strings out of 492639
  46906 string characters out of 6135497
- 137399 words of memory out of 5000000
+ 134399 words of memory out of 5000000
  7167 multiletter control sequences out of 15000+600000
  21548 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,28p,1069b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fon
-ts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
-/share/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fon
-ts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/u
-tmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on sbc-template.pdf (17 pages, 844397 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}<
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/ty
+pe1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb
+8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texm
+f-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw
+/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on sbc-template.pdf (17 pages, 844485 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
