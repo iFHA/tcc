@@ -325,6 +325,27 @@ Como mencionado na introdução deste trabalho, a linguagem escolhida para desen
 
 O Java EE consiste de uma série de especificações bem detalhadas, ditando como deve ser implementado um software capaz de realizar serviços de infraestrutura, como web services, persistência em banco de dados, gerenciamento de conexões HTTP, acesso remoto, gerenciamento de sessão web, entre outros. Tudo isso, claro, baseado na linguagem Java.
 
+\subsubsection{Apache Maven}
+
+Inicialmente, para criação do projeto, utilizou-se da ferramenta de automatização de construção e gerenciamento de projetos Java, denominada Apache Maven, embora também possa ser utilizada com outras linguagens. Ela fornece aos desenvolvedores uma forma padronizada de automação, construção e publicação de suas aplicações.
+
+O processo de criação de um projeto Java EE envolve vários passos, como a criação e organização de seus diretórios, a configuração de diversos arquivos XML, a obtenção de bibliotecas e recursos para o projeto, a geração dos pacotes de publicação, o processo de documentação, entre outras etapas. Normalmente, sem a utilização de tal ferramenta, cada projeto teria sua própria estrutura, seu próprio jeito de gerar pacotes(jar, war), ou de executar cada um desses passos. Projetos complexos, com vários módulos, podem exigir uma ordem específica para a compilação dos mesmos, para que se chegue ao pacote final. Essa não-padronização, pode acarretar vários problemas, como por exemplo, um desenvolvedor alterar a estrutura de pastas do projeto referente a localização de imagens, e esquecer de avisar aos demais, o sistema passaria a funcionar de forma instável em alguns momentos. Tendo em vista esses pontos, e o fato de que tal ferramenta incentiva a adoção de boas práticas, optou-se por utilizá-la.
+
+Após a criação de um projeto Maven, temos à disposição, uma de suas funcionalidades mais poderosas, que é a gestão de dependências, por meio do arquivo pom.xml, que fica localizado no diretório raiz do projeto. Esse arquivo xml nos fornece uma forma fácil de administrar bibliotecas de terceiros necessárias para o funcionamento correto do código, tarefa que pode se tornar difícil, à medida que o projeto for aumentando de proporção e que cada vez mais a adição de bibliotecas ao desenvolvimento se torne necessária. O arquivo pom.xml, além de conter uma lista das chamadas dependências, possui várias outras informações referentes ao correto funcionamento do Maven. Entre outras palavras, ele é basicamente o coração da ferramenta. 
+Por meio da lista de dependências, a ferramenta faz uma análise e tenta localizá-las, com o intuito de disponibilizá-las para o projeto. Para realizar as buscas de dependências, o Maven faz uma varredura em locais denominados repositórios, cujos tipos principais são local e público. O primeiro fica localizado na máquina onde a ferramenta está sendo executada(no caso deste trabalho, /home/fernando/.m2/repository/), e o último, em \url{http://repo.maven.apache.org/maven2/}, endereço do repositório público oficial da ferramenta.
+
+A Figura \ref{fig:Figura5} exibe as dependências adicionadas ao arquivo pom.xml deste trabalho, que no caso, são referentes à ferramenta Jersey.
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=.9\textwidth]{jersey-pom.png}
+	\caption{Jersey como dependência Maven}
+	\label{fig:Figura5}
+\end{figure}
+
+%Outra capacidade da ferramenta é identificar as dependências das dependências do projeto. Ou seja, se uma biblioteca depender de outras, o Maven irá procurar por elas também e assim sucessivamente, até todas as dependências necessárias estarem à disposição do projeto.
+
+Com as dependências citadas na Figura \ref{fig:Figura5} adicionadas, e com o Maven instalado devidamente na máquina, basta um único comando(mvn install), no diretório raiz do projeto, para que a ferramenta realize seu trabalho de baixar dependências que ainda não tenham sido adicionadas ao projeto, compilá-lo e gerar o pacote, com o código compilado.
+
 \subsubsection{Framework Jersey}
 
 Como o Java EE é apenas uma especificação, fez-se o uso de um dos principais frameworks utilizados para desenvolver aplicações RESTful em Java, o Jersey, que implementa todas as características da arquitetura REST. Para fazer uso da ferramenta, basta adicioná-la como dependência no arquivo pom.xml, assim como no exemplo da Figura \ref{fig:Figura5}. Após a inclusão da dependência, é necessário alterar mais um arquivo xml de configuração denominado web.xml, localizado no diretório src/main/webapp/WEB-INF, como segue na Figura 9:
@@ -336,8 +357,8 @@ Como o Java EE é apenas uma especificação, fez-se o uso de um dos principais 
 	\label{fig:Figura9}
 \end{figure}
 
-Na Figura acima, a linha 12 refere-se ao pacote java onde estarão salvas as classes referentes aos recursos do web service, já na linha 18, está sendo definida a Url base a qual a partir da mesma será possível o acesso aos recursos, ou seja, no momento, o servidor está sendo acessível pelo seguinte endereço web: \url{http://endereco_ip_servidor:8080/nome_projeto/restapi}.
-Em seguida, é necessário a criação de tais classes. Neste trabalho, foi criada a classe MyResource, no pacote descrito pela linha 12 da Figura \ref{fig:Figura9}, A Figura \ref{fig:Figura10} mostra a implementação da classe que expõe os métodos como serviços REST:
+Na Figura \ref{fig:Figura9}, a linha 12 refere-se ao pacote java onde estarão salvas as classes referentes aos recursos do web service, já na linha 18, está sendo definida a Url base a qual a partir da mesma será possível o acesso aos recursos, ou seja, no momento, o servidor está sendo acessível pelo seguinte endereço web: \url{http://endereco_ip_servidor:8080/nome_projeto/restapi}.
+Em seguida, é necessário a criação de tais classes. Neste trabalho, foi criada a classe MyResource, no pacote descrito pela linha 12 da Figura \ref{fig:Figura9}. A Figura \ref{fig:Figura10} mostra a implementação da classe que expõe os métodos como serviços REST:
 
 \begin{figure}[ht]
 	\centering
@@ -351,7 +372,7 @@ A anotação @Path definida na classe, indica o endereço por meio do qual o rec
 
 \subsubsection{Armazenamento e transmissão de informação}
 
-Como forma padrão de comunicação entre servidor e cliente, foi adotado o JSON. O JSON é um formato de troca de dados entre sistemas independente de linguagem de programação derivado do JavaScript[1][2]; a Figura \ref{fig:Figura4} exibe um exemplo de arquivo JSON, com a representação de um array de carros, onde cada elemento do array possui os atributos modelo e ano:
+Como forma padrão de comunicação entre servidor e cliente, foi adotado o JSON. O JSON é um formato de troca de dados entre sistemas independente de linguagem de programação derivado do JavaScript. A Figura \ref{fig:Figura4} exibe um exemplo de arquivo JSON, com a representação de um array de carros, onde cada elemento do array possui os atributos modelo e ano:
 
 \begin{figure}[ht]
 	\centering
@@ -376,7 +397,7 @@ Seu nome é dado pelo fato de o mesmo ser constituído por 64 caracteres ([A-Za-
 	\end{tabular}
 \end{table}
 
-Em seguida a cada 6 bits da esquerda para a direita, os valores são convertidos para decimal e posteriormente o algoritmo base 64 entende estes decimais como índices para serem convertidos a um dos 64 caracteres, como mostra o exemplo a seguir:
+Em seguida, como mostrado na tabela 4 cada 6 bits da esquerda para a direita, os valores são convertidos para decimal e posteriormente o algoritmo base 64 entende estes decimais como índices para serem convertidos a um dos 64 caracteres, como mostra o exemplo a seguir:
 
 \begin{table}[ht]
 	\centering
@@ -421,27 +442,6 @@ Na tabela 5 confere-se os índices de conversão para base64.
 		15	P&	31	f&	47	v&	63	/ \\ \hline
 	\end{tabular}
 \end{table}
-
-\subsubsection{Apache Maven}
-
-Inicialmente, para criação do projeto, utilizou-se da ferramenta de automatização de construção e gerenciamento de projetos Java, denominada Apache Maven, embora também possa ser utilizada com outras linguagens. Ela fornece aos desenvolvedores uma forma padronizada de automação, construção e publicação de suas aplicações.
-
-O processo de criação de um projeto Java EE envolve vários passos, como a criação e organização de seus diretórios, a configuração de diversos arquivos XML, a obtenção de bibliotecas e recursos para o projeto, a geração dos pacotes de publicação, o processo de documentação, entre outras etapas. Normalmente, sem a utilização de tal ferramenta, cada projeto teria sua própria estrutura, seu próprio jeito de gerar pacotes(jar, war), ou de executar cada um desses passos. Projetos complexos, com vários módulos, podem exigir uma ordem específica para a compilação dos mesmos, para que se chegue ao pacote final. Essa não-padronização, pode acarretar vários problemas, como por exemplo, um desenvolvedor alterar a estrutura de pastas do projeto referente a localização de imagens, e esquecer de avisar aos demais, o sistema passaria a funcionar de forma instável em alguns momentos. Tendo em vista esses pontos, e o fato de que tal ferramenta incentiva a adoção de boas práticas, optou-se por utilizá-la.
-
-Após a criação de um projeto Maven, temos à disposição, uma de suas funcionalidades mais poderosas, que é a gestão de dependências, por meio do arquivo pom.xml, que fica localizado no diretório raiz do projeto. Esse arquivo xml nos fornece uma forma fácil de administrar bibliotecas de terceiros necessárias para o funcionamento correto do código, tarefa que pode se tornar difícil, à medida que o projeto for aumentando de proporção e que cada vez mais a adição de bibliotecas ao desenvolvimento se torne necessária. O arquivo pom.xml, além de conter uma lista das chamadas dependências, possui várias outras informações referentes ao correto funcionamento do Maven. Entre outras palavras, ele é basicamente o coração da ferramenta. 
-Por meio da lista de dependências, a ferramenta faz uma análise e tenta localizá-las, com o intuito de disponibilizá-las para o projeto. Para realizar as buscas de dependências, o Maven faz uma varredura em locais denominados repositórios, cujos tipos principais são local e público. O primeiro fica localizado na máquina onde a ferramenta está sendo executada(no caso deste trabalho, /home/fernando/.m2/repository/), e o último, em \url{http://repo.maven.apache.org/maven2/}, endereço do repositório público oficial da ferramenta.
-
-A Figura \ref{fig:Figura5} exibe as dependências adicionadas ao arquivo pom.xml deste trabalho, que no caso, são referentes à ferramenta Jersey.
-\begin{figure}[ht]
-	\centering
-	\includegraphics[width=.9\textwidth]{jersey-pom.png}
-	\caption{Jersey como dependência Maven}
-	\label{fig:Figura5}
-\end{figure}
-
-%Outra capacidade da ferramenta é identificar as dependências das dependências do projeto. Ou seja, se uma biblioteca depender de outras, o Maven irá procurar por elas também e assim sucessivamente, até todas as dependências necessárias estarem à disposição do projeto.
-
-Com as dependências citadas na Figura \ref{fig:Figura5} adicionadas, e com o Maven instalado devidamente na máquina, basta um único comando(mvn install), no diretório raiz do projeto, para que a ferramenta realize seu trabalho de baixar dependências que ainda não tenham sido adicionadas ao projeto, compilá-lo e gerar o pacote, com o código compilado.
 
 \section{Estudo de caso}
 
