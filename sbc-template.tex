@@ -142,7 +142,7 @@ formatos mais utilizados nas requisições e respostas, destacam-se texto plano
 HTML, XML e JSON. O uso de Webservice
 possibilita que aplicações desenvolvidas em plataformas e linguagens diversificadas
 troquem informações padronizadas permitindo a interação entre elas com rapidez,
-facilidade e baixo custo, conforme ilustrado na Figura 1.
+facilidade e baixo custo, conforme ilustrado na Figura \ref{fig:exampleFigura1}.
 
 \begin{figure}[ht]
 	\centering
@@ -244,7 +244,7 @@ por utilizá-lo.
 A interoperabilidade entre a aplicação cliente e a API de PDI, conforme ilustrado na Figura 2, é
 realizado da seguinte forma:
 \begin{itemize}
-	\item A aplicação cliente se conecta ao web service através da URL de acesso a algum serviço disponibilizado pelo mesmo, informando junto com a requisição, a imagem alvo a qual se deseja realizar tal transformação, codificada no formato base64;
+	\item A aplicação cliente se conecta ao web service através da URL(Uniform Resource Locator) de acesso a algum serviço disponibilizado pelo mesmo, informando junto com a requisição, a imagem alvo a qual se deseja realizar tal transformação, codificada no formato base64;
 	\item O WS recebe a requisição, decodifica a imagem requisitada, salva-a no disco, e realiza uma chamada via linha de comando para o sistema operacional do servidor, passando como parâmetro o caminho da imagem salva, e o tipo de transformação que se deseja realizar na mesma, para que a API possa realizar seu trabalho;
 	\item Após realizar seu processamento, a API retorna para o WS como resultado de execução, a imagem transformada e codificada no formato base64;
 	\item O WS por fim, retorna para a aplicação cliente do serviço, um código de status da requisição, representando o sucesso ou insucesso da operação, em conjunto com uma mensagem informando se houve qualquer erro em algum dos passos anteriores, e caso todo o processo tenha sido realizado com sucesso, retorna também a imagem processada pela API, também no formato base64.
@@ -458,7 +458,7 @@ A Figura \ref{fig:Figura6} representa a interface da aplicação cliente desenvo
 	\label{fig:Figura6}
 \end{figure}
 
-Esta aplicação consiste em uma página HTML, que utiliza-se da linguagem javascript para realizar as requisições ao Webservice. Na Figura acima, temos a lista de serviços disponibilizados pelo WS(1), onde o usuário poderá escolher qual filtro aplicar, um botão para selecionar a imagem desejada(2), a imagem escolhida(3), a imagem final(4), após o processamento da API, e resposta do middeware, e por fim, o botão de enviar(5), que realizará a requisição.
+Esta aplicação consiste em uma página HTML, que utiliza-se da linguagem javascript para realizar as requisições ao Webservice. Na Figura \ref{fig:Figura6}, temos a lista de serviços disponibilizados pelo WS(1), onde o usuário poderá escolher qual filtro aplicar, um botão para selecionar a imagem desejada(2), a imagem escolhida(3), a imagem final(4), após o processamento da API, e resposta do middeware, e por fim, o botão de enviar(5), que realizará a requisição.
 
 O código da Figura \ref{fig:Figura7} diz respeito ao código necessário para realizar a requisição aos serviços do webservice:
 
@@ -469,7 +469,7 @@ O código da Figura \ref{fig:Figura7} diz respeito ao código necessário para r
 	\label{fig:Figura7}
 \end{figure}
 
-Como a maioria das linguagens de programação possuem suporte à codificação e decodificação do formato base64, por o mesmo ser bastante difundido, não há necessidade de explicar o seu funcionamento. Portanto, no código listado acima, a partir da linha 21, entende-se que a imagem selecionada já está codificada em tal formato, e que seu valor está atribuído na variável denominada "base64". 
+Como a maioria das linguagens de programação possuem suporte à codificação e decodificação do formato base64, por o mesmo ser bastante difundido, não há necessidade de explicar o seu funcionamento. Portanto, no código listado na figura \ref{fig:Figura7}, a partir da linha 21, entende-se que a imagem selecionada já está codificada em tal formato, e que seu valor está atribuído na variável denominada "base64". 
 
 Assim sendo, na linha 22, têm-se a definição de qual serviço o usuário escolheu, atribuindo-o à variável serviceUrl, que mais tarde será utilizada para redirecionar a requisição para o serviço correto. A Figura \ref{fig:Figura8} exibe as URLs associadas a cada serviço do webservice. Como o WS está localizado na máquina local, seu acesso se tem por meio da URL \url{http://localhost:8080/demorest/restapi/ws}; 
 
@@ -490,7 +490,7 @@ Linhas 33 a 36: informamos ao WS, sob qual formato os dados do corpo da requisi�
 
 Linha 37: informamos a URL para a qual enviaremos a requisição;
 
-Linha 28: enviamos alguma informação no corpo da requisição;
+Linha 28: enviamos alguma informação no corpo da requisição, neste caso, o objeto JSON contendo a imagem desejada, no formato base64;
 
 Linhas 29 a 32: o argumento beforeSend recebe uma função que é executada antes de a requisição ser enviada. Nesse caso, atribuímos um "gif" no local onde será inserido a imagem processada pela API, para demonstrar ao usuário que o processo de requisição ainda não foi concluído;
 
