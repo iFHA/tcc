@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  19 MAR 2019 22:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  26 MAR 2019 05:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -286,15 +286,20 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <13> not available
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 80.
+ (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 80.
 
- [2]
-Underfull \hbox (badness 1194) in paragraph at lines 110--118
+[2]
+Underfull \hbox (badness 1194) in paragraph at lines 116--124
 \OT1/ptm/m/n/12 Para [[]] o mid-dleware refere-se a uma ca-mada
  []
 
 
-Underfull \hbox (badness 1412) in paragraph at lines 110--118
+Underfull \hbox (badness 1412) in paragraph at lines 116--124
 \OT1/ptm/m/n/12 autoriza[][]ao, autentica[][]ao, seguran[]a, en-tre ou-tras. O 
 mid-dleware im-ple-menta a
  []
@@ -302,27 +307,20 @@ mid-dleware im-ple-menta a
 <figura1.png, id=16, 456.95718pt x 135.50626pt>
 File: figura1.png Graphic file (type png)
 <use figura1.png>
-Package pdftex.def Info: figura1.png  used on input line 149.
+Package pdftex.def Info: figura1.png  used on input line 155.
 (pdftex.def)             Requested size: 341.43437pt x 101.25311pt.
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 150.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 156.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1phv.fd
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <10> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 150.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 156.
  [3] [4 <./figura1.png (PNG copy)>] [5]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 247.
-
- (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 247.
 <modelo-comunicacao2.png, id=27, 158.09062pt x 331.2375pt>
 File: modelo-comunicacao2.png Graphic file (type png)
 <use modelo-comunicacao2.png>
-Package pdftex.def Info: modelo-comunicacao2.png  used on input line 255.
+Package pdftex.def Info: modelo-comunicacao2.png  used on input line 261.
 (pdftex.def)             Requested size: 128.0387pt x 268.29079pt.
  [6] [7 <./modelo-comunicacao2.png (PNG copy)>]
 Overfull \hbox (21.54872pt too wide) in paragraph at lines 298--307
@@ -376,15 +374,9 @@ File: caminho-servicos.png Graphic file (type png)
 <use caminho-servicos.png>
 Package pdftex.def Info: caminho-servicos.png  used on input line 478.
 (pdftex.def)             Requested size: 384.1096pt x 30.7522pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [14 <./aplicacao-cliente.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [15 <./cliente-requisicao.png> <./caminho-servicos.png>] (./sbc-template.bbl [
-16])
-[17] (./sbc-template.aux) ) 
+[15 <./cliente-requisicao.png> <./caminho-servicos.png>] (./sbc-template.bbl
+[16]) [17] (./sbc-template.aux) ) 
 Here is how much of TeX's memory you used:
  3362 strings out of 492639
  46906 string characters out of 6135497
@@ -393,14 +385,15 @@ Here is how much of TeX's memory you used:
  21548 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  41i,11n,28p,1069b,321s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}<
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/ty
-pe1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvb
-8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texm
-f-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw
-/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sbc-template.pdf (17 pages, 844508 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r
+.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fo
+nts/type1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helveti
+c/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
+e/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/typ
+e1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on sbc-template.pdf (17 pages, 844714 bytes).
 PDF statistics:
  106 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream

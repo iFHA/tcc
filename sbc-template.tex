@@ -29,16 +29,12 @@
 %\end{abstract}
 
 \begin{resumo} 
-  O presente trabalho tem como objetivo a criação de um serviço web no estilo arquitetural REST (Representational State Transfer), com o intuito de disponibilizar funções para manipulação de imagens digitais, além de apresentar um estudo de caso demonstrando a aplicação do consumo de tais serviços por meio do desenvolvimento de uma aplicação cliente na plataforma web, onde um cliente JavaScript se comunica com o serviço web. Nele, todo o processo de desenvolvimento do cliente, bem como as tecnologias utilizadas são descritas passo a passo. O estudo de caso mostra resultados promissores na adoção de serviços web RESTful para encapsular e disponibilizar funções de manipulação de imagens digitais. Dentre as principais vantagens, pode-se mencionar a redução da dificuldade de acesso a funções de processamento de imagens digitais, bem como a interoperabilidade entre linguagens de programação que essa tecnologia proporciona.
+  O presente trabalho tem como objetivo a criação de um serviço web no estilo arquitetural REST (Representational State Transfer), com o intuito de disponibilizar funções para manipulação de imagens digitais, além de apresentar uma maneira de realizar o consumo dos serviços criados, por meio de uma aplicação cliente na plataforma web, onde um cliente JavaScript realiza a comunicação com o serviço web. Dentre as principais vantagens da ferramenta, pode-se mencionar a redução da dificuldade de acesso a funções de processamento de imagens digitais, bem como a interoperabilidade entre linguagens de programação que essa tecnologia proporciona.
   
 \end{resumo}
 \textbf{Palavras-chave:} serviço web, estilo REST, interoperabilidade, manipulação de imagens digitais.
 
 \section{Introdução}
-
-Com a evolução da tecnologia, foram desenvolvidas várias facilidades para o ser humano. 
-Dentre elas, a Computação e a Internet se destacam por automatizar tarefas, reduzir
-custos, distância e tempo para realizar a troca de vários tipos de informação. 
 
 Toda área, seja ela educação, comércio, medicina ou militar, exige troca de informação para seu funcionamento. 
 Um dos mais populares modos de comunicação de dados via internet é através do uso de um Web Service(WS) ou serviço web.
@@ -76,7 +72,17 @@ de execução dos softwares de forma distribuída, rápida e portável.
 
 Diante da necessidade de permitir que uma API de PDI atenda a tais requisitos, surge a
 possibilidade de implementar uma ferramenta, independente de plataforma, para a
-disponibilização de suas funcionalidades.
+disponibilização de tais funcionalidades. 
+
+A utilização das funcionalidades da API de forma direta, necessitando de tê-la instalada na própria máquina do utilizador, traria alguns inconvenientes, sendo eles:
+
+\begin{itemize}
+	\item O usuário necessitar instalar novas versões da mesma à medida que novas funcionalidades forem sendo adicionadas;
+	\item Dependência de plataforma, uma vez que para se comunicar corretamente com a API, o usuário necessita utilizar a mesma linguagem de programação com a qual a mesma fora implementada;
+	\item Restrição de utilização da API à medida que os recursos da máquina do usuário foram ficando mais escassos, uma vez que todo o processamento da API será feito no computador do usuário.
+\end{itemize}
+
+Dessa forma, o objetivo desse trabalho é possibilitar aos desenvolvedores uma forma fácil e intuitiva de utilizar as funcionalidades da API mencionada, por meio de requisições HTTP. Para isso, o programador não deverá encontrar dificuldades em adaptar a sua forma de desenvolvimento atual para fazer uso dessa ferramenta, uma vez que quase todas as linguagens de programação populares possuem alguma API específica para auxiliar na realização de chamadas a serviços RESTful. 
 
 Para chegar à ferramenta, a solução está implementada em Linguagem
 Java, com auxílio de uma ferramenta denominada Jersey, baseada na arquitetura
@@ -216,9 +222,9 @@ API do Inglês Application Programming Interface(ou Interface de Programação d
 Paralelamente a este trabalho, está em processo de desenvolvimento, uma API, livre e de código aberto, que poderá ser utilizada para o desenvolvimento de software na área de PDI, para a manipulação de imagens utilizando-se de técnicas de processamento paralelo, podendo ajudar a diminuir custos e tempo para a produção de programas. Além disso, mais programadores podem utilizá-la para o PDI sem que seja necessário que eles se tornem especialistas na área.
 Até o presente momento, foram desenvolvidos dois filtros para aplicação em imagens, sendo eles o filtro preto e branco YIQ, e o filtro de recuperação do canal verde da imagem. Este trabalho tem como foco, a disponibilização das funcionalidades dessa API exposta em específico, que, como já mencionado, está em constante desenvolvimento e mais funcionalidades podem ser adicionadas ao serviço remoto.
 
-\section{Desenvolvimento}
+\section{Metodologia}
 
-Esta seção está destinada a descrever a arquitetura e funcionamento da ferramenta proposta, bem como a disponibilização de seus serviços, e as tecnologias envolvidas em sua implementação.
+Esta seção está destinada a descrever a arquitetura e funcionamento da ferramenta proposta, bem como o passo a passo para a criação do web service, e as tecnologias envolvidas em sua implementação.
 
 
 %A função de um middleware é tornar possível a comunicação entre aplicações que
@@ -229,7 +235,7 @@ Esta seção está destinada a descrever a arquitetura e funcionamento da ferram
 %desenvolvido baseado num padrão de interoperabilidade que permite a comunicação
 %com diversos AVA. 
 
-A Figura 2 representa o diagrama da estratégia de comunicação que
+A Figura 2 representa o diagrama de comunicação que
 foi desenvolvida em duas etapas: entre a aplicação cliente e o WS via HTTP utilizando JSON como padrão de comunicação e entre
 o WS e a API de PDI desenvolvida via linha de comando, esta, que por sua vez, está localizada no mesmo servidor do web service.
 
@@ -264,12 +270,6 @@ O WS será executado em um servidor de aplicação. Este servidor
 é responsável por estabelecer a comunicação com as aplicações clientes que desejem utilizar os serviços da API. 
 A desvantagem é que recursos computacionais de um servidor serão alocados para o WS, porém, como vantagens teremos a flexibilidade, melhoria no desempenho, manutenibilidade e disponibilidade do serviço.
 
-A utilização das funcionalidades da API de forma direta, necessitando de tê-la instalada na própria máquina do utilizador, traria alguns inconvenientes, sendo eles:
-\begin{itemize}
-	\item O usuário necessitar instalar novas versões da mesma à medida que novas funcionalidades forem sendo adicionadas;
-	\item Dependência de plataforma, uma vez que para se comunicar corretamente com a API, o usuário necessita utilizar a mesma linguagem de programação com a qual a mesma fora implementada;
-	\item Restrição de utilização da API à medida que os recursos da máquina do usuário foram ficando mais escassos, uma vez que todo o processamento da API será feito no computador do usuário.
-\end{itemize}
 %O uso do MiddleWare desonera o consumo da bateria e o processamento do aparelho que esteja executando o mesmo, ampliando sua performance.
 
 O WS possui a implementação e uso de dois serviços através dos quais será possível realizar diversas operações de troca de informações, à medida que novas funcionalidades forem sendo disponibilizadas pela API, poderão ser adicionados novos serviços que correspondam às mesmas.
@@ -443,9 +443,9 @@ Na tabela 5 confere-se os índices de conversão para base64.
 	\end{tabular}
 \end{table}
 
-\section{Estudo de caso}
+\section{Aplicação}
 
-Nesta seção, serão descritos os passos necessários para a realização de consumo dos serviços da API por meio da comunicação com o WS, apresentando o desenvolvimento de uma aplicação cliente como estudo de caso.
+Nesta seção, serão descritos os passos necessários para a realização de consumo dos serviços da API por meio da comunicação com o WS, apresentando o desenvolvimento de uma aplicação cliente na plataforma web.
 
 A escolha da linguagem JavaScript como base para o desenvolvimento da aplicação cliente, se deu mais pela necessidade de demonstrar a independência de plataforma que o WS nos proporciona, e também pelo fato de que atualmente JavaScript é uma das linguagens mais conhecidas e utilizadas ao redor do mundo.
 
@@ -501,7 +501,7 @@ Linhas 46 a 48: a função de callback error, por sua vez, é executada quando o
 
 \section{Considerações Finais}
 
-O principal objetivo do WS desenvolvido é possibilitar aos desenvolvedores uma forma fácil e intuitiva de utilizar as funcionalidades da API apresentada na seção 2.4 por meio de requisições HTTP. Para isso, o programador não deverá encontrar dificuldades em adaptar a sua forma de desenvolvimento atual para fazer uso dessa ferramenta, uma vez que praticamente todas as linguagens de programação populares possuem alguma API específica para auxiliar na realização de chamadas a serviços RESTful. 
+%O principal objetivo do WS desenvolvido é possibilitar aos desenvolvedores uma forma fácil e intuitiva de utilizar as funcionalidades da API apresentada na seção 2.4 por meio de requisições HTTP. Para isso, o programador não deverá encontrar dificuldades em adaptar a sua forma de desenvolvimento atual para fazer uso dessa ferramenta, uma vez que praticamente todas as linguagens de programação populares possuem alguma API específica para auxiliar na realização de chamadas a serviços RESTful. 
 
 %Dessa forma, O WS cumpre essas expectativas, provendo uma comunicação de fácil  que encapsula toda
 %as funcionalidades além de permitir efetuar chamadas remotas de maneira similar a
@@ -513,6 +513,10 @@ liberdade, não só na escolha da linguagem utilizada para implementar suas apli
 mas também permitindo que o foco do desenvolvimento se resuma a aplicação em si,
 uma vez que, os detalhes da implementação estão encapsulados pela API,
 permitindo a utilização dos mesmos de uma forma fácil e eficiente.
+
+\section{Propostas de Trabalhos Futuros}
+
+Como trabalhos futuros há a possibilidade de criação da funcionalidade de controle de acesso, uma vez que qualquer pessoa, atualmente, pode fazer requisições ao servidor. Outra possibilidade é a criação de um cliente que acesse o web service via código, para demonstrar como um programador que utiliza de tais técnicas em seu dia-a-dia faça uso do WS. Também há a possibilidade de inserir o web service em alguma infraestrutura em nuvem, como por exemplo, em servidores da Google ou Amazon.
 
 
 \bibliographystyle{sbc}
