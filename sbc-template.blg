@@ -15,6 +15,10 @@ Too many commas in name 1 of "CAMARA, G., SOUZA, R. C. M., FREITAS, U. M. and GA
 while executing---line 1021 of file sbc.bst
 Too many commas in name 1 of "CAMARA, G., SOUZA, R. C. M., FREITAS, U. M. and GARRIDO, J." for entry spring
 while executing---line 1021 of file sbc.bst
+Too many commas in name 1 of "SENTHILKUMAR, K., VIVEK, N. K. and VIJAYAN E." for entry vivek
+while executing---line 1021 of file sbc.bst
+Too many commas in name 1 of "SENTHILKUMAR, K., VIVEK, N. K. and VIJAYAN E." for entry vivek
+while executing---line 1021 of file sbc.bst
 Too many commas in name 1 of "COULOURIS, George, DOLLIMORE, Jean and KINDBERG, Tim" for entry coulouris:05
 while executing---line 1021 of file sbc.bst
 Too many commas in name 1 of "COULOURIS, George, DOLLIMORE, Jean and KINDBERG, Tim" for entry coulouris:05
@@ -37,45 +41,47 @@ Warning--empty year in soa1
 Warning--empty year in oracle
 Too many commas in name 1 of "RICHARDSON, Leonard, RUBY, Sam" for entry richard:07
 while executing---line 1096 of file sbc.bst
-You've used 20 entries,
+Too many commas in name 1 of "SENTHILKUMAR, K., VIVEK, N. K. and VIJAYAN E." for entry vivek
+while executing---line 1096 of file sbc.bst
+You've used 22 entries,
             1935 wiz_defined-function locations,
-            570 strings with 5748 characters,
-and the built_in function-call counts, 5656 in all, are:
-= -- 554
-> -- 164
-< -- 20
-+ -- 48
-- -- 48
-* -- 368
-:= -- 1066
-add.period$ -- 65
-call.type$ -- 20
-change.case$ -- 116
-chr.to.int$ -- 20
-cite$ -- 24
-duplicate$ -- 255
-empty$ -- 416
-format.name$ -- 76
-if$ -- 1092
+            583 strings with 6076 characters,
+and the built_in function-call counts, 6364 in all, are:
+= -- 624
+> -- 190
+< -- 22
++ -- 58
+- -- 56
+* -- 425
+:= -- 1192
+add.period$ -- 71
+call.type$ -- 22
+change.case$ -- 130
+chr.to.int$ -- 22
+cite$ -- 26
+duplicate$ -- 282
+empty$ -- 465
+format.name$ -- 90
+if$ -- 1230
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 25
-newline$ -- 108
-num.names$ -- 60
-pop$ -- 125
+missing$ -- 27
+newline$ -- 118
+num.names$ -- 66
+pop$ -- 133
 preamble$ -- 1
-purify$ -- 124
+purify$ -- 138
 quote$ -- 0
-skip$ -- 188
+skip$ -- 211
 stack$ -- 0
-substring$ -- 261
-swap$ -- 14
+substring$ -- 308
+swap$ -- 16
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 96
+type$ -- 108
 warning$ -- 4
-while$ -- 41
+while$ -- 46
 width$ -- 0
-write$ -- 256
-(There were 15 error messages)
+write$ -- 282
+(There were 18 error messages)

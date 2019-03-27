@@ -82,7 +82,15 @@ A utilização das funcionalidades da API de forma direta, necessitando de tê-l
 	\item Restrição de utilização da API à medida que os recursos da máquina do usuário foram ficando mais escassos, uma vez que todo o processamento da API será feito no computador do usuário.
 \end{itemize}
 
-Dessa forma, o objetivo desse trabalho é possibilitar aos desenvolvedores uma forma fácil e intuitiva de utilizar as funcionalidades da API mencionada, por meio de requisições HTTP. Para isso, o programador não deverá encontrar dificuldades em adaptar a sua forma de desenvolvimento atual para fazer uso dessa ferramenta, uma vez que quase todas as linguagens de programação populares possuem alguma API específica para auxiliar na realização de chamadas a serviços RESTful. 
+Durante o estudo da literatura, foi possível verificar algumas soluções relacionadas a problemas semelhantes. O estudo de caso realizado por \cite{vivek} é motivado por problemas semelhantes aos discutidos no presente
+trabalho. Sua solução baseia-se em uma arquitetura de web services no estilo SOAP, que demanda mais recursos para realização de comunicação em rede quando comparada com o estilo REST, e oferece uma variedade de serviços de processamento de imagens, sendo alguns deles filtros como preto e branco, "anti-color", "true-color". Segundo o autor, seu web service possui um estágio que trata de problemas relacionados a segurança. Uma observação sobre seu trabalho é a de que o web service é o responsável pelo processamento das imagens requisitadas, e não uma API em separado.
+
+%O artigo não informa se utiliza processamento paralelo para processar as imagens.
+
+Outro estudo semelhante é o de \cite{martin}, que também utiliza serviços baseados em SOAP para realizar as comunicações com aplicações clientes, diferenciando-se do trabalho anterior pelo fato de o mesmo fazer uso de APIs separadas, que ficam a cargo de realizar os processamentos nas imagens requisitadas pelo cliente, deixando o web service com mais recursos para atender uma demanda maior de requisições. Tal comunicação entre web service e API é realizada por meio de chamadas a procedimentos remotos(RPC), que são serviços remotos executados em outra máquina. 
+
+Dessa forma, diante dos problemas e cenários analisados, o presente trabalho tem como objetivo a criação de um serviço web no estilo arquitetural REST (Representational State Transfer), com o intuito de disponibilizar funções para manipulação de imagens digitais, além de apresentar a realização do consumo dos serviços criados, por meio do desenvolvimento de uma aplicação cliente.
+
 
 Para chegar à ferramenta, a solução está implementada em Linguagem
 Java, com auxílio de uma ferramenta denominada Jersey, baseada na arquitetura
@@ -223,6 +231,9 @@ Paralelamente a este trabalho, está em processo de desenvolvimento, uma API, li
 Até o presente momento, foram desenvolvidos dois filtros para aplicação em imagens, sendo eles o filtro preto e branco YIQ, e o filtro de recuperação do canal verde da imagem. Este trabalho tem como foco, a disponibilização das funcionalidades dessa API exposta em específico, que, como já mencionado, está em constante desenvolvimento e mais funcionalidades podem ser adicionadas ao serviço remoto.
 
 \section{Metodologia}
+
+
+\section{Desenvolvimento do Web Service}
 
 Esta seção está destinada a descrever a arquitetura e funcionamento da ferramenta proposta, bem como o passo a passo para a criação do web service, e as tecnologias envolvidas em sua implementação.
 

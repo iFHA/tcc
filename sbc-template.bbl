@@ -85,10 +85,22 @@ RICHARDSON, Leonard, R.~S. (2007).
 \newblock {\em RESTful Web Services}.
 \newblock O'Reilly.
 
+\bibitem[RUDORFER and KRUGER 2018]{martin}
+RUDORFER, M. and KRUGER, J. (2018).
+\newblock Industrial image processing applications as orchestration of web
+  services.
+\newblock {\em Procedia CIRP}, 76:144--148.
+
 \bibitem[SANDOVAL 2009]{sandoval:09}
 SANDOVAL, J. (2009).
 \newblock {\em RESTful Java Web Services}.
 \newblock Packt Publishing.
+
+\bibitem[SENTHILKUMAR and E. 2017]{vivek}
+SENTHILKUMAR, K., V. N.~K. and E., V. (2017).
+\newblock An efficient image processing method based on web services for mobile
+  devices.
+\newblock {\em IOP Conference Series: Materials Science and Engineering}, 263.
 
 \bibitem[SOMMERVILLE 2011]{sommerville:11}
 SOMMERVILLE, I. (2011).
