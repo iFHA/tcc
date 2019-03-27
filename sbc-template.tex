@@ -83,7 +83,8 @@ A utilização das funcionalidades da API de forma direta, necessitando de tê-l
 \end{itemize}
 
 Durante o estudo da literatura, foi possível verificar algumas soluções relacionadas a problemas semelhantes. O estudo de caso realizado por \cite{vivek} é motivado por problemas semelhantes aos discutidos no presente
-trabalho. Sua solução baseia-se em uma arquitetura de web services no estilo SOAP, que demanda mais recursos para realização de comunicação em rede quando comparada com o estilo REST, e oferece uma variedade de serviços de processamento de imagens, sendo alguns deles filtros como preto e branco, "anti-color", "true-color". Segundo o autor, seu web service possui um estágio que trata de problemas relacionados a segurança. Uma observação sobre seu trabalho é a de que o web service é o responsável pelo processamento das imagens requisitadas, e não uma API em separado.
+trabalho. Sua solução baseia-se em uma arquitetura de web services no estilo SOAP(Simple Object Access Protocol), que demanda mais recursos para realização de comunicação em rede quando comparada com o estilo REST, do inglês
+Representational State Transfer (Transferência do Estado Representacional), e oferece uma variedade de serviços de processamento de imagens, sendo alguns deles filtros como preto e branco, \textit{"anti-color"}, \textit{"true-color"}. Segundo o autor, seu web service possui um estágio que trata de problemas relacionados a segurança. Uma observação sobre seu trabalho é a de que o web service é o responsável pelo processamento das imagens requisitadas, e não uma API em separado.
 
 %O artigo não informa se utiliza processamento paralelo para processar as imagens.
 
@@ -94,8 +95,7 @@ Dessa forma, diante dos problemas e cenários analisados, o presente trabalho te
 
 Para chegar à ferramenta, a solução está implementada em Linguagem
 Java, com auxílio de uma ferramenta denominada Jersey, baseada na arquitetura
-SOA(Service-Oriented Architecture), mais especificamente em Serviço Web seguindo o conceito REST, do inglês
-Representational State Transfer (Transferência do Estado Representacional). 
+SOA(Service-Oriented Architecture), mais especificamente em Serviço Web seguindo o conceito REST. 
 
 De acordo com \cite{oracle} Java é uma linguagem de programação e plataforma computacional cujo lançamento foi realizado pela Sun Microsystems em 1995.
 
@@ -172,7 +172,7 @@ funcionarem como padrão para troca de mensagens também têm o papel de definir
 serviços. Sua sintaxe especifica como os dados são representados, transmitidos e
 detalhes de como são publicados e descobertos.
 
-Existem basicamente, dois grupos de serviços web: os serviços baseados em SOAP (Simple Object Access Protocol) e os REST (Representational
+Existem basicamente, dois grupos de serviços web: os serviços baseados em SOAP e os REST (Representational
 State Transfer ). Um serviço baseado em SOAP entregue sobre HTTP é um caso especial dos serviços REST. O foco deste trabalho está na criação e utilização de um web service do grupo REST, devido a sua popularização, e ferramentas auxiliares disponíveis para uso.
 
 \subsubsection{REST - Representational State Transfer}
