@@ -29,7 +29,7 @@
 %\end{abstract}
 
 \begin{resumo} 
-  O presente trabalho tem como objetivo a criação de um serviço web no estilo arquitetural REST (Representational State Transfer), com o intuito de disponibilizar funções para manipulação de imagens digitais, além de apresentar uma maneira de realizar o consumo dos serviços criados, por meio de uma aplicação cliente na plataforma web, onde um cliente JavaScript realiza a comunicação com o serviço web. Dentre as principais vantagens da ferramenta, pode-se mencionar a redução da dificuldade de acesso a funções de processamento de imagens digitais, bem como a interoperabilidade entre linguagens de programação que essa tecnologia proporciona.
+  O presente trabalho tem como objetivo a criação de um serviço web no estilo arquitetural REST \textit{(Representational State Transfer)}, com o intuito de disponibilizar funções para manipulação de imagens digitais, além de apresentar uma maneira de realizar o consumo dos serviços criados, por meio de uma aplicação cliente na plataforma web, onde um cliente JavaScript realiza a comunicação com o serviço web. Dentre as principais vantagens da ferramenta, pode-se mencionar a redução da dificuldade de acesso a funções de processamento de imagens digitais, bem como a interoperabilidade entre linguagens de programação que essa tecnologia proporciona.
   
 \end{resumo}
 \textbf{Palavras-chave:} serviço web, estilo REST, interoperabilidade, manipulação de imagens digitais.
@@ -59,7 +59,7 @@ crescer a demanda por software capaz de manipulá-las.
 
 O PDI refere-se ao processamento de imagens por meio de um computador digital. Segundo \cite{spring} o objetivo de se usar processamento digital de imagens é melhorar o aspecto visual de certas feições estruturais para o analista humano e fornecer outros subsídios para a sua interpretação, inclusive gerando produtos que possam ser posteriormente submetidos a outros processamentos. 
 
-Neste contexto, APIs(Application Programming Interface) podem incorporar implementações de métodos que são a base comum para a manipulação de imagens e 
+Neste contexto, APIs\textit{(Application Programming Interface)} podem incorporar implementações de métodos que são a base comum para a manipulação de imagens e 
 vídeos a fim de minimizar erros de codificação, diminuir o custo e o tempo de produção. 
 
 De acordo com \cite{pressman:16, sommerville:11} APIs contém a implementação de funcionalidades de uso frequente e que podem ser utilizadas pelo
@@ -83,19 +83,19 @@ A utilização das funcionalidades da API de forma direta, necessitando de tê-l
 \end{itemize}
 
 Durante o estudo da literatura, foi possível verificar algumas soluções relacionadas a problemas semelhantes. O estudo de caso realizado por \cite{vivek} é motivado por problemas semelhantes aos discutidos no presente
-trabalho. Sua solução baseia-se em uma arquitetura de web services no estilo SOAP(Simple Object Access Protocol), que demanda mais recursos para realização de comunicação em rede quando comparada com o estilo REST, do inglês
-Representational State Transfer (Transferência do Estado Representacional), e oferece uma variedade de serviços de processamento de imagens, sendo alguns deles filtros como preto e branco, \textit{"anti-color"}, \textit{"true-color"}. Segundo o autor, seu web service possui um estágio que trata de problemas relacionados a segurança. Uma observação sobre seu trabalho é a de que o web service é o responsável pelo processamento das imagens requisitadas, e não uma API em separado.
+trabalho. Sua solução baseia-se em uma arquitetura de web services no estilo SOAP\textit{(Simple Object Access Protocol)}, que demanda mais recursos para realização de comunicação em rede quando comparada com o estilo REST, do inglês
+\textit{Representational State Transfer} (Transferência do Estado Representacional), e oferece uma variedade de serviços de processamento de imagens, sendo alguns deles filtros como preto e branco, \textit{"anti-color"}, \textit{"true-color"}. Segundo o autor, seu web service possui um estágio que trata de problemas relacionados a segurança. Uma observação sobre seu trabalho é a de que o web service é o responsável pelo processamento das imagens requisitadas, e não uma API em separado.
 
 %O artigo não informa se utiliza processamento paralelo para processar as imagens.
 
 Outro estudo semelhante é o de \cite{martin}, que também utiliza serviços baseados em SOAP para realizar as comunicações com aplicações clientes, diferenciando-se do trabalho anterior pelo fato de o mesmo fazer uso de APIs separadas, que ficam a cargo de realizar os processamentos nas imagens requisitadas pelo cliente, deixando o web service com mais recursos para atender uma demanda maior de requisições. Tal comunicação entre web service e API é realizada por meio de chamadas a procedimentos remotos(RPC), que são serviços remotos executados em outra máquina. 
 
-Dessa forma, diante dos problemas e cenários analisados, o presente trabalho tem como objetivo a criação de um serviço web no estilo arquitetural REST (Representational State Transfer), com o intuito de disponibilizar funções para manipulação de imagens digitais, além de apresentar a realização do consumo dos serviços criados, por meio do desenvolvimento de uma aplicação cliente.
+Dessa forma, diante dos problemas e cenários analisados, o presente trabalho tem como objetivo a criação de um serviço web no estilo arquitetural REST, com o intuito de disponibilizar funções para manipulação de imagens digitais, além de apresentar a realização do consumo dos serviços criados, por meio do desenvolvimento de uma aplicação cliente.
 
 
 Para chegar à ferramenta, a solução está implementada em Linguagem
 Java, com auxílio de uma ferramenta denominada Jersey, baseada na arquitetura
-SOA(Service-Oriented Architecture), mais especificamente em Serviço Web seguindo o conceito REST. 
+SOA\textit{(Service-Oriented Architecture)}, mais especificamente em Serviço Web seguindo o conceito REST. 
 
 De acordo com \cite{oracle} Java é uma linguagem de programação e plataforma computacional cujo lançamento foi realizado pela Sun Microsystems em 1995.
 
@@ -105,9 +105,9 @@ Proposto por \cite{rest} REST refere-se a um estilo de arquitetura de software.
 
 De acordo com \cite{jersey} Jersey é uma biblioteca de programação que implementa especificações de criação de WSs do tipo REST, baseada na linguagem Java.
 
-Este tipo de Serviço Web utiliza-se do protocolo HTTP(Hypertext Transfer Protocol) para realizar a troca
+Este tipo de Serviço Web utiliza-se do protocolo HTTP\textit{(Hypertext Transfer Protocol)} para realizar a troca
 de mensagens entre clientes e servidor. Outra característica importante é a forma de
-redirecionamento de serviços, realizado através de um endereçamento URI(Uniform Resource Identifier)
+redirecionamento de serviços, realizado através de um endereçamento URI\textit{(Uniform Resource Identifier)}
 específico.
 
 Aliando todos os fatores e tecnologias apresentados anteriormente, torna-se
@@ -147,8 +147,8 @@ Configura-se como um mecanismo de comunicação que permite a interoperabilidade
 entre sistemas. 
 
 Para \cite{kreger:01}, um Webservice descreve uma coleção de operações
-que são acessíveis pela rede através de mensagens XML (eXtensible Markup Language)
-padronizadas. Porém existe a tecnologia JSON (Javascript Object Notation) que
+que são acessíveis pela rede através de mensagens XML \textit{(eXtensible Markup Language)}
+padronizadas. Porém existe a tecnologia JSON \textit{(Javascript Object Notation)} que
 também possibilita a troca de mensagens de forma mais leve. 
 
 Segundo \cite{sandoval:09}, dentre os
@@ -172,8 +172,7 @@ funcionarem como padrão para troca de mensagens também têm o papel de definir
 serviços. Sua sintaxe especifica como os dados são representados, transmitidos e
 detalhes de como são publicados e descobertos.
 
-Existem basicamente, dois grupos de serviços web: os serviços baseados em SOAP e os REST (Representational
-State Transfer ). Um serviço baseado em SOAP entregue sobre HTTP é um caso especial dos serviços REST. O foco deste trabalho está na criação e utilização de um web service do grupo REST, devido a sua popularização, e ferramentas auxiliares disponíveis para uso.
+Existem basicamente, dois grupos de serviços web: os serviços baseados em SOAP e os REST. Um serviço baseado em SOAP entregue sobre HTTP é um caso especial dos serviços REST. O foco deste trabalho está na criação e utilização de um web service do grupo REST, devido a sua popularização, e ferramentas auxiliares disponíveis para uso.
 
 \subsubsection{REST - Representational State Transfer}
 
@@ -257,7 +256,7 @@ A Figura 2 representa o diagrama de comunicação que
 foi desenvolvida em duas etapas: entre a aplicação cliente e o WS via HTTP utilizando JSON como padrão de comunicação e entre
 o WS e a API de PDI desenvolvida via linha de comando, esta, que por sua vez, está localizada no mesmo servidor do web service.
 
-Para a troca de informações adotou-se o JSON (JavaScript Object Notation). O
+Para a troca de informações adotou-se o JSON. O
 JSON é um formato de interconexão de dados utilizado em ambientes cliente-servidor
 que possibilita o desenvolvimento nas mais variadas linguagens. O JSON atualmente
 vem sendo utilizado como linguagem padrão para comunicação entre sistemas nas mais
@@ -268,7 +267,7 @@ por utilizá-lo.
 A interoperabilidade entre a aplicação cliente e a API de PDI, conforme ilustrado na Figura 2, é
 realizado da seguinte forma:
 \begin{itemize}
-	\item A aplicação cliente se conecta ao web service através da URL(Uniform Resource Locator) de acesso a algum serviço disponibilizado pelo mesmo, informando junto com a requisição, a imagem alvo a qual se deseja realizar tal transformação, codificada no formato base64;
+	\item A aplicação cliente se conecta ao web service através da URL\textit{(Uniform Resource Locator)} de acesso a algum serviço disponibilizado pelo mesmo, informando junto com a requisição, a imagem alvo a qual se deseja realizar tal transformação, codificada no formato base64;
 	\item O WS recebe a requisição, decodifica a imagem requisitada, salva-a no disco, e realiza uma chamada via linha de comando para o sistema operacional do servidor, passando como parâmetro o caminho da imagem salva, e o tipo de transformação que se deseja realizar na mesma, para que a API possa realizar seu trabalho;
 	\item Após realizar seu processamento, a API retorna para o WS como resultado de execução, a imagem transformada e codificada no formato base64;
 	\item O WS por fim, retorna para a aplicação cliente do serviço, um código de status da requisição, representando o sucesso ou insucesso da operação, em conjunto com uma mensagem informando se houve qualquer erro em algum dos passos anteriores, e caso todo o processo tenha sido realizado com sucesso, retorna também a imagem processada pela API, também no formato base64.
@@ -301,11 +300,10 @@ Todos os serviços possuem somente um parâmetro de entrada (Requisicao) e um pa
 
 A definição dos elementos de comunicação – ou objetos de comunicação – é
 determinante para o sucesso de todo o processo de comunicação, que inicia na requisição da aplicação cliente, passa pelo WS, chega na API, e finaliza na resposta final do web service. Esses objetos são as estruturas de dados que carregam as informações necessárias para consumir e responder um WS.
-A dinâmica de comunicação é realizada da seguinte forma: a aplicação cliente realiza uma requisição encapsulando um objeto de comunicação que é processado pelo web service. Em seguida, o WS realiza uma chamada à função requisitada pelo cliente à API, esta que por sua vez, realiza seu processamento, e envia uma resposta ao WS, que, por fim, responde à requisição do cliente através de um outro objeto de comunicação.
 
-Por exemplo: para consumir o serviço GreenFilter a aplicação cliente requisita através do objeto de comunicação Requisicao os dados da imagem codificada. Em seguida, o serviço GreenFilter envia a resposta com o objeto de comunicação Resposta.
+A dinâmica de comunicação é realizada da seguinte forma: a aplicação cliente realiza uma requisição encapsulando um objeto de comunicação que é processado pelo web service. Em seguida, o WS realiza uma chamada à função requisitada pelo cliente à API, esta que por sua vez, realiza seu processamento, e envia uma resposta ao WS, que, por fim, responde à requisição do cliente através de um outro objeto de comunicação. Por exemplo: para consumir o serviço GreenFilter a aplicação cliente requisita através do objeto de comunicação Requisicao os dados da imagem codificada. Em seguida, o serviço GreenFilter envia a resposta com o objeto de comunicação Resposta.
 
-A tabela 2 representa um exemplo da estrutura de dados de um objeto de
+A Tabela 2 representa um exemplo da estrutura de dados de um objeto de
 comunicação exemplificado no formato JSON.
 
 \begin{table}[ht]
@@ -530,7 +528,7 @@ O WS apresentado neste trabalho elimina a restrição de dependência a uma
 liberdade, não só na escolha da linguagem utilizada para implementar suas aplicações,
 mas também permitindo que o foco do desenvolvimento se resuma a aplicação em si,
 uma vez que, os detalhes da implementação estão encapsulados pela API,
-permitindo a utilização dos mesmos de uma forma fácil e eficiente.
+permitindo a utilização dos mesmos de uma forma fácil e eficiente. Vale também salientar a facilidade de acesso a funções de processamento de imagens digitais que a ferramenta proporciona.
 
 \section{Propostas de Trabalhos Futuros}
 

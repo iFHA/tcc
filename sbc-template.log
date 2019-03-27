@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  27 MAR 2019 20:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  27 MAR 2019 20:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -340,17 +340,17 @@ Underfull \vbox (badness 5924) has occurred while \output is active []
 <modelo-comunicacao2.png, id=30, 158.09062pt x 331.2375pt>
 File: modelo-comunicacao2.png Graphic file (type png)
 <use modelo-comunicacao2.png>
-Package pdftex.def Info: modelo-comunicacao2.png  used on input line 279.
+Package pdftex.def Info: modelo-comunicacao2.png  used on input line 278.
 (pdftex.def)             Requested size: 128.0387pt x 268.29079pt.
  [7]
-Overfull \hbox (21.54872pt too wide) in paragraph at lines 316--325
+Overfull \hbox (21.54872pt too wide) in paragraph at lines 314--323
  [][] 
  []
 
 <ds-green-filter2.png, id=35, 388.45125pt x 332.74312pt>
 File: ds-green-filter2.png Graphic file (type png)
 <use ds-green-filter2.png>
-Package pdftex.def Info: ds-green-filter2.png  used on input line 331.
+Package pdftex.def Info: ds-green-filter2.png  used on input line 329.
 (pdftex.def)             Requested size: 298.75264pt x 255.91342pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -360,42 +360,42 @@ y)>]
 <jersey-pom.png, id=42, 425.33907pt x 173.89969pt>
 File: jersey-pom.png Graphic file (type png)
 <use jersey-pom.png>
-Package pdftex.def Info: jersey-pom.png  used on input line 358.
+Package pdftex.def Info: jersey-pom.png  used on input line 356.
 (pdftex.def)             Requested size: 384.1096pt x 157.05222pt.
 
 [10]
 <web-xml.png, id=46, 536.75531pt x 207.02344pt>
 File: web-xml.png Graphic file (type png)
 <use web-xml.png>
-Package pdftex.def Info: web-xml.png  used on input line 373.
+Package pdftex.def Info: web-xml.png  used on input line 371.
 (pdftex.def)             Requested size: 384.1096pt x 148.14697pt.
  [11 <./jersey-pom.png (PNG copy)> <./web-xml.png (PNG copy)>]
 <codigo-green-service.png, id=50, 603.0028pt x 399.74344pt>
 File: codigo-green-service.png Graphic file (type png)
 <use codigo-green-service.png>
-Package pdftex.def Info: codigo-green-service.png  used on input line 383.
+Package pdftex.def Info: codigo-green-service.png  used on input line 381.
 (pdftex.def)             Requested size: 384.1096pt x 254.6333pt.
 <exemplo-json.png, id=51, 284.56313pt x 79.79813pt>
 File: exemplo-json.png Graphic file (type png)
 <use exemplo-json.png>
-Package pdftex.def Info: exemplo-json.png  used on input line 397.
+Package pdftex.def Info: exemplo-json.png  used on input line 395.
 (pdftex.def)             Requested size: 298.75264pt x 83.78561pt.
  [12 <./codigo-green-service.png (PNG copy)>]
 <aplicacao-cliente.png, id=55, 584.1825pt x 756.8275pt>
 File: aplicacao-cliente.png Graphic file (type png)
 <use aplicacao-cliente.png>
-Package pdftex.def Info: aplicacao-cliente.png  used on input line 474.
+Package pdftex.def Info: aplicacao-cliente.png  used on input line 472.
 (pdftex.def)             Requested size: 213.39568pt x 276.46494pt.
  [13 <./exemplo-json.png (PNG copy)>]
 <cliente-requisicao.png, id=61, 767.86874pt x 568.1225pt>
 File: cliente-requisicao.png Graphic file (type png)
 <use cliente-requisicao.png>
-Package pdftex.def Info: cliente-requisicao.png  used on input line 485.
+Package pdftex.def Info: cliente-requisicao.png  used on input line 483.
 (pdftex.def)             Requested size: 384.1096pt x 284.19923pt.
 <caminho-servicos.png, id=62, 664.4825pt x 53.19875pt>
 File: caminho-servicos.png Graphic file (type png)
 <use caminho-servicos.png>
-Package pdftex.def Info: caminho-servicos.png  used on input line 496.
+Package pdftex.def Info: caminho-servicos.png  used on input line 494.
 (pdftex.def)             Requested size: 384.1096pt x 30.7522pt.
  [14]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -418,7 +418,7 @@ f-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/u
 rw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></
 usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on sbc-template.pdf (18 pages, 847215 bytes).
+Output written on sbc-template.pdf (18 pages, 847874 bytes).
 PDF statistics:
  109 PDF objects out of 1000 (max. 8388607)
  67 compressed objects within 1 object stream
