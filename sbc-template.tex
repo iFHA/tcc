@@ -39,7 +39,7 @@
 
 
 Toda área, seja ela educação, comércio, medicina ou militar, exige troca de informação para seu funcionamento. 
-Um dos mais populares modos de comunicação de dados via internet é através do uso de um Web Service(WS) ou serviço web.
+Um dos mais populares modos de comunicação de dados via internet é através do uso de um Web Service (WS) ou serviço web.
 Segundo o \cite{w3c1} um WS é definido como um sistema de software projetado para fornecer suporte à interoperabilidade entre máquinas sobre rede.
 %Web Services podem ser definidos como aplicações cliente/servidor que se utilizam da comunicação 
 %através da internet, por meio do protocolo HTTP (HyperText Transfer Protocol), para prover serviços 
@@ -55,13 +55,13 @@ Nos últimos anos, têm-se acompanhado a disponibilização de um grande número
 computacionais com um considerável conjunto de recursos que satisfaçam as necessidades de 
 desenvolvedores de software. Esse aumento do poder computacional gera um desejo de tratar 
 problemas de maior escopo por parte de programadores e pesquisadores, e uma das áreas que podem 
-se beneficiar de tal avanço é a de Processamento Digital de Imagens (PDI), pois a popularização 
+se beneficiar de tal avanço é a de PDI (Processamento Digital de Imagens), pois a popularização 
 de dispositivos de aquisição e armazenamento de mídias digitais, como imagens e vídeos, faz 
 crescer a demanda por software capaz de manipulá-las.
 
 O PDI refere-se ao processamento de imagens por meio de um computador digital. Segundo \cite{spring} o objetivo de se usar processamento digital de imagens é melhorar o aspecto visual de certas feições estruturais para o analista humano e fornecer outros subsídios para a sua interpretação, inclusive gerando produtos que possam ser posteriormente submetidos a outros processamentos. 
 
-Neste contexto, APIs\textit{(Application Programming Interface)} podem incorporar implementações de métodos que são a base comum para a manipulação de imagens e 
+Neste contexto, APIs \textit{(Application Programming Interface)} podem incorporar implementações de métodos que são a base comum para a manipulação de imagens e 
 vídeos a fim de minimizar erros de codificação, diminuir o custo e o tempo de produção. 
 
 De acordo com \cite{pressman:16, sommerville:11} APIs contém a implementação de funcionalidades de uso frequente e que podem ser utilizadas pelo
@@ -85,19 +85,19 @@ A utilização das funcionalidades da API de forma direta, necessitando de tê-l
 \end{itemize}
 
 Durante o estudo da literatura, foi possível verificar algumas soluções relacionadas a problemas semelhantes. O estudo de caso realizado por \cite{vivek} é motivado por problemas semelhantes aos discutidos no presente
-trabalho. Sua solução baseia-se em uma arquitetura de web services no estilo SOAP\textit{(Simple Object Access Protocol)}, que demanda mais recursos para realização de comunicação em rede quando comparada com o estilo REST, do inglês
+trabalho. Sua solução baseia-se em uma arquitetura de web services no estilo SOAP \textit{(Simple Object Access Protocol)}, que demanda mais recursos para realização de comunicação em rede quando comparada com o estilo REST, do inglês
 \textit{Representational State Transfer} (Transferência do Estado Representacional), e oferece uma variedade de serviços de processamento de imagens, sendo alguns deles filtros como preto e branco, \textit{"anti-color"}, \textit{"true-color"}. Segundo o autor, seu web service possui um estágio que trata de problemas relacionados a segurança. Uma observação sobre seu trabalho é a de que o web service é o responsável pelo processamento das imagens requisitadas, e não uma API em separado.
 
 %O artigo não informa se utiliza processamento paralelo para processar as imagens.
 
-Outro estudo semelhante é o de \cite{martin}, que também utiliza serviços baseados em SOAP para realizar as comunicações com aplicações clientes, diferenciando-se do trabalho anterior pelo fato de o mesmo fazer uso de APIs separadas, que ficam a cargo de realizar os processamentos nas imagens requisitadas pelo cliente, deixando o web service com mais recursos para atender uma demanda maior de requisições. Tal comunicação entre web service e API é realizada por meio de chamadas a procedimentos remotos(RPC), que são serviços remotos executados em outra máquina. 
+Outro estudo semelhante é o de \cite{martin}, que também utiliza serviços baseados em SOAP para realizar as comunicações com aplicações clientes, diferenciando-se do trabalho anterior pelo fato de o mesmo fazer uso de APIs separadas, que ficam a cargo de realizar os processamentos nas imagens requisitadas pelo cliente, deixando o web service com mais recursos para atender uma demanda maior de requisições. Tal comunicação entre web service e API é realizada por meio de RPC (chamadas a procedimentos remotos), que são serviços remotos executados em outra máquina. 
 
 Dessa forma, diante dos problemas e cenários analisados, o presente trabalho tem como objetivo a criação de um serviço web no estilo arquitetural REST, com o intuito de disponibilizar funções para manipulação de imagens digitais, além de apresentar a realização do consumo dos serviços criados, por meio do desenvolvimento de uma aplicação cliente.
 
 
 Para chegar à ferramenta, a solução está implementada em Linguagem
 Java, com auxílio de uma ferramenta denominada Jersey, baseada na arquitetura
-SOA\textit{(Service-Oriented Architecture)}, mais especificamente em Serviço Web seguindo o conceito REST. 
+SOA \textit{(Service-Oriented Architecture)}, mais especificamente em Serviço Web seguindo o conceito REST. 
 
 De acordo com \cite{oracle} Java é uma linguagem de programação e plataforma computacional cujo lançamento foi realizado pela Sun Microsystems em 1995.
 
@@ -107,9 +107,9 @@ Proposto por \cite{rest} REST refere-se a um estilo de arquitetura de software.
 
 De acordo com \cite{jersey} Jersey é uma biblioteca de programação que implementa especificações de criação de WSs do tipo REST, baseada na linguagem Java.
 
-Este tipo de Serviço Web utiliza-se do protocolo HTTP\textit{(Hypertext Transfer Protocol)} para realizar a troca
+Este tipo de Serviço Web utiliza-se do protocolo HTTP \textit{(Hypertext Transfer Protocol)} para realizar a troca
 de mensagens entre clientes e servidor. Outra característica importante é a forma de
-redirecionamento de serviços, realizado através de um endereçamento URI\textit{(Uniform Resource Identifier)}
+redirecionamento de serviços, realizado através de um endereçamento URI \textit{(Uniform Resource Identifier)}
 específico.
 
 Aliando todos os fatores e tecnologias apresentados anteriormente, torna-se
@@ -137,7 +137,7 @@ Este trabalho exerce uma função de middleware, no que se diz respeito ao proce
 \subsection{Web Service}
 
 Com o surgimento da comunicação através das redes de computadores e da necessidade
-de diferentes softwares trocarem informações, surgiu o conceito de Webservice (WS).
+de diferentes softwares trocarem informações, surgiu o conceito de Web service (WS).
 Os Web services permitem que sistemas desenvolvidos em diferentes linguagens,
 sendo executados em diversas plataformas, transmitam e recebam informações
 padronizadas entre si, permitindo uma interação entre os dispositivos, mais abrangente
@@ -183,13 +183,13 @@ Descrito por \cite{rest}, REST é um modelo de arquitetura de software distribu�
 Segundo \cite{richard:07} Um sistema baseado no modelo REST denomina-se RESTful. Para a implementação de tal sistema não há a necessidade da criação de novos protocolos ou tecnologias, pois o mesmo é suportado em qualquer arquitetura de rede.
 
 Enquanto o SOAP é um protocolo de mensagens, o REST é um estilo de arquitetura
-de software para sistemas hipermídia distribuídos, conhecidos como recursos e são acessados via URIs (Uniform Resource Identifiers ou, em português, Identificador Uniforme de Recursos). 
+de software para sistemas hipermídia distribuídos, conhecidos como recursos e são acessados via URIs (\textit{Uniform Resource Identifiers} ou, em português, Identificador Uniforme de Recursos). 
 
 Segundo \cite{lecheta:15}, um dos motivos pelos quais o SOAP começou a perder espaço para web services RESTful, foi principalmente, por causa da grande utilização de dispositivos móveis atualmente, que possuem recursos mais escassos, e necessitam de uma forma mais leve para tráfego de dados, pois um WS RESTful, possui uma sintaxe mais elegante e pode transmitir informações utilizando formatos mais leves.
 
 Um recurso RESTful é qualquer coisa que possua um endereço através da web, como por exemplo uma imagem jpg, dados de uma empresa, entre outros, ou seja, sistemas em que as hipermídias são armazenadas em uma rede e interconectadas através de hiperlinks podendo ser acessados e transferidos entre clientes e servidores.
 
-O núcleo da abordagem REST consiste na utilização dos métodos HTTP, que correspondem às operações CRUD (Create, Read, Update, Delete). Cada requisição HTTP inclui um dos métodos apresentados na tabela 1 para indicar qual a operação CRUD que deve ser realizada sobre o recurso.
+O núcleo da abordagem REST consiste na utilização dos métodos HTTP, que correspondem às operações CRUD (\textit{Create, Read, Update, Delete}). Cada requisição HTTP inclui um dos métodos apresentados na tabela 1 para indicar qual a operação CRUD que deve ser realizada sobre o recurso.
 \begin{table}[ht]
 	\centering
 	\caption{Métodos HTTP e operações CRUD}
@@ -211,7 +211,7 @@ do recurso é transferido do servidor que hospeda o recurso para o cliente que e
 pedido.
 
 
-\subsection{Processamento Digital de Imagens(PDI)}
+\subsection{Processamento Digital de Imagens}
 
 Uma imagem pode ser definida por uma função bidimensional f (x,y) em que x e y são um par de coordenadas espaciais e o valor de f representa a intensidade da
 imagem naquele ponto. Quando x, y e os valores das intensidades de f são todos finitos e em quantidades discretas, pode-se dizer que a imagem é uma imagem
@@ -227,7 +227,7 @@ implementado. Segundo \cite{gonzalez:08,jain:89} estas nuâncias de implementaç
 
 \subsection{API em Desenvolvimento}
 
-API do Inglês Application Programming Interface(ou Interface de Programação de Aplicativos), é um conjunto de rotinas e padrões que são seguidos com o intuito de utilizar a funcionalidade de algum software, onde não há a necessidade de o usuário se ater aos detalhes internos de funcionamento do mesmo, ou seja, sua implementação não necessita ser compreendida pelo usuário. 
+API do Inglês \textit{Application Programming Interface} (ou Interface de Programação de Aplicativos), é um conjunto de rotinas e padrões que são seguidos com o intuito de utilizar a funcionalidade de algum software, onde não há a necessidade de o usuário se ater aos detalhes internos de funcionamento do mesmo, ou seja, sua implementação não necessita ser compreendida pelo usuário. 
 
 Paralelamente a este trabalho, está em processo de desenvolvimento, uma API, livre e de código aberto, que poderá ser utilizada para o desenvolvimento de software na área de PDI, para a manipulação de imagens utilizando-se de técnicas de processamento paralelo, podendo ajudar a diminuir custos e tempo para a produção de programas. Além disso, mais programadores podem utilizá-la para o PDI sem que seja necessário que eles se tornem especialistas na área.
 Até o presente momento, foram desenvolvidos dois filtros para aplicação em imagens, sendo eles o filtro preto e branco YIQ, e o filtro de recuperação do canal verde da imagem. Este trabalho tem como foco, a disponibilização das funcionalidades dessa API exposta em específico, que, como já mencionado, está em constante desenvolvimento e mais funcionalidades podem ser adicionadas ao serviço remoto.
@@ -269,7 +269,7 @@ por utilizá-lo.
 A interoperabilidade entre a aplicação cliente e a API de PDI, conforme ilustrado na Figura 2, é
 realizado da seguinte forma:
 \begin{itemize}
-	\item A aplicação cliente se conecta ao web service através da URL\textit{(Uniform Resource Locator)} de acesso a algum serviço disponibilizado pelo mesmo, informando junto com a requisição, a imagem alvo a qual se deseja realizar tal transformação, codificada no formato base64;
+	\item A aplicação cliente se conecta ao web service através da URL \textit{(Uniform Resource Locator)} de acesso a algum serviço disponibilizado pelo mesmo, informando junto com a requisição, a imagem alvo a qual se deseja realizar tal transformação, codificada no formato base64;
 	\item O WS recebe a requisição, decodifica a imagem requisitada, salva-a no disco, e realiza uma chamada via linha de comando para o sistema operacional do servidor, passando como parâmetro o caminho da imagem salva, e o tipo de transformação que se deseja realizar na mesma, para que a API possa realizar seu trabalho;
 	\item Após realizar seu processamento, a API retorna para o WS como resultado de execução, a imagem transformada e codificada no formato base64;
 	\item O WS por fim, retorna para a aplicação cliente do serviço, um código de status da requisição, representando o sucesso ou insucesso da operação, em conjunto com uma mensagem informando se houve qualquer erro em algum dos passos anteriores, e caso todo o processo tenha sido realizado com sucesso, retorna também a imagem processada pela API, também no formato base64.
@@ -337,7 +337,7 @@ A Figura 3 representa o diagrama de sequência para o consumo do serviço GreenF
 
 Esta seção, descreve, bem como o título da mesma explicita, as tecnologias envolvidas na criação deste trabalho, sendo elas, a especificação Java EE; a ferramenta de automatização de construção e gerenciamento de projetos Java, Apache Maven; o framework Jersey, que implementa todas as características da arquitetura REST, ou seja, que nos permite a criação de sistemas RESTful, e por fim, as tecnologias que nos permite o armazenamento e transmissão de informação no formato de texto: JSON e base64.
 
-\subsubsection{Java Enterprise Edition(Java EE)}
+\subsubsection{Java EE \textit{(Java Enterprise Edition)}}
 
 Como mencionado na introdução deste trabalho, a linguagem escolhida para desenvolvimento do WS foi Java, que é uma das linguagens de desenvolvimento multiplataforma mais conhecidas e atualmente está bastante consolidada no mercado, com vários fóruns e comunidades dispostos a nos auxiliar no processo de construção de software, o que torna tal escolha bastante razoável. 
 
@@ -347,10 +347,10 @@ O Java EE consiste de uma série de especificações bem detalhadas, ditando com
 
 Inicialmente, para criação do projeto, utilizou-se da ferramenta de automatização de construção e gerenciamento de projetos Java, denominada Apache Maven, embora também possa ser utilizada com outras linguagens. Ela fornece aos desenvolvedores uma forma padronizada de automação, construção e publicação de suas aplicações.
 
-O processo de criação de um projeto Java EE envolve vários passos, como a criação e organização de seus diretórios, a configuração de diversos arquivos XML, a obtenção de bibliotecas e recursos para o projeto, a geração dos pacotes de publicação, o processo de documentação, entre outras etapas. Normalmente, sem a utilização de tal ferramenta, cada projeto teria sua própria estrutura, seu próprio jeito de gerar pacotes(jar, war), ou de executar cada um desses passos. Projetos complexos, com vários módulos, podem exigir uma ordem específica para a compilação dos mesmos, para que se chegue ao pacote final. Essa não-padronização, pode acarretar vários problemas, como por exemplo, um desenvolvedor alterar a estrutura de pastas do projeto referente a localização de imagens, e esquecer de avisar aos demais, o sistema passaria a funcionar de forma instável em alguns momentos. Tendo em vista esses pontos, e o fato de que tal ferramenta incentiva a adoção de boas práticas, optou-se por utilizá-la.
+O processo de criação de um projeto Java EE envolve vários passos, como a criação e organização de seus diretórios, a configuração de diversos arquivos XML, a obtenção de bibliotecas e recursos para o projeto, a geração dos pacotes de publicação, o processo de documentação, entre outras etapas. Normalmente, sem a utilização de tal ferramenta, cada projeto teria sua própria estrutura, seu próprio jeito de gerar pacotes \textit{(jar, war)}, ou de executar cada um desses passos. Projetos complexos, com vários módulos, podem exigir uma ordem específica para a compilação dos mesmos, para que se chegue ao pacote final. Essa não-padronização, pode acarretar vários problemas, como por exemplo, um desenvolvedor alterar a estrutura de pastas do projeto referente a localização de imagens, e esquecer de avisar aos demais, o sistema passaria a funcionar de forma instável em alguns momentos. Tendo em vista esses pontos, e o fato de que tal ferramenta incentiva a adoção de boas práticas, optou-se por utilizá-la.
 
 Após a criação de um projeto Maven, temos à disposição, uma de suas funcionalidades mais poderosas, que é a gestão de dependências, por meio do arquivo pom.xml, que fica localizado no diretório raiz do projeto. Esse arquivo xml nos fornece uma forma fácil de administrar bibliotecas de terceiros necessárias para o funcionamento correto do código, tarefa que pode se tornar difícil, à medida que o projeto for aumentando de proporção e que cada vez mais a adição de bibliotecas ao desenvolvimento se torne necessária. O arquivo pom.xml, além de conter uma lista das chamadas dependências, possui várias outras informações referentes ao correto funcionamento do Maven. Entre outras palavras, ele é basicamente o coração da ferramenta. 
-Por meio da lista de dependências, a ferramenta faz uma análise e tenta localizá-las, com o intuito de disponibilizá-las para o projeto. Para realizar as buscas de dependências, o Maven faz uma varredura em locais denominados repositórios, cujos tipos principais são local e público. O primeiro fica localizado na máquina onde a ferramenta está sendo executada(no caso deste trabalho, /home/fernando/.m2/repository/), e o último, em \url{http://repo.maven.apache.org/maven2/}, endereço do repositório público oficial da ferramenta.
+Por meio da lista de dependências, a ferramenta faz uma análise e tenta localizá-las, com o intuito de disponibilizá-las para o projeto. Para realizar as buscas de dependências, o Maven faz uma varredura em locais denominados repositórios, cujos tipos principais são local e público. O primeiro fica localizado na máquina onde a ferramenta está sendo executada (no caso deste trabalho, /home/fernando/.m2/repository/), e o último, em \url{http://repo.maven.apache.org/maven2/}, endereço do repositório público oficial da ferramenta.
 
 A Figura \ref{fig:Figura5} exibe as dependências adicionadas ao arquivo pom.xml deste trabalho, que no caso, são referentes à ferramenta Jersey.
 \begin{figure}[ht]
@@ -362,7 +362,7 @@ A Figura \ref{fig:Figura5} exibe as dependências adicionadas ao arquivo pom.xml
 
 %Outra capacidade da ferramenta é identificar as dependências das dependências do projeto. Ou seja, se uma biblioteca depender de outras, o Maven irá procurar por elas também e assim sucessivamente, até todas as dependências necessárias estarem à disposição do projeto.
 
-Com as dependências citadas na Figura \ref{fig:Figura5} adicionadas, e com o Maven instalado devidamente na máquina, basta um único comando(mvn install), no diretório raiz do projeto, para que a ferramenta realize seu trabalho de baixar dependências que ainda não tenham sido adicionadas ao projeto, compilá-lo e gerar o pacote, com o código compilado.
+Com as dependências citadas na Figura \ref{fig:Figura5} adicionadas, e com o Maven instalado devidamente na máquina, basta um único comando \textit{(mvn install)}, no diretório raiz do projeto, para que a ferramenta realize seu trabalho de baixar dependências que ainda não tenham sido adicionadas ao projeto, compilá-lo e gerar o pacote, com o código compilado.
 
 \subsubsection{Framework Jersey}
 
@@ -376,7 +376,7 @@ Como o Java EE é apenas uma especificação, fez-se o uso de um dos principais 
 \end{figure}
 
 Na Figura \ref{fig:Figura9}, a linha 12 refere-se ao pacote java onde estarão salvas as classes referentes aos recursos do web service, já na linha 18, está sendo definida a Url base a qual a partir da mesma será possível o acesso aos recursos, ou seja, no momento, o servidor está sendo acessível pelo seguinte endereço web: \url{http://endereco_ip_servidor:8080/nome_projeto/restapi}.
-Em seguida, é necessário a criação de tais classes. Neste trabalho, foi criada a classe MyResource, no pacote descrito pela linha 12 da Figura \ref{fig:Figura9}. A Figura \ref{fig:Figura10} mostra a implementação da classe que expõe os métodos como serviços REST:
+Em seguida, é necessário a criação de tais classes. Neste trabalho, foi criada a classe \textit{MyResource}, no pacote descrito pela linha 12 da Figura \ref{fig:Figura9}. A Figura \ref{fig:Figura10} mostra a implementação da classe que expõe os métodos como serviços REST:
 
 \begin{figure}[ht]
 	\centering
@@ -385,7 +385,7 @@ Em seguida, é necessário a criação de tais classes. Neste trabalho, foi cria
 	\label{fig:Figura10}
 \end{figure}
 
-A anotação @Path definida na classe, indica o endereço por meio do qual o recurso será acessado, em conjunto com as anotações @Path, nos métodos implementados pela classe, por exemplo, o método getGreenImg(serviço GreenService), que possui a anotação @Path com o valor /get/image/green\_filter poderá ser acessado por meio da Url \url{http://endereco_ip_servidor:8080/nome_projeto/restapi/ws/get/image/green_filter}.
+A anotação @Path definida na classe, indica o endereço por meio do qual o recurso será acessado, em conjunto com as anotações @Path, nos métodos implementados pela classe, por exemplo, o método getGreenImg (serviço GreenService), que possui a anotação @Path com o valor /get/image/green\_filter poderá ser acessado por meio da Url \url{http://endereco_ip_servidor:8080/nome_projeto/restapi/ws/get/image/green_filter}.
  O método getGreenImg recebe como parâmetro um objeto do tipo Requisicao, e envia como resposta um objeto do tipo Resposta, ambos descritos na tabela 2. Para acessar esse método, é necessário indicar no cabeçalho da requisição que se deseja acessar o método com tipo de resposta APPLICATION\_JSON. As anotações @POST, @Consumes, e @Produces, dizem respeito ao método/verbo HTTP pelo qual o serviço pode ser acessado, o tipo hipermídia que o serviço aceita como corpo da requisição, e o tipo de hipermídia que o serviço retornará à aplicação cliente, respectivamente. Há também outro método chamado getBlackAndWhiteImg, este, referente à aplicação do filtro de cores YIQ, porém, como o mesmo é muito semelhante ao anterior, decidiu-se omitir sua implementação.
 
 \subsubsection{Armazenamento e transmissão de informação}
@@ -399,7 +399,7 @@ Como forma padrão de comunicação entre servidor e cliente, foi adotado o JSON
 	\label{fig:Figura4}
 \end{figure}
 
-Para que fosse possível a transmissão de um arquivo binário de forma leve e eficiente, foi utilizado o padrão de codificação base64, que nada mais é do que uma forma de representar arquivos binários(imagens, no contexto deste trabalho) em formato de texto, método comumente utilizado na internet para transferência de dados.
+Para que fosse possível a transmissão de um arquivo binário de forma leve e eficiente, foi utilizado o padrão de codificação base64, que nada mais é do que uma forma de representar arquivos binários (imagens, no contexto deste trabalho) em formato de texto, método comumente utilizado na internet para transferência de dados.
 Seu nome é dado pelo fato de o mesmo ser constituído por 64 caracteres ([A-Za-z0-9], "/" e "+"). Trabalha com transformação em bits a partir de um outro padrão, como por exemplo ASCII. A tabela 3 expressa um exemplo de codificação da palavra “Fer”.
 
 \begin{table}[ht]
@@ -476,7 +476,7 @@ A Figura \ref{fig:Figura6} representa a interface da aplicação cliente desenvo
 	\label{fig:Figura6}
 \end{figure}
 
-Esta aplicação consiste em uma página HTML, que utiliza-se da linguagem javascript para realizar as requisições ao Webservice. Na Figura \ref{fig:Figura6}, temos a lista de serviços disponibilizados pelo WS(1), onde o usuário poderá escolher qual filtro aplicar, um botão para selecionar a imagem desejada(2), a imagem escolhida(3), a imagem final(4), após o processamento da API, e resposta do middeware, e por fim, o botão de enviar(5), que realizará a requisição.
+Esta aplicação consiste em uma página HTML, que utiliza-se da linguagem javascript para realizar as requisições ao Webservice. Na Figura \ref{fig:Figura6}, temos a lista de serviços disponibilizados pelo WS (1), onde o usuário poderá escolher qual filtro aplicar, um botão para selecionar a imagem desejada (2), a imagem escolhida (3), a imagem final (4), após o processamento da API, e resposta do middleware, e por fim, o botão de enviar (5), que realizará a requisição.
 
 O código da Figura \ref{fig:Figura7} diz respeito ao código necessário para realizar a requisição aos serviços do webservice:
 
