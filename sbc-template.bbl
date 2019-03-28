@@ -17,6 +17,26 @@ COULOURIS, George, D.~J. and KINDBERG, T. (2005).
 \newblock {\em Distributed systems: concepts and design}.
 \newblock Addison-Wesley, 4th edition.
 
+\bibitem[ECMA 2017]{json}
+ECMA, I. (2017).
+\newblock The json data interchange syntax.
+\newblock Disponível em:
+  \url{http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf}.
+\newblock Acesso em: 29 dez. 2018.
+
+\bibitem[FIELDING and BERNERS-LEE 1999]{http}
+FIELDING, Roy~T., G. J. M. J. C. N. H. F. M. L. L. P.~J. and BERNERS-LEE, T.
+  (1999).
+\newblock Hypertext transfer protocol -- http/1.1.
+\newblock Disponível em: \url{https://www.rfc-editor.org/rfc/rfc2616.txt}.
+\newblock Acesso em: 21 dez. 2018.
+
+\bibitem[FIELDING and BERNERS-LEE 1998]{uri}
+FIELDING, Roy~T., I. U. M. L. X.~C. and BERNERS-LEE, T. (1998).
+\newblock Uniform resource identifiers (uri): Generic syntax.
+\newblock Disponível em: \url{http://www.faqs.org/rfcs/rfc2396.html}.
+\newblock Acesso em: 24 dez. 2018.
+
 \bibitem[FIELDING 2000]{rest}
 FIELDING, R.~T. (2000).
 \newblock {\em {REST:} Architectural Styles and the Design of Network-based
@@ -27,6 +47,12 @@ FIELDING, R.~T. (2000).
 GONZALEZ, R.~C. and WOODS, R.~E. (2008).
 \newblock {\em Digital Image Processing}.
 \newblock Prentice Hall, 3rd edition.
+
+\bibitem[IETF 1976]{rpc}
+IETF (1976).
+\newblock A high-level framework for network-based resource sharing.
+\newblock Disponível em: \url{https://tools.ietf.org/html/rfc707}.
+\newblock Acesso em: 29 dez. 2018.
 
 \bibitem[JAIN 2007]{jain:89}
 JAIN, A.~K. (2007).
@@ -124,5 +150,11 @@ W3C (2004).
 \newblock Web services architecture.
 \newblock Disponível em: \url{https://www.w3.org/TR/ws-arch/#whatis}.
 \newblock Acesso em: 29 dez. 2018.
+
+\bibitem[W3C 2019]{html}
+W3C (2019).
+\newblock What is html.
+\newblock Disponível em: \url{https://www.w3.org/html/}.
+\newblock Acesso em: 01 Mar. 2019.
 
 \end{thebibliography}

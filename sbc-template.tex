@@ -90,7 +90,7 @@ trabalho. Sua solução baseia-se em uma arquitetura de web services no estilo S
 
 %O artigo não informa se utiliza processamento paralelo para processar as imagens.
 
-Outro estudo semelhante é o de \cite{martin}, que também utiliza serviços baseados em SOAP para realizar as comunicações com aplicações clientes, diferenciando-se do trabalho anterior pelo fato de o mesmo fazer uso de APIs separadas, que ficam a cargo de realizar os processamentos nas imagens requisitadas pelo cliente, deixando o web service com mais recursos para atender uma demanda maior de requisições. Tal comunicação entre web service e API é realizada por meio de RPC (chamadas a procedimentos remotos), que são serviços remotos executados em outra máquina. 
+Outro estudo semelhante é o de \cite{martin}, que também utiliza serviços baseados em SOAP para realizar as comunicações com aplicações clientes, diferenciando-se do trabalho anterior pelo fato de o mesmo fazer uso de APIs separadas, que ficam a cargo de realizar os processamentos nas imagens requisitadas pelo cliente, deixando o web service com mais recursos para atender uma demanda maior de requisições. Tal comunicação entre web service e API é realizada por meio de RPC (chamadas a procedimentos remotos), que são serviços remotos executados em outra máquina. Descrito por \cite{rpc}, o principal objetivo do RPC é o compartilhamento de recursos.
 
 Dessa forma, diante dos problemas e cenários analisados, o presente trabalho tem como objetivo a criação de um serviço web no estilo arquitetural REST, com o intuito de disponibilizar funções para manipulação de imagens digitais, além de apresentar a realização do consumo dos serviços criados, por meio do desenvolvimento de uma aplicação cliente.
 
@@ -108,9 +108,9 @@ Proposto por \cite{rest} REST refere-se a um estilo de arquitetura de software.
 De acordo com \cite{jersey} Jersey é uma biblioteca de programação que implementa especificações de criação de WSs do tipo REST, baseada na linguagem Java.
 
 Este tipo de Serviço Web utiliza-se do protocolo HTTP \textit{(Hypertext Transfer Protocol)} para realizar a troca
-de mensagens entre clientes e servidor. Outra característica importante é a forma de
+de mensagens entre clientes e servidor. Em \cite{http} temos que o HTTP é um protocolo de camada de aplicação destinado a troca de informações utilizando hipermídia. Outra característica importante é a forma de
 redirecionamento de serviços, realizado através de um endereçamento URI \textit{(Uniform Resource Identifier)}
-específico.
+específico. Segundo \cite{uri} um URI consiste em um conjunto de caracteres que identificam um recurso físico ou abstrato.
 
 Aliando todos os fatores e tecnologias apresentados anteriormente, torna-se
 possível o desenvolvimento de um mecanismo baseado em Serviços Web, que disponibilize serviços de uma API de processamento digital de imagens
@@ -151,11 +151,12 @@ entre sistemas.
 Para \cite{kreger:01}, um Webservice descreve uma coleção de operações
 que são acessíveis pela rede através de mensagens XML \textit{(eXtensible Markup Language)}
 padronizadas. Porém existe a tecnologia JSON \textit{(Javascript Object Notation)} que
-também possibilita a troca de mensagens de forma mais leve. 
+também possibilita a troca de mensagens de forma mais leve. De acordo com \cite{json} JSON consiste em um arquivo leve, no formato de texto, com sintaxe independente de linguagem, com o intuito de definir formatos de troca de dados.
+
 
 Segundo \cite{sandoval:09}, dentre os
 formatos mais utilizados nas requisições e respostas, destacam-se texto plano
-HTML, XML e JSON. O uso de Webservice
+HTML \textit{(HyperText Markup Language)}, XML e JSON. Segundo \cite{html} HTML é a principal linguagem para criação de conteúdo web. O uso de Webservice
 possibilita que aplicações desenvolvidas em plataformas e linguagens diversificadas
 troquem informações padronizadas permitindo a interação entre elas com rapidez,
 facilidade e baixo custo, conforme ilustrado na Figura \ref{fig:exampleFigura1}.
