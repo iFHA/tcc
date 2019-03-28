@@ -301,9 +301,9 @@ Todos os serviços possuem somente um parâmetro de entrada (Requisicao) e um pa
 \textit{BlackAndWhiteFilter}: Operação destinada a realizar a aplicação do filtro de cores preto e branco na imagem requisitada.
 
 A definição dos elementos de comunicação – ou objetos de comunicação – é
-determinante para o sucesso de todo o processo de comunicação, que inicia na requisição da aplicação cliente, passa pelo WS, chega na API, e finaliza na resposta final do web service. Esses objetos são as estruturas de dados que carregam as informações necessárias para consumir e responder um WS.
+determinante para o sucesso de todo o processo de comunicação, que inicia na requisição da aplicação cliente, passa pelo WS, chega na API, e finaliza na resposta final do web service. Esses objetos são as estruturas de dados que carregam as informações necessárias para a adequada comunicação com um Web service.
 
-A dinâmica de comunicação é realizada da seguinte forma: a aplicação cliente realiza uma requisição encapsulando um objeto de comunicação que é processado pelo web service. Em seguida, o WS realiza uma chamada à função requisitada pelo cliente à API, esta que por sua vez, realiza seu processamento, e envia uma resposta ao WS, que, por fim, responde à requisição do cliente através de um outro objeto de comunicação. Por exemplo: para consumir o serviço GreenFilter a aplicação cliente requisita através do objeto de comunicação Requisicao os dados da imagem codificada. Em seguida, o serviço GreenFilter envia a resposta com o objeto de comunicação Resposta.
+A dinâmica de comunicação é realizada da seguinte forma: a aplicação cliente realiza uma requisição encapsulando um objeto de comunicação que é processado pelo web service. Em seguida, o WS realiza uma chamada à função requisitada pelo cliente à API, esta que por sua vez, realiza seu processamento, e envia uma resposta ao WS, que, por fim, responde à requisição do cliente através de um outro objeto de comunicação. Por exemplo: para consumir o serviço \textit{GreenFilter} a aplicação cliente requisita através do objeto de comunicação Requisicao os dados da imagem codificada. Em seguida, o serviço \textit{GreenFilter} envia a resposta com o objeto de comunicação Resposta.
 
 A Tabela 2 representa um exemplo da estrutura de dados de um objeto de
 comunicação exemplificado no formato JSON.
@@ -324,12 +324,12 @@ comunicação exemplificado no formato JSON.
 	\end{tabular}
 \end{table}
 
-A Figura 3 representa o diagrama de sequência para o consumo do serviço GreenFilter:
+A Figura 3 representa o diagrama de sequência para o consumo do serviço \textit{GreenFilter}:
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=.7\textwidth]{ds-green-filter2.png}
-	\caption{Diagrama de Sequência - GreenFilterService}
+	\caption{Diagrama de Sequência - \textit{GreenFilterService}}
 	\label{fig:Figura3}
 \end{figure}
 
@@ -381,12 +381,12 @@ Em seguida, é necessário a criação de tais classes. Neste trabalho, foi cria
 \begin{figure}[ht]
 	\centering
 	\includegraphics[width=.9\textwidth]{codigo-green-service.png}
-	\caption{Classe MyResource - código referente ao serviço greenService}
+	\caption{Classe \textit{MyResource} - código referente ao serviço \textit{greenService}}
 	\label{fig:Figura10}
 \end{figure}
 
-A anotação @Path definida na classe, indica o endereço por meio do qual o recurso será acessado, em conjunto com as anotações @Path, nos métodos implementados pela classe, por exemplo, o método getGreenImg (serviço GreenService), que possui a anotação @Path com o valor /get/image/green\_filter poderá ser acessado por meio da Url \url{http://endereco_ip_servidor:8080/nome_projeto/restapi/ws/get/image/green_filter}.
- O método getGreenImg recebe como parâmetro um objeto do tipo Requisicao, e envia como resposta um objeto do tipo Resposta, ambos descritos na tabela 2. Para acessar esse método, é necessário indicar no cabeçalho da requisição que se deseja acessar o método com tipo de resposta APPLICATION\_JSON. As anotações @POST, @Consumes, e @Produces, dizem respeito ao método/verbo HTTP pelo qual o serviço pode ser acessado, o tipo hipermídia que o serviço aceita como corpo da requisição, e o tipo de hipermídia que o serviço retornará à aplicação cliente, respectivamente. Há também outro método chamado getBlackAndWhiteImg, este, referente à aplicação do filtro de cores YIQ, porém, como o mesmo é muito semelhante ao anterior, decidiu-se omitir sua implementação.
+A anotação \textit{@Path} definida na classe, indica o endereço por meio do qual o recurso será acessado, em conjunto com as anotações \textit{@Path}, nos métodos implementados pela classe, por exemplo, o método \textit{getGreenImg} (serviço \textit{GreenService}), que possui a anotação \textit{@Path} com o valor /get/image/green\_filter poderá ser acessado por meio da Url \url{http://endereco_ip_servidor:8080/nome_projeto/restapi/ws/get/image/green_filter}.
+ O método \textit{getGreenImg} recebe como parâmetro um objeto do tipo Requisicao, e envia como resposta um objeto do tipo Resposta, ambos descritos na tabela 2. Para acessar esse método, é necessário indicar no cabeçalho da requisição que se deseja acessar o método com tipo de resposta APPLICATION\_JSON. As anotações \textit{@POST}, \textit{@Consumes}, e \textit{@Produces}, dizem respeito ao método/verbo HTTP pelo qual o serviço pode ser acessado, o tipo hipermídia que o serviço aceita como corpo da requisição, e o tipo de hipermídia que o serviço retornará à aplicação cliente, respectivamente. Há também outro método chamado \textit{getBlackAndWhiteImg}, este, referente à aplicação do filtro de cores YIQ, porém, como o mesmo é muito semelhante ao anterior, decidiu-se omitir sua implementação.
 
 \subsubsection{Armazenamento e transmissão de informação}
 
@@ -526,15 +526,23 @@ Linhas 46 a 48: a função de callback error, por sua vez, é executada quando o
 %chamadas locais.
 
 O WS apresentado neste trabalho elimina a restrição de dependência a uma
-única linguagem de programação, permitindo que os desenvolvedores tenham uma maior
+única linguagem de programação, permitindo que os desenvolvedores possuam uma maior
 liberdade, não só na escolha da linguagem utilizada para implementar suas aplicações,
-mas também permitindo que o foco do desenvolvimento se resuma a aplicação em si,
-uma vez que, os detalhes da implementação estão encapsulados pela API,
-permitindo a utilização dos mesmos de uma forma fácil e eficiente. Vale também salientar a facilidade de acesso a funções de processamento de imagens digitais que a ferramenta proporciona.
+mas também permitindo que o foco do desenvolvimento se resuma à aplicação em si,
+uma vez que os detalhes da implementação estão encapsulados pela API,
+permitindo a utilização dos mesmos de uma forma fácil e eficiente. Isso também ajuda com a redução de erros durante a codificação, uma vez que o programador não necessita implementar tais funcionalidades.
+
+Outra característica importante desse trabalho, é a facilidade de acesso a funções de processamento de imagens digitais que é proporcionada pelo web service, uma vez que as mesmas podem ser acessadas de qualquer lugar e qualquer dispositivo, por meio da internet.
+
+No decorrer do desenvolvimento da ferramenta, surgiu uma dificuldade técnica, relacionada à maneira como seria feita a comunicação entre o WS e a API, pois em um primeiro momento, a mesma não estava sendo utilizada de forma separada do web service, ou seja, a API estava sendo encapsulada por ele, o que acarretava em um mal-funcionamento da mesma - a requisição só era bem sucedida na primeira tentativa de acesso aos serviços. Tal problema foi resolvido separando-os em duas aplicações distintas.
 
 \section{Propostas de Trabalhos Futuros}
 
-Como trabalhos futuros há a possibilidade de criação da funcionalidade de controle de acesso, uma vez que qualquer pessoa, atualmente, pode fazer requisições ao servidor. Outra possibilidade é a criação de um cliente que acesse o web service via código, para demonstrar como um programador que utiliza de tais técnicas em seu dia-a-dia faça uso do WS. Também há a possibilidade de inserir o web service em alguma infraestrutura em nuvem, como por exemplo, em servidores da Google ou Amazon.
+Como trabalhos futuros há a possibilidade de criação da funcionalidade de controle de acesso, uma vez que qualquer pessoa, atualmente, pode fazer requisições ao servidor. 
+
+Outra possibilidade é a criação de um cliente que acesse o web service via código, para demonstrar como um programador que utiliza de tais técnicas em seu dia-a-dia faça uso do Web service. 
+
+Também há a possibilidade de inserir o WS em alguma infraestrutura em nuvem, como por exemplo, em servidores da Google ou Amazon.
 
 
 \bibliographystyle{sbc}
