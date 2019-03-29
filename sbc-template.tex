@@ -342,11 +342,13 @@ Esta seção, descreve, bem como o título da mesma explicita, as tecnologias en
 
 Como mencionado na introdução deste trabalho, a linguagem escolhida para desenvolvimento do WS foi Java, que é uma das linguagens de desenvolvimento multiplataforma mais conhecidas e atualmente está bastante consolidada no mercado, com vários fóruns e comunidades dispostos a nos auxiliar no processo de construção de software, o que torna tal escolha bastante razoável. 
 
-O Java EE consiste de uma série de especificações bem detalhadas, ditando como deve ser implementado um software capaz de realizar serviços de infraestrutura, como web services, persistência em banco de dados, gerenciamento de conexões HTTP, acesso remoto, gerenciamento de sessão web, entre outros. Tudo isso, claro, baseado na linguagem Java.
+Segundo \cite{javaee} Java EE é um padrão de indústria que foi desenvolvido por um comitê independente de fornecedor, que consiste em várias especificações, fortemente integradas, e que já está bem consolidado no mercado por estar disponível há bastante tempo. Essas especificações ditam como deve ser implementado um software capaz de realizar serviços de infraestrutura, como web services, persistência em banco de dados, gerenciamento de conexões HTTP, acesso remoto, gerenciamento de sessão web, entre outros. Tudo isso, claro, baseado na linguagem Java.
 
 \subsubsection{Apache Maven}
 
 Inicialmente, para criação do projeto, utilizou-se da ferramenta de automatização de construção e gerenciamento de projetos Java, denominada Apache Maven, embora também possa ser utilizada com outras linguagens. Ela fornece aos desenvolvedores uma forma padronizada de automação, construção e publicação de suas aplicações.
+
+Segundo \cite{maven} o Maven é uma ferramenta de automatização cujo principal objetivo é o de permitir com que o desenvolvedor alcance o estado completo de esforço de desenvolvimento em um curto período de tempo.
 
 O processo de criação de um projeto Java EE envolve vários passos, como a criação e organização de seus diretórios, a configuração de diversos arquivos XML, a obtenção de bibliotecas e recursos para o projeto, a geração dos pacotes de publicação, o processo de documentação, entre outras etapas. Normalmente, sem a utilização de tal ferramenta, cada projeto teria sua própria estrutura, seu próprio jeito de gerar pacotes \textit{(jar, war)}, ou de executar cada um desses passos. Projetos complexos, com vários módulos, podem exigir uma ordem específica para a compilação dos mesmos, para que se chegue ao pacote final. Essa não-padronização, pode acarretar vários problemas, como por exemplo, um desenvolvedor alterar a estrutura de pastas do projeto referente a localização de imagens, e esquecer de avisar aos demais, o sistema passaria a funcionar de forma instável em alguns momentos. Tendo em vista esses pontos, e o fato de que tal ferramenta incentiva a adoção de boas práticas, optou-se por utilizá-la.
 
@@ -501,7 +503,9 @@ Assim sendo, na linha 22, têm-se a definição de qual serviço o usuário esco
 
 A linha 23 é responsável pela criação e atribuição de um objeto de comunicação JSON com o atributo Img, como já descrito na tabela 2; 
 
-A partir da linha 26, têm-se de fato a requisição. Com o intuito de simplicidade e praticidade, foi utilizada uma biblioteca javascript chamada jquery, para realização das requisições, e seu uso é demonstrado a partir da linha 26, onde está sendo chamado o método ajax, por meio do objeto \$(cifrão), método este, que nos permite realizar requisições assíncronas, ou seja, o fluxo do código não é interrompido até que a resposta seja obtida. Pelo contrário, após realizar a requisição, a resposta é obtida em um momento posterior, de forma independente, e tratada por meio de uma função (chamada função de callback) que será executada após o término da requisição. Com uma sintaxe bastante simples, esse método nos permite enviar e tratar o resultado de requisições assíncronas:
+A partir da linha 26, têm-se de fato a requisição. Com o intuito de simplicidade e praticidade, foi utilizada uma biblioteca javascript chamada JQuery, para realização das requisições.
+
+Segundo \cite{jquery} JQuery é uma biblioteca javascript leve e rápida, que faz operações como manipulação e travessia de documentos HTML, manipulação de eventos e requisições assíncronas de maneira muito simples, e seu uso é demonstrado a partir da linha 26, onde está sendo chamado o método ajax, por meio do objeto \$(cifrão), método este, que nos permite realizar requisições assíncronas, ou seja, o fluxo do código não é interrompido até que a resposta seja obtida. Pelo contrário, após realizar a requisição, a resposta é obtida em um momento posterior, de forma independente, e tratada por meio de uma função (chamada função de callback) que será executada após o término da requisição. Com uma sintaxe bastante simples, esse método nos permite enviar e tratar o resultado de requisições assíncronas:
 
 Linha 27: informamos qual método/verbo HTTP será utilizado na requisição;
 

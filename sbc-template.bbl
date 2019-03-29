@@ -65,6 +65,12 @@ JERSEY.
 \newblock Disponível em: \url{https://jersey.github.io/}.
 \newblock Acesso em: 22 Jan. 2019.
 
+\bibitem[JQUERY 2019]{jquery}
+JQUERY (2019).
+\newblock What is jquery.
+\newblock Disponível em: \url{https://jquery.com/}.
+\newblock Acesso em: 19 Mar. 2019.
+
 \bibitem[KALIN 2009]{kalin:09}
 KALIN, M. (2009).
 \newblock {\em Java Web Services}.
@@ -87,6 +93,12 @@ LUBLINSKY, B.
   \url{http://www.ibm.com/developerworks/library/ar-soastyle/}.
 \newblock Acesso em: 18 dez. 2018.
 
+\bibitem[MAVEN 2015]{maven}
+MAVEN, A. (2015).
+\newblock What is maven.
+\newblock Disponível em: \url{https://maven.apache.org/what-is-maven.html}.
+\newblock Acesso em: 29 dez. 2018.
+
 \bibitem[OPENGROUP ]{soa1}
 OPENGROUP.
 \newblock Definition of soa.
@@ -105,6 +117,11 @@ ORACLE.
 PRESSMAN, R.~S. and MAXIM, B.~R. (2016).
 \newblock {\em Engenharia de software: uma abordagem profissional}.
 \newblock AMGH, 8th edition.
+
+\bibitem[REIMER 2018]{javaee}
+REIMER, M.-L. (2018).
+\newblock {\em Building RESTful Web Services with Java EE 8}.
+\newblock Packt.
 
 \bibitem[RICHARDSON 2007]{richard:07}
 RICHARDSON, Leonard, R.~S. (2007).
