@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  28 MAR 2019 21:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/Arch Linux) (preloaded format=pdflatex 2019.2.16)  28 MAR 2019 21:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -409,10 +409,7 @@ File: modelo-comunicacao2.png Graphic file (type png)
 <use modelo-comunicacao2.png>
 Package pdftex.def Info: modelo-comunicacao2.png  used on input line 281.
 (pdftex.def)             Requested size: 128.0387pt x 268.29079pt.
- [7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [8 <./modelo-comunicacao2.png (PNG copy)>]
+ [7] [8 <./modelo-comunicacao2.png (PNG copy)>]
 Overfull \hbox (21.54872pt too wide) in paragraph at lines 317--326
  [][] 
  []
@@ -461,13 +458,19 @@ File: cliente-requisicao.png Graphic file (type png)
 <use cliente-requisicao.png>
 Package pdftex.def Info: cliente-requisicao.png  used on input line 488.
 (pdftex.def)             Requested size: 384.1096pt x 284.19923pt.
-<caminho-servicos.png, id=63, 664.4825pt x 53.19875pt>
+ [14]
+<caminho-servicos.png, id=66, 664.4825pt x 53.19875pt>
 File: caminho-servicos.png Graphic file (type png)
 <use caminho-servicos.png>
 Package pdftex.def Info: caminho-servicos.png  used on input line 499.
 (pdftex.def)             Requested size: 384.1096pt x 30.7522pt.
- [14] [15 <./aplicacao-cliente.png>]
-[16 <./cliente-requisicao.png> <./caminho-servicos.png>] (./sbc-template.bbl
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./aplicacao-cliente.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16 <./cliente-requisicao.png> <./caminho-servicos.png>] (./sbc-template.bbl
 Underfull \hbox (badness 6708) in paragraph at lines 21--26
 []\OT1/ptm/m/n/12 ECMA, I. (2017).  The json data in-ter-change syn-tax.  Dis-p
 on[]^^Pvel em:
@@ -530,7 +533,7 @@ Package pdftex.def Info: ata.pdf , page1 used on input line 556.
 Here is how much of TeX's memory you used:
  4681 strings out of 492639
  65596 string characters out of 6135497
- 161029 words of memory out of 5000000
+ 163029 words of memory out of 5000000
  8447 multiletter control sequences out of 15000+600000
  23307 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -543,7 +546,7 @@ helvetic/uhvb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/helvetic/uhvbo8a.pfb
 ></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist
 /fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times
 /utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on sbc-template.pdf (20 pages, 1321083 bytes).
+Output written on sbc-template.pdf (20 pages, 1321242 bytes).
 PDF statistics:
  127 PDF objects out of 1000 (max. 8388607)
  77 compressed objects within 1 object stream
